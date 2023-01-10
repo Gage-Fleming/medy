@@ -1,4 +1,25 @@
+/* ==========================================================================
+   CSS sorting information
+   ========================================================================== */
+
+/*
+ * The CSS is sorted in the following manner
+ * 
+ * element tags
+ * general class tags
+ * general id tags
+ * index.html styling
+ * books.html styling
+ * games.html styling
+ * movies.html styling
+ * tv.html styling
+ */
+
 body {
     background-color: black;
     color: #e0dc19; /*Just to remember color*/
 }
+
+/* ==========================================================================
+   Section comment block
+   ========================================================================== */
