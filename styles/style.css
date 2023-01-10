@@ -1,15 +1,20 @@
 /*
  * The CSS is sorted in the following manner
  * 
- * element tags
- * general class tags
- * general id tags
+ * element selectors
+ * general class selectors
+ * general id selectors
  * index.html styling
  * books.html styling
  * games.html styling
  * movies.html styling
  * tv.html styling
+ * media queries (Please note these are also structured following this outline)
  */
+
+ /* ==========================================================================
+   element selectors
+   ========================================================================== */
 
  * {
     margin: 0px;
@@ -24,23 +29,26 @@ body {
 
 header {
     background-color: #363506;
-    display: flex;
-    justify-content: space-between;
     max-width: 100%;
 }
 
-header img {
-    
+nav {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ==========================================================================
    Media queries
    ========================================================================== */
 
-/* Devices smaller than 480px
+/* Devices smaller than 770px
    ========================================================================== */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 769px) {
+
+    /*  ==========================================================================
+        sd element selectors
+        ========================================================================== */
     header {
         height: 60px;
     }
@@ -51,22 +59,50 @@ header img {
     }
 
     header, main, footer {
-        padding: 10px;
+        padding: 10px 20px;
+    }
+
+    /*  ==========================================================================
+        sd class selectors
+        ========================================================================== */
+
+    /* Ensure any items with class large are not displayed */
+    .large {
+        display: none;;
     }
 }
 
-/* Devices larger than 480px and smaller than 769px
+/* Devices larger than 770px
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 770px) {
 
-}
+    /*  ==========================================================================
+        ld element selectors
+        ========================================================================== */
 
-/* Devices larger than 769px
-   ========================================================================== */
+        header {
+            height: 100px;
+            padding: 20px;
+        }
 
-@media only screen and (min-width: 992px) {
+        header img {
+            height: 100px;
+            width: 100px;
+        }
 
+        main, footer {
+            padding: 20px 100px;
+        }
+
+    /*  ==========================================================================
+        ld class selectors
+        ========================================================================== */
+
+    /* Ensure any items with class small are not displayed */
+    .small {
+        display: none;;
+    }
 }
 
 /* ==========================================================================
