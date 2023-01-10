@@ -11,9 +11,26 @@
  * tv.html styling
  */
 
+ * {
+    margin: 0px;
+    padding: 0px;
+
+ }
+
 body {
     background-color: black;
     color: #e0dc19; /*Just to remember color*/
+}
+
+header {
+    background-color: #363506;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+header img {
+    
 }
 
 /* ==========================================================================
@@ -24,7 +41,18 @@ body {
    ========================================================================== */
 
 @media only screen and (max-width: 480px) {
+    header {
+        height: 60px;
+    }
 
+    header img {
+        height: 60px;
+        width: 60px;
+    }
+
+    header, main, footer {
+        padding: 10px;
+    }
 }
 
 /* Devices larger than 480px and smaller than 769px
