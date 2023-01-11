@@ -38,9 +38,9 @@ header {
 }
 
 nav {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 /* ==========================================================================
@@ -56,9 +56,9 @@ nav {
    general id selectors
    ========================================================================== */
 
-#logo {
-    width: 60px;
+#headerLogo {
     height: 60px;
+    width: 60px;
 }
 
 /* ==========================================================================
@@ -89,7 +89,7 @@ nav {
 
     /* Ensure any items with class large are not displayed */
     .large {
-        display: none;;
+        display: none;
     }
 }
 
@@ -117,7 +117,7 @@ nav {
 
     /* Ensure any items with class small are not displayed */
     .small {
-        display: none;;
+        display: none;
     }
 
     /*  ==========================================================================
