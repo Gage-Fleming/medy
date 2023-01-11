@@ -19,12 +19,15 @@
  * {
     margin: 0px;
     padding: 0px;
+    color: #e0dc19; /*Just to remember color*/
+ }
 
+ a {
+    text-decoration: none;
  }
 
 body {
     background-color: black;
-    color: #e0dc19; /*Just to remember color*/
 }
 
 header {
@@ -71,6 +74,11 @@ nav {
         sd element selectors
         ========================================================================== */
 
+    /* Set default font size to be 3vw when small media query is in place */    
+    * {
+        font-size: 3vw;
+    }
+
     main, footer {
         padding: 10px 20px;
     }
@@ -94,9 +102,14 @@ nav {
         ld element selectors
         ========================================================================== */
 
-        main, footer {
-            padding: 20px 100px;
-        }
+    /* Set default font size to be 1.5vw when large media query is in place */
+    * {
+        font-size: 1.5vw;
+    }
+
+    main, footer {
+        padding: 20px 100px;
+    }
 
     /*  ==========================================================================
         ld class selectors
@@ -106,6 +119,10 @@ nav {
     .small {
         display: none;;
     }
+
+    /*  ==========================================================================
+        ld id selectors
+        ========================================================================== */
 }
 
 /* ==========================================================================
