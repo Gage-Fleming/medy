@@ -30,14 +30,23 @@ body {
     background-color: black;
 }
 
+footer {
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+}
+
 header {
     align-items: center;
+    height: 60px;
+    padding: 10px 20px;
+}
+
+footer, header {
     background-color: #363506;
     display: flex;
-    height: 60px;
     justify-content: space-between;
     max-width: 100%;
-    padding: 10px 20px;
 }
 
 nav {
@@ -60,6 +69,10 @@ nav {
    general id selectors
    ========================================================================== */
 
+#footerLogo {
+    height: 120px;
+    width: 120px;
+}
 #headerLogo {
     height: 60px;
     width: 60px;
@@ -83,7 +96,7 @@ nav {
         font-size: 3vw;
     }
 
-    main, footer {
+    main {
         padding: 10px 20px;
     }
 
@@ -111,7 +124,7 @@ nav {
         font-size: 1.5vw;
     }
 
-    main, footer {
+    main {
         padding: 20px 100px;
     }
 
