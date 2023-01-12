@@ -57,11 +57,13 @@ footer, header {
     width: 100%;
 }
 
+/*
+* TODO: Make header fixed when wireframes are complete
+*/
 header {
     align-items: center;
     height: 80px;
     padding: 10px 20px;
-    position: fixed;
 }
 
 hr {
