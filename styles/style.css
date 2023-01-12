@@ -36,10 +36,8 @@ footer {
     height: auto;
 }
 
-header {
-    align-items: center;
-    height: 60px;
-    padding: 10px 20px;
+footer > * {
+    margin: 20px 0px;
 }
 
 footer, header {
@@ -47,6 +45,12 @@ footer, header {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
+}
+
+header {
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px;
 }
 
 /* ==========================================================================
@@ -67,16 +71,15 @@ footer, header {
     width: 120px;
 }
 
+#footerNav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 #headerLogo {
     height: 60px;
     width: 60px;
-}
-
-#headerNav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
 }
 
 /* ==========================================================================
@@ -129,10 +132,6 @@ footer, header {
         padding: 20px 100px;
     }
 
-    footer > * {
-        margin: 20px 0px;
-    }
-
     /*  ==========================================================================
         ld class selectors
         ========================================================================== */
@@ -145,6 +144,13 @@ footer, header {
     /*  ==========================================================================
         ld id selectors
         ========================================================================== */
+
+    #headerNav {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
 }
 
 /* ==========================================================================
