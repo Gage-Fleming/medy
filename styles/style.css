@@ -31,7 +31,7 @@ body {
 }
 
 footer {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     height: auto;
 }
@@ -47,13 +47,6 @@ footer, header {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-}
-
-nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
 }
 
 /* ==========================================================================
@@ -73,9 +66,17 @@ nav {
     height: 120px;
     width: 120px;
 }
+
 #headerLogo {
     height: 60px;
     width: 60px;
+}
+
+#headerNav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
 }
 
 /* ==========================================================================
@@ -96,7 +97,7 @@ nav {
         font-size: 3vw;
     }
 
-    main {
+    footer, main {
         padding: 10px 20px;
     }
 
@@ -124,8 +125,12 @@ nav {
         font-size: 1.5vw;
     }
 
-    main {
+    footer, main {
         padding: 20px 100px;
+    }
+
+    footer > * {
+        margin: 20px 0px;
     }
 
     /*  ==========================================================================
