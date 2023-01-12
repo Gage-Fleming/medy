@@ -17,10 +17,10 @@
    ========================================================================== */
 
  * {
+    box-sizing: border-box;
+    color: #fff;
     margin: 0px;
     padding: 0px;
-    color: #fff;
-    box-sizing: border-box;
  }
 
  a {
@@ -122,7 +122,17 @@ nav a:hover {
     background-image: url(".././images/movie-banner.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    padding: 20px 100px;
     width: 100%;
+}
+
+#pageBannerText {
+    background-color: #e0dd19a4;
+    border-radius: 75px;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
 }
 
 /* ==========================================================================
@@ -147,6 +157,10 @@ nav a:hover {
         padding: 10px 20px;
     }
 
+    h1 {
+        font-size: 6vw;
+    }
+
     /*  ==========================================================================
         sd class selectors
         ========================================================================== */
@@ -162,6 +176,11 @@ nav a:hover {
 
     #pageBanner {
         height: 250px;
+        align-items: flex-end;
+    }
+
+    #pageBannerText {
+        width: 100%;
     }
 }
 
@@ -181,6 +200,10 @@ nav a:hover {
 
     footer{
         padding: 20px 100px;
+    }
+
+    h1 {
+        font-size: 4vw;
     }
 
     /*  ==========================================================================
@@ -204,7 +227,13 @@ nav a:hover {
     }
 
     #pageBanner {
+        align-items: flex-end;
         height: 500px;
+        justify-content: flex-start;
+    }
+
+    #pageBannerText {
+        width: 50%;
     }
 }
 
