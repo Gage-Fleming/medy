@@ -96,6 +96,12 @@ nav a:hover {
    general id selectors
    ========================================================================== */
 
+/* #bannerImage {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+} */
+
 #footerLogo {
     height: 120px;
     width: 120px;
@@ -110,6 +116,13 @@ nav a:hover {
 #headerLogo {
     height: 60px;
     width: 60px;
+}
+
+#pageBanner {
+    background-image: url(".././images/movie-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 
 /* ==========================================================================
@@ -130,7 +143,7 @@ nav a:hover {
         font-size: 3vw;
     }
 
-    footer, main {
+    footer{
         padding: 10px 20px;
     }
 
@@ -141,6 +154,14 @@ nav a:hover {
     /* Ensure any items with class large are not displayed */
     .large {
         display: none;
+    }
+
+    /*  ==========================================================================
+        ld id selectors
+        ========================================================================== */
+
+    #pageBanner {
+        height: 250px;
     }
 }
 
@@ -158,7 +179,7 @@ nav a:hover {
         font-size: 1.5vw;
     }
 
-    footer, main {
+    footer{
         padding: 20px 100px;
     }
 
@@ -180,6 +201,10 @@ nav a:hover {
         display: flex;
         justify-content: space-between;
         width: 50%;
+    }
+
+    #pageBanner {
+        height: 500px;
     }
 }
 
