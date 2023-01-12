@@ -123,12 +123,11 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     display: flex;
-    padding: 20px 100px;
     width: 100%;
 }
 
 #pageBannerText {
-    background-color: #e0dd19a4;
+    background-color: rgba(0, 0, 0, 0.732);
     border-radius: 75px;
     flex-direction: column;
     padding: 20px;
@@ -177,6 +176,7 @@ nav a:hover {
     #pageBanner {
         height: 250px;
         align-items: flex-end;
+        padding: 10px 20px;
     }
 
     #pageBannerText {
@@ -230,6 +230,7 @@ nav a:hover {
         align-items: flex-end;
         height: 500px;
         justify-content: flex-start;
+        padding: 20px 100px;
     }
 
     #pageBannerText {
