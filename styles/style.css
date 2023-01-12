@@ -20,6 +20,7 @@
     margin: 0px;
     padding: 0px;
     color: #fff;
+    box-sizing: border-box;
  }
 
  a {
@@ -45,27 +46,32 @@ footer > a {
 }
 
 footer > p {
+    color: #e0dc19;
     margin-bottom: 0px;
 }
 
 footer, header {
     background-color: #363506;
-    color: #e0dc19;
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
+    width: 100%;
 }
 
 header {
     align-items: center;
-    height: 60px;
+    height: 80px;
     padding: 10px 20px;
+    position: fixed;
 }
 
 hr {
     color: #8b8810;
     margin: 0px;
     width: 100%;
+}
+
+nav a {
+    color: #e0dc19;
 }
 
 /* ==========================================================================
