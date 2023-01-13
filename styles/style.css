@@ -112,6 +112,10 @@ nav a:hover {
     width: 60px;
 }
 
+img {
+    object-fit: cover;
+}
+
 /* ==========================================================================
    index.html styling
    ========================================================================== */
@@ -130,6 +134,20 @@ nav a:hover {
     flex-direction: column;
     padding: 20px;
     text-align: center;
+}
+
+.rotateLinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rotateLinks a{
+    margin: 0px 10px;
+}
+
+.rotateLinks img{
+    border-radius: 20px;
+    opacity: .5;
 }
 
 /* ==========================================================================
@@ -165,6 +183,19 @@ nav a:hover {
     /* Ensure any items with class large are not displayed */
     .large {
         display: none;
+    }
+
+    .rotateLinks a {
+        width: 50%;
+    }
+
+    .rotateLinks img {
+        width: 100%;
+        height: auto;
+    }
+
+    .standardPadding {
+        padding: 20px 20px;
     }
 
     /*  ==========================================================================
@@ -208,9 +239,24 @@ nav a:hover {
         ld class selectors
         ========================================================================== */
 
+    .rotateLinks img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    /* TODO How to make hover nice when leaving object? */
+    .rotateLinks img:hover {
+        box-shadow: 0px 15px 5px #363506;
+        opacity: 1;
+        transform: translateY(-10px);
+        transition: transform 250ms;
+    }
     /* Ensure any items with class small are not displayed */
     .small {
         display: none;
+    }
+
+    .standardPadding {
+        padding: 20px 100px;
     }
 
     /*  ==========================================================================
