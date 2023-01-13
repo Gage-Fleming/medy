@@ -96,12 +96,6 @@ nav a:hover {
    general id selectors
    ========================================================================== */
 
-/* #bannerImage {
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-} */
-
 #footerLogo {
     height: 120px;
     width: 120px;
@@ -117,6 +111,10 @@ nav a:hover {
     height: 60px;
     width: 60px;
 }
+
+/* ==========================================================================
+   index.html styling
+   ========================================================================== */
 
 #pageBanner {
     background-image: url(".././images/movie-banner.jpg");
