@@ -1,6 +1,7 @@
 /*
  * The CSS is sorted in the following manner
  * 
+ * font declarations
  * element selectors
  * general class selectors
  * general id selectors
@@ -12,6 +13,14 @@
  * media queries (Please note these are also structured following this outline)
  */
 
+  /* ==========================================================================
+   font declarations
+   ========================================================================== */
+
+/* Poppins import
+========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
  /* ==========================================================================
    element selectors
    ========================================================================== */
@@ -19,6 +28,7 @@
  * {
     box-sizing: border-box;
     color: #fff;
+    font-family: Poppins, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
  }
@@ -170,6 +180,10 @@ img {
         font-size: 6vw;
     }
 
+    h2 {
+        font-size: 5vw;
+    }
+
     /*  ==========================================================================
         sd class selectors
         ========================================================================== */
@@ -196,7 +210,7 @@ img {
     }
 
     /*  ==========================================================================
-        ld id selectors
+        sd id selectors
         ========================================================================== */
 
     #pageBanner {
@@ -229,7 +243,11 @@ img {
     }
 
     h1 {
-        font-size: 4vw;
+        font-size: 3.5vw;
+    }
+
+    h2 {
+        font-size: 2.5vw;
     }
 
     /*  ==========================================================================
@@ -279,7 +297,7 @@ img {
     }
 
     #pageBannerText {
-        width: 50%;
+        width: 65%;
     }
 }
 
