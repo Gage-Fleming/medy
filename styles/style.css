@@ -54,17 +54,8 @@ body {
     background-color: black;
 }
 
-footer * {
-    margin: 20px 0px;
-}
-
-footer a {
-    margin-top: 0px;
-}
-
 footer p {
     color: #e0dc19;
-    margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 769px) {
@@ -149,6 +140,10 @@ general class selectors
     width: 30px;
 }
 
+.imageA {
+    display: flex;
+}
+
 @media only screen and (max-width: 769px) {
     /* Ensure any items with class large are not displayed */
     .large {
@@ -168,7 +163,7 @@ general class selectors
         padding: 20px 20px;
     }
 
-    .standardBox * {
+    .standardBox > * {
         margin: 10px 0px;
     }
 }
@@ -178,9 +173,17 @@ general class selectors
         padding: 20px 100px;
     }
 
-    .standardBox * {
+    .standardBox > * {
         margin: 10px 0px;
     }
+}
+
+.standardFirst {
+    margin-top: 0px;
+}
+
+.standardLast {
+    margin-bottom: 0px;
 }
 
 /* ==========================================================================
