@@ -34,12 +34,6 @@ body {
     justify-content: space-between;
 }
 
-footer {
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-}
-
 footer > * {
     margin: 20px 0px;
 }
@@ -87,6 +81,12 @@ nav a:hover {
    general class selectors
    ========================================================================== */
 
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .headerImage {
     height: 30px;
     width: 30px;
@@ -131,7 +131,6 @@ img {
 #pageBannerText {
     background-color: rgba(0, 0, 0, 0.732);
     border-radius: 75px;
-    flex-direction: column;
     padding: 20px;
     text-align: center;
 }
