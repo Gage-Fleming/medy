@@ -137,8 +137,7 @@ img {
 }
 
 .rotateLinks {
-    display: flex;
-    justify-content: space-between;
+    
 }
 
 .rotateLinks a{
@@ -185,12 +184,14 @@ img {
         display: none;
     }
 
-    .rotateLinks a {
-        width: 50%;
+    .rotateLinks {
+        height: fit-content;
+        overflow: scroll;
+        white-space: nowrap;
     }
 
     .rotateLinks img {
-        width: 100%;
+        width: 50%;
         height: auto;
     }
 
@@ -239,6 +240,10 @@ img {
         ld class selectors
         ========================================================================== */
 
+    .rotateLinks {
+        display: flex;
+        justify-content: space-between;
+    }
     .rotateLinks img {
         max-height: 100%;
         max-width: 100%;
