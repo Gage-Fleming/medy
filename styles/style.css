@@ -205,8 +205,12 @@ img {
         height: auto;
     }
 
-    .standardPadding {
+    .standardBox {
         padding: 20px 20px;
+    }
+
+    .standardBox * {
+        margin: 10px 0px;
     }
 
     /*  ==========================================================================
@@ -274,8 +278,12 @@ img {
         display: none;
     }
 
-    .standardPadding {
+    .standardBox {
         padding: 20px 100px;
+    }
+
+    .standardBox * {
+        margin: 10px 0px;
     }
 
     /*  ==========================================================================
