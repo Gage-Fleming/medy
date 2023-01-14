@@ -29,9 +29,6 @@
 
 body {
     background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 footer > * {
@@ -49,8 +46,6 @@ footer > p {
 
 footer, header {
     background-color: #363506;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
 }
 
@@ -82,9 +77,16 @@ nav a:hover {
    ========================================================================== */
 
 .flexColumn {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexRow {
     align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .headerImage {
@@ -102,8 +104,6 @@ nav a:hover {
 }
 
 #footerNav {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
 }
 
