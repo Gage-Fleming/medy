@@ -187,6 +187,7 @@ img {
     .rotateLinks {
         height: fit-content;
         overflow: scroll;
+        scroll-snap-type: x mandatory;
         white-space: nowrap;
     }
 
