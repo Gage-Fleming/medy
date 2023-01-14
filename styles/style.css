@@ -10,12 +10,11 @@
  * games.html styling
  * movies.html styling
  * tv.html styling
- * media queries (Please note these are also structured following this outline)
  */
 
-  /* ==========================================================================
-   font declarations
-   ========================================================================== */
+/* ==========================================================================
+  font declarations
+  ========================================================================== */
 
 /* Poppins import
 ========================================================================== */
@@ -25,33 +24,58 @@
    element selectors
    ========================================================================== */
 
- * {
+* {
     box-sizing: border-box;
     color: #fff;
     font-family: Poppins, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
- }
+}
 
- a {
+@media only screen and (max-width: 769px) {
+    * {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    * {
+        font-size: 1.5vw;
+    }
+}
+
+
+a {
     text-decoration: none;
- }
+}
 
 body {
     background-color: black;
 }
 
-footer > * {
+footer * {
     margin: 20px 0px;
 }
 
-footer > a {
+footer a {
     margin-top: 0px;
 }
 
-footer > p {
+footer p {
     color: #e0dc19;
     margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 769px) {
+    footer{
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    footer{
+        padding: 20px 100px;
+    }
 }
 
 footer, header {
@@ -66,6 +90,26 @@ header {
     align-items: center;
     height: 80px;
     padding: 10px 20px;
+}
+
+@media only screen and (max-width: 769px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    h2 {
+        font-size: 2.5vw;
+    }
 }
 
 hr {
@@ -104,6 +148,40 @@ nav a:hover {
     width: 30px;
 }
 
+@media only screen and (max-width: 769px) {
+    /* Ensure any items with class large are not displayed */
+    .large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    /* Ensure any items with class small are not displayed */
+    .small {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .standardBox {
+        padding: 20px 20px;
+    }
+
+    .standardBox * {
+        margin: 10px 0px;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    .standardBox {
+        padding: 20px 100px;
+    }
+
+    .standardBox * {
+        margin: 10px 0px;
+    }
+}
+
 /* ==========================================================================
    general id selectors
    ========================================================================== */
@@ -120,6 +198,15 @@ nav a:hover {
 #headerLogo {
     height: 60px;
     width: 60px;
+}
+
+@media only screen and (min-width: 770px) {
+    #headerNav {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
 }
 
 img {
@@ -145,78 +232,7 @@ img {
     text-align: center;
 }
 
-.rotateLinks a{
-    margin: 0px 10px;
-}
-
-.rotateLinks img{
-    border-radius: 20px;
-    opacity: .5;
-}
-
-/* ==========================================================================
-   Media queries
-   ========================================================================== */
-
-/* Devices smaller than 770px
-   ========================================================================== */
-
 @media only screen and (max-width: 769px) {
-
-    /*  ==========================================================================
-        sd element selectors
-        ========================================================================== */
-
-    /* Set default font size to be 3vw when small media query is in place */    
-    * {
-        font-size: 3vw;
-    }
-
-    footer{
-        padding: 10px 20px;
-    }
-
-    h1 {
-        font-size: 6vw;
-    }
-
-    h2 {
-        font-size: 5vw;
-    }
-
-    /*  ==========================================================================
-        sd class selectors
-        ========================================================================== */
-
-    /* Ensure any items with class large are not displayed */
-    .large {
-        display: none;
-    }
-
-    .rotateLinks {
-        height: fit-content;
-        overflow: scroll;
-        scroll-snap-type: x mandatory;
-        white-space: nowrap;
-    }
-
-    .rotateLinks img {
-        width: 50%;
-        height: auto;
-    }
-
-    .standardBox {
-        padding: 20px 20px;
-    }
-
-    .standardBox * {
-        margin: 10px 0px;
-    }
-
-    /*  ==========================================================================
-        sd id selectors
-        ========================================================================== */
-
     #pageBanner {
         height: 250px;
         align-items: flex-end;
@@ -228,75 +244,7 @@ img {
     }
 }
 
-/* Devices larger than 770px
-   ========================================================================== */
-
 @media only screen and (min-width: 770px) {
-
-    /*  ==========================================================================
-        ld element selectors
-        ========================================================================== */
-
-    /* Set default font size to be 1.5vw when large media query is in place */
-    * {
-        font-size: 1.5vw;
-    }
-
-    footer{
-        padding: 20px 100px;
-    }
-
-    h1 {
-        font-size: 3.5vw;
-    }
-
-    h2 {
-        font-size: 2.5vw;
-    }
-
-    /*  ==========================================================================
-        ld class selectors
-        ========================================================================== */
-
-    .rotateLinks {
-        display: flex;
-        justify-content: space-between;
-    }
-    .rotateLinks img {
-        max-height: 100%;
-        max-width: 100%;
-    }
-    /* TODO How to make hover nice when leaving object? */
-    .rotateLinks img:hover {
-        box-shadow: 0px 15px 5px #363506;
-        opacity: 1;
-        transform: translateY(-10px);
-        transition: transform 250ms;
-    }
-    /* Ensure any items with class small are not displayed */
-    .small {
-        display: none;
-    }
-
-    .standardBox {
-        padding: 20px 100px;
-    }
-
-    .standardBox * {
-        margin: 10px 0px;
-    }
-
-    /*  ==========================================================================
-        ld id selectors
-        ========================================================================== */
-
-    #headerNav {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        width: 50%;
-    }
-
     #pageBanner {
         align-items: flex-end;
         height: 500px;
@@ -306,6 +254,54 @@ img {
 
     #pageBannerText {
         width: 65%;
+    }
+}
+
+.rotateLinks img{
+    border-radius: 20px;
+    margin: 0px;
+    opacity: .5;
+}
+
+@media only screen and (max-width: 769px) {
+    .rotateLinks {
+        height: fit-content;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+        white-space: nowrap;
+    }
+
+    .rotateLinks a {
+        margin: 0px 10px;
+    }
+
+    .rotateLinks img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    .rotateLinks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rotateLinks * {
+        margin: 0px 10px!important;
+    }
+
+    .rotateLinks img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    /* TODO How to make hover nice when leaving object? */
+    .rotateLinks img:hover {
+        box-shadow: 0px 15px 5px #363506;
+        opacity: 1;
+        transform: translateY(-10px);
+        transition: transform 250ms;
     }
 }
 

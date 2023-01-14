@@ -8,9 +8,8 @@
 
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-    <!-- Create header container to hold navigational tools dependant on size of viewport and Escapyst logo -->
-    <header>
+<body class="flexColumn">
+    <header class="flexRow">
         <img src="./images/hamburger.png" height="128px" width="128px" id="hamburgerLogo" class="small headerImage">
         <a href="index.html"><img src="./images/logo-no-background.png" height="1125px" width="1000px" id="headerLogo"></a>
         <nav id="headerNav" class="large">
@@ -22,7 +21,7 @@
         <img src="./images/search.png" height="512px" width="512px" id="searchLogo" class="headerImage">
     </header>
 
-    <main>
+    <main class="standardBox">
         <div>
             <h1>Report: Large Coursework (Escapyst Website)</h1>
             <h2>Gage Fleming SN:220103602</h2>
@@ -80,10 +79,10 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="flexColumn">
         <a href="index.html"><img src="./images/logo-no-background.png" height="1125px" width="1000px" id="footerLogo"></a>
         <hr>
-        <nav id="footerNav">
+        <nav id="footerNav" class="flexRow">
             <a href="#">Books</a>
             <a href="#">Games</a>
             <a href="#">Movies</a>
