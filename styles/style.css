@@ -212,6 +212,11 @@ general class selectors
         width: 75%;
     }
 
+    .standardArticle:hover {
+        transform: scale(1.02);
+        transition: transform 250ms;
+    }
+
     .standardArticle > a {
         height: auto;
         margin-right: 10px;
@@ -355,7 +360,7 @@ index.html styling
 
 @media only screen and (max-width: 769px) {
     .rotateLinks {
-        overflow: scroll;
+        overflow-x: scroll;
         white-space: nowrap;
     }
 
