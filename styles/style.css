@@ -92,6 +92,11 @@ header {
     h2 {
         font-size: 5vw;
     }
+
+    h3 {
+        font-weight: 1000;
+        font-size: 4vw;
+    }
 }
 
 @media only screen and (min-width: 770px) {
@@ -101,6 +106,11 @@ header {
 
     h2 {
         font-size: 2.5vw;
+    }
+
+    h3 {
+        font-weight: 1000;
+        font-size: 2vw;
     }
 }
 
@@ -144,21 +154,24 @@ general class selectors
     display: flex;
 }
 
+.imageA img {
+    opacity: .5;
+}
+
+.imageA img:hover {
+    opacity: 1;
+}
+
+.logoA {
+    display: flex;
+}
+
 @media only screen and (max-width: 769px) {
     /* Ensure any items with class large are not displayed */
     .large {
         display: none;
     }
-}
 
-@media only screen and (min-width: 770px) {
-    /* Ensure any items with class small are not displayed */
-    .small {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 769px) {
     .standardBox {
         padding: 20px 20px;
     }
@@ -169,6 +182,34 @@ general class selectors
 }
 
 @media only screen and (min-width: 770px) {
+    /* Ensure any items with class small are not displayed */
+    .small {
+        display: none;
+    }
+
+    .standardArticle {
+        display: flex;
+        justify-content: center;
+        width: 75%;
+    }
+
+    .standardArticle > a {
+        height: auto;
+        margin-right: 10px;
+        width: 50%;
+    }
+
+    .standardArticle > div {
+        margin-left: 10px;
+        width: 50%;
+    }
+
+    .standardArticle img {
+        border-radius: 20px;
+        height: auto;
+        width: 100%;
+    }
+
     .standardBox {
         padding: 20px 100px;
     }
@@ -176,6 +217,16 @@ general class selectors
     .standardBox > * {
         margin: 10px 0px;
     }
+}
+
+.standardArticle {
+    border-bottom: 1px solid #8b8810;
+    padding-bottom: 20px;
+}
+
+.standardArticle > div {
+    align-items: flex-start;
+    height: auto;
 }
 
 .standardFirst {
@@ -220,6 +271,10 @@ img {
 /* ==========================================================================
 index.html styling
 ========================================================================== */
+
+.mediumIntro {
+    padding: 20px 100px;
+}
 
 #pageBanner {
     background-image: url(".././images/movie-banner.jpg");
@@ -307,6 +362,10 @@ index.html styling
         transform: translateY(-10px);
         transition: transform 250ms;
     }
+}
+
+#elevatorPitch p {
+    text-align: center;
 }
 
 /* ==========================================================================
