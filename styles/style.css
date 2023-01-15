@@ -172,6 +172,25 @@ general class selectors
         display: none;
     }
 
+    .standardArticle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .standardArticle > div {
+        align-items: center;
+    }
+
+    .standardArticle > div > p {
+        margin: 10px 0px;
+    }
+
+    .standardArticle p:first-of-type {
+        margin-top: 10px;
+        text-align: center;
+    }
+
     .standardBox {
         padding: 20px 20px;
     }
@@ -200,8 +219,13 @@ general class selectors
     }
 
     .standardArticle > div {
+        align-items: flex-start;
         margin-left: 10px;
         width: 50%;
+    }
+
+    .standardArticle p:first-of-type {
+        margin: 10px 0px;
     }
 
     .standardArticle img {
@@ -225,8 +249,15 @@ general class selectors
 }
 
 .standardArticle > div {
-    align-items: flex-start;
     height: auto;
+}
+
+.standardArticle > div > p:nth-last-of-type(-n+2) {
+    font-style: italic;
+}
+
+.standardArticle h3:hover {
+    color: #e0dc19;
 }
 
 .standardFirst {
