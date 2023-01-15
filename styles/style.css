@@ -228,12 +228,6 @@ general class selectors
         margin: 10px 0px;
     }
 
-    .standardArticle img {
-        border-radius: 20px;
-        height: auto;
-        width: 100%;
-    }
-
     .standardBox {
         padding: 20px 100px;
     }
@@ -258,6 +252,12 @@ general class selectors
 
 .standardArticle h3:hover {
     color: #e0dc19;
+}
+
+.standardArticle img {
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
 }
 
 .standardFirst {
