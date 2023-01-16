@@ -241,11 +241,15 @@ general class selectors
 }
 
 .standardArticle > div {
-    height: auto;
+    color: black;
 }
 
 .standardArticle > div > p:nth-last-of-type(-n+2) {
     font-style: italic;
+}
+
+.standardArticle h3 {
+    color: #000;
 }
 
 .standardArticle h3:hover {
@@ -390,7 +394,7 @@ index.html styling
 
     /* TODO How to make hover nice when leaving object? */
     .rotateLinks img:hover {
-        box-shadow: 0px 15px 15px #716fc1;
+        box-shadow: 0px 15px 15px #706fc158;
         opacity: 1;
         transform: translateY(-10px);
         transition: transform 250ms;
