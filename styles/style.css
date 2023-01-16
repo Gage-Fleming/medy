@@ -234,8 +234,10 @@ general class selectors
 }
 
 .standardArticle {
-    border: 1px solid #8b8810;
+    background-color: #e2e2ef;
+    border: 1px solid #716fc1;
     padding: 20px;
+    box-shadow: 5px 5px 5px #716fc1;
 }
 
 .standardArticle > div {
@@ -247,7 +249,7 @@ general class selectors
 }
 
 .standardArticle h3:hover {
-    color: #e0dc19;
+    color: #716fc1;
 }
 
 .standardArticle img {
@@ -270,7 +272,7 @@ general id selectors
 
 #footerLogo {
     height: 120px;
-    width: 120px;
+    width: auto;
 }
 
 #footerNav {
@@ -279,7 +281,7 @@ general id selectors
 
 #headerLogo {
     height: 60px;
-    width: 60px;
+    width: auto;
 }
 
 @media only screen and (min-width: 770px) {
@@ -304,7 +306,7 @@ index.html styling
 }
 
 #pageBanner {
-    background-image: url(".././images/movie-banner.jpg");
+    background-image: url(".././images/page-banner.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -312,10 +314,14 @@ index.html styling
 }
 
 #pageBannerText {
-    background-color: rgba(0, 0, 0, 0.732);
+    background-color: #706fc1bd;
     border-radius: 75px;
     padding: 20px;
     text-align: center;
+}
+
+#pageBannerText > * {
+    color: #fff;
 }
 
 @media only screen and (max-width: 769px) {
@@ -384,7 +390,7 @@ index.html styling
 
     /* TODO How to make hover nice when leaving object? */
     .rotateLinks img:hover {
-        box-shadow: 0px 15px 5px #363506;
+        box-shadow: 0px 15px 15px #716fc1;
         opacity: 1;
         transform: translateY(-10px);
         transition: transform 250ms;
