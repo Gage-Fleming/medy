@@ -153,6 +153,10 @@ general class selectors
     opacity: 1;
 }
 
+.darkPurpleBackground {
+    background-color: #3f3e6c;
+}
+
 .logoA {
     display: flex;
 }
@@ -408,6 +412,30 @@ index.html styling
 /* ==========================================================================
 thich-nhat-hanh.html styling
 ========================================================================== */
+.timelineArticle {
+    display: flex;
+}
+
+@media only screen and (max-width: 769px) {
+    .timelineArticle {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    .timelineArticle {
+        height: 400px;
+        flex-direction: row;
+        width: 75%;
+    }
+
+    .timelineArticle > * {
+        height: auto;
+        margin: 10px;
+        width: 50%;
+    }
+}
 
 #thichIntro p {
     text-align: center;
