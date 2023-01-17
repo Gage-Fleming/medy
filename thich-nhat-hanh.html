@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="maxSpace">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,9 @@
 
     <script src="./scripts/script.js"></script>
 </head>
-<body class="flexColumn">
-    <header class="flexRow">
+<body class="flexColumn maxSpace timelineBackground">
+
+    <header class="flexRow" id="timelineHeader">
         <img src="./images/hamburger.png" height="128px" width="128px" id="hamburgerLogo" class="small headerImage" alt="Hamburger menu">
         <a href="index.html"><img src="./images/medy-logo.png" height="424px" width="1000px" id="headerLogo" class="logoA" alt="Escapyst logo"></a>
         <nav id="headerNav" class="large">
@@ -25,82 +26,23 @@
         <img src="./images/search.png" height="512px" width="512px" id="searchLogo" class="headerImage" alt="Search button">
     </header>
 
-    <main>
-        <div class="flexColumn standardBox" id="thichIntro">
-            <h1>Dedicated to: Thich Nhat Hanh</h1>
-            <p>
-                Zen Master Thich Nhat Hanh was a larger-than life figure within the Buddhist Religion. As a spiritual leader he
-                helped introduce me, and thousands of others to the powerful practice of meditation and engaged buddhism. 
-                His poetry helped convey powerful messages and his peace activism got him recognition from figures like MLK.
-                Thich Nhat Hanh is one of the only reason's I found drive. Therefore in memory of his passing, I have a timeline below of 
-                notable events in his life to help solidify him a little longer in my little world.
-            </p>
-        </div>
-
-        <div class="standardBox flexColumn fadeInElement" id="timeline">
-            <div class="standardArticle">
-                <div class="imageContainer">
-                    <img src="./images/./thich-nhat-hanh-images/1951.jpg" alt="A young Thich Nhat Hanh is seen smiling with a tea kettle">
-                </div>
-                <div class="timelineInfo">
-                    <h2>1951 - Ordained as Buddhist monk</h2>
-                    <p>
-                        Thich Nhat Hanh started his journey in renewing the vigor in Vietnamese Buddhism. On a fun note, he also was one of
-                    6 origin monks to learn to ride a bicycle!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="standardBox flexColumn fadeInElement" id="timeline">
-            <div class="standardArticle">
-                <div class="imageContainer">
-                    <img src="./images/./thich-nhat-hanh-images/1951.jpg" alt="A young Thich Nhat Hanh is seen smiling with a tea kettle">
-                </div>
-                <div class="timelineInfo">
-                    <h2>1951 - Ordained as Buddhist monk</h2>
-                    <p>
-                        Thich Nhat Hanh started his journey in renewing the vigor in Vietnamese Buddhism. On a fun note, he also was one of
-                    6 origin monks to learn to ride a bicycle!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="standardBox flexColumn fadeInElement" id="timeline">
-            <div class="standardArticle">
-                <div class="imageContainer">
-                    <img src="./images/./thich-nhat-hanh-images/1951.jpg" alt="A young Thich Nhat Hanh is seen smiling with a tea kettle">
-                </div>
-                <div class="timelineInfo">
-                    <h2>1951 - Ordained as Buddhist monk</h2>
-                    <p>
-                        Thich Nhat Hanh started his journey in renewing the vigor in Vietnamese Buddhism. On a fun note, he also was one of
-                    6 origin monks to learn to ride a bicycle!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="standardBox flexColumn fadeInElement" id="timeline">
-            <div class="standardArticle">
-                <div class="imageContainer">
-                    <img src="./images/./thich-nhat-hanh-images/1951.jpg" alt="A young Thich Nhat Hanh is seen smiling with a tea kettle">
-                </div>
-                <div class="timelineInfo">
-                    <h2>1951 - Ordained as Buddhist monk</h2>
-                    <p>
-                        Thich Nhat Hanh started his journey in renewing the vigor in Vietnamese Buddhism. On a fun note, he also was one of
-                    6 origin monks to learn to ride a bicycle!
-                    </p>
-                </div>
+    <main class="timeline">
+        <div>
+            <div class="flexColumn standardBox" id="thichIntro">
+                <h1>Dedicated to: Thich Nhat Hanh</h1>
+                <p>
+                    Zen Master Thich Nhat Hanh was a larger-than life figure within the Buddhist Religion. As a spiritual leader he
+                    helped introduce me, and thousands of others to the powerful practice of meditation and engaged buddhism. 
+                    His poetry helped convey powerful messages and his peace activism got him recognition from figures like MLK.
+                    Thich Nhat Hanh is one of the only reason's I found drive. Therefore in memory of his passing, I have a timeline below of 
+                    notable events in his life to help solidify him a little longer in my little world.
+                </p>
             </div>
         </div>
     </main>
 
-    <footer class="flexColumn standardBox">
+    <footer class="flexColumn standardBox" id="timelineFooter">
         <a href="index.html" class="standardFirst logoA"><img src="./images/medy-logo.png" height="424px" width="1000px" id="footerLogo"></a>
-        <hr>
         <nav id="footerNav" class="flexRow">
             <a href="./index.html">Home</a>
             <a href="./meditations.html">Meditations</a>
@@ -109,8 +51,9 @@
             <a href="./thich-nhat-hanh.html">T.N.H</a>
             <a href="./tools.html">Tools</a>
         </nav>
-        <hr>
         <p class="standardLast">© copyright Escapyst, implemented by Gage Fleming</p>
     </footer>
+
+    <img src="./images/page-banner.jpg" id="timelineImage" alt="">
 </body>
 </html>

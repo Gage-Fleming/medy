@@ -161,6 +161,10 @@ general class selectors
     display: flex;
 }
 
+.seeThrough {
+    opacity: .5;
+}
+
 @media only screen and (max-width: 769px) {
     /* Ensure any items with class large are not displayed */
     .large {
@@ -412,19 +416,17 @@ index.html styling
 /* ==========================================================================
 thich-nhat-hanh.html styling
 ========================================================================== */
-.fadeInElement {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: 1.2s ease-out;
-    visibility: hidden;
-    will-change: opacity, visibility;
+.timeline {
+    background-color: #706fc17b;
+    color: #fff;
+    height: 100%;
+    width: 100%;
 }
 
-.fadeInElementVisible {
-    transition: opacity 2s ease-out, transform 1.2s ease-out;
-    visibility: visible;
+.maxSpace {
+    height: 100%;
+    width: 100%;
 }
-
 @media only screen and (max-width: 769px) {
     
 }
@@ -435,6 +437,17 @@ thich-nhat-hanh.html styling
 
 #thichIntro p {
     text-align: center;
+}
+
+#timelineHeader, #timelineFooter {
+    background-color: #706fc17b;
+}
+
+#timelineImage {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
 }
 
 /* ==========================================================================
