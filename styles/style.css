@@ -416,31 +416,42 @@ index.html styling
 /* ==========================================================================
 thich-nhat-hanh.html styling
 ========================================================================== */
+
+.circle {
+    background-color: #FFF;
+    border-radius: 50%;
+    min-height: 25px;
+    position: absolute;
+    width: 25px;
+}
+
 .timeline {
     background-color: #706fc17b;
     color: #fff;
+    display: flex;
+    margin: 0px auto;
+    padding: 20px 200px;
+}
+
+.timeline h2 {
+    font-weight: 200;
+}
+
+.verticalLine {
+    align-items: center;
+    background-color: #FFF;
+    display: flex;
     height: 100%;
-    width: 100%;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+    width: 2px;
+    z-index: 0;
 }
 
-.maxSpace {
-    height: 100%;
-    width: 100%;
-}
-@media only screen and (max-width: 769px) {
-    
-}
-
-@media only screen and (min-width: 770px) {
-    
-}
-
-#thichIntro p {
-    text-align: center;
-}
-
-#timelineHeader, #timelineFooter {
+#timelineHeader, #timelineFooter, #timelineIntro {
     background-color: #706fc17b;
+    color: #FFF;
 }
 
 #timelineImage {
@@ -448,6 +459,56 @@ thich-nhat-hanh.html styling
     position: fixed;
     width: 100%;
     z-index: -1;
+}
+
+@media only screen and (max-width: 769px) {
+    
+}
+
+@media only screen and (min-width: 770px) {
+    .divider {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-height: 100%;
+        width: 20%;
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timelineArticle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .timelineArticle > * {
+        margin: 20px;
+    }
+
+    .year {
+        width: 20%;
+    }
+
+    .year h3 {
+        font-size: 5vw;
+    }
+
+    .yearInfo {
+        width: 60%;
+    }
+
+    .yearInfo > * {
+        padding: 10px 0px;
+    }
+
+    .yearInfo h4 {
+        font-size: 4vw;
+    }
 }
 
 /* ==========================================================================
