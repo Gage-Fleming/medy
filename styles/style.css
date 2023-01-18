@@ -430,7 +430,7 @@ thich-nhat-hanh.html styling
     color: #fff;
     display: flex;
     margin: 0px auto;
-    padding: 20px 200px;
+    padding: 20px 100px;
 }
 
 .timeline h2 {
@@ -491,6 +491,9 @@ thich-nhat-hanh.html styling
     }
 
     .year {
+        align-items: center;
+        display: flex;
+        min-height: 100%;
         width: 20%;
     }
 
