@@ -63,6 +63,7 @@ a {
 footer, header {
     background-color: #716fc1;
     color: #fff;
+    margin: 0px auto;
     width: 100%;
 }
 
