@@ -1,12 +1,13 @@
 /* Create intersection observer for timeline */
 
 let timelineArticles = document.querySelectorAll('.timelineArticle');
+let timelineImage = document.getElementById('timelineImage');
 
 let observer = new IntersectionObserver(
     entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle('show', entry.isIntersecting);
-    })
+    for (let i = 0; i < entries.length; i++) {
+        entries[i].target.classList.toggle('show', entries[i].isIntersecting);
+    }
     },
     {
         threshold: .9,
