@@ -434,6 +434,10 @@ thich-nhat-hanh.html styling
     padding: 20px 100px;
 }
 
+.timelineArticle {
+    visibility: hidden;
+}
+
 .timeline h2 {
     font-weight: 200;
 }
@@ -500,6 +504,7 @@ thich-nhat-hanh.html styling
 
     .year h3 {
         font-size: 5vw;
+        text-align: right;
     }
 
     .yearInfo {
@@ -513,6 +518,10 @@ thich-nhat-hanh.html styling
     .yearInfo h4 {
         font-size: 4vw;
     }
+}
+
+.show {
+    visibility: visible;
 }
 
 /* ==========================================================================
