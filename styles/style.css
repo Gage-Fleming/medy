@@ -457,6 +457,13 @@ thich-nhat-hanh.html styling
     z-index: 0;
 }
 
+#timelineBody {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 #timelineHeader, #timelineFooter, #timelineIntro {
     background-color: #706fc17b;
     color: #FFF;
