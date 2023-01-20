@@ -555,6 +555,7 @@ thich-nhat-hanh.html styling
         width: 100%;
     }
 
+    /* Position yearInfo below to transition to correct spot when intersecting with viewport */
     .yearInfo {
         height: 60%;
         opacity: 0;
@@ -630,6 +631,7 @@ thich-nhat-hanh.html styling
         width: 20%;
     }
 
+    /* Ensure yearInfo slides in from right of screen */
     .yearInfo {
         opacity: 0;
         transform: translateX(300px);
