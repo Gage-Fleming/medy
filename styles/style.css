@@ -428,19 +428,6 @@ thich-nhat-hanh.html styling
     width: 0px;
 }
 
-.horizontalLine {
-    align-items: center;
-    background-color: #FFF;
-    display: flex;
-    height: 2px;
-    justify-content: center;
-    opacity: 0;
-    position: relative;
-    transition: opacity 1s;
-    min-width: 100%;
-    z-index: 0;
-}
-
 .show .divider .verticalLine, .show .divider .verticalLine .circle {
     opacity: 1;
 }
@@ -475,6 +462,13 @@ thich-nhat-hanh.html styling
     max-width: 100%;
 }
 
+#timelineImage {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
 #timelineHeader, #timelineFooter, #timelineIntro {
     background-color: #706fc17b;
     color: #FFF;
@@ -487,6 +481,19 @@ thich-nhat-hanh.html styling
         justify-content: center;
         height: 20%;
         width: 100%;
+    }
+
+    .horizontalLine {
+        align-items: center;
+        background-color: #FFF;
+        display: flex;
+        height: 2px;
+        justify-content: center;
+        opacity: 0;
+        position: relative;
+        transition: opacity 1s;
+        min-width: 100%;
+        z-index: 0;
     }
 
     .show .divider .verticalLine .circle {
@@ -516,13 +523,6 @@ thich-nhat-hanh.html styling
 
     .timelineArticle > * {
         margin: 10px;
-    }
-
-    #timelineImage {
-        height: 100%;
-        position: fixed;
-        width: 100%;
-        z-index: -1;
     }
 
     .year {
@@ -582,13 +582,6 @@ thich-nhat-hanh.html styling
 
     .timelineArticle > * {
         margin: 20px;
-    }
-
-    #timelineImage {
-        height: 100%;
-        position: fixed;
-        width: 100%;
-        z-index: -1;
     }
 
     .verticalLine {
