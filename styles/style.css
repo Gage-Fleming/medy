@@ -78,16 +78,16 @@ header {
 
 @media only screen and (max-width: 769px) {
     h1 {
-        font-size: 6vw;
+        font-size: 7vw;
     }
 
     h2 {
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     h3 {
         font-weight: 1000;
-        font-size: 4vw;
+        font-size: 5vw;
     }
 }
 
@@ -428,12 +428,36 @@ thich-nhat-hanh.html styling
     width: 0px;
 }
 
+.horizontalLine {
+    align-items: center;
+    background-color: #FFF;
+    display: flex;
+    height: 2px;
+    justify-content: center;
+    opacity: 0;
+    position: relative;
+    transition: opacity 1s;
+    min-width: 100%;
+    z-index: 0;
+}
+
+.show .divider .verticalLine, .show .divider .verticalLine .circle {
+    opacity: 1;
+}
+
+.show .yearInfo {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 .timeline {
+    align-items: center;
     background-color: #706fc17b;
     color: #fff;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0px auto;
-    padding: 20px 100px;
 }
 
 .timelineArticle {
@@ -442,19 +466,6 @@ thich-nhat-hanh.html styling
 
 .timeline h2 {
     font-weight: 200;
-}
-
-.verticalLine {
-    align-items: center;
-    background-color: #FFF;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    opacity: 0;
-    position: relative;
-    transition: opacity 1s;
-    width: 2px;
-    z-index: 0;
 }
 
 #timelineBody {
@@ -469,15 +480,71 @@ thich-nhat-hanh.html styling
     color: #FFF;
 }
 
-#timelineImage {
-    height: 100%;
-    position: fixed;
-    width: 100%;
-    z-index: -1;
-}
-
 @media only screen and (max-width: 769px) {
-    
+    .divider {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 20%;
+        width: 100%;
+    }
+
+    .show .divider .verticalLine .circle {
+        height: 20px;
+        width: 20px;
+    }
+
+    .show .year h3 {
+        font-size: 10vw;
+    }
+
+    .show .yearInfo {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .timeline {
+        padding: 10px 50px;
+    }
+
+    .timelineArticle {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .timelineArticle > * {
+        margin: 10px;
+    }
+
+    #timelineImage {
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .year {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-height: 20%;
+        width: 100%;
+    }
+
+    .yearInfo {
+        height: 60%;
+        opacity: 0;
+        text-align: center;
+        transform: translateY(200px);
+        transition: transform 1s, opacity 1s;
+        width: 100%;
+    }
+
+    .yearInfo h4 {
+        font-size: 7vw;
+    }
 }
 
 @media only screen and (min-width: 770px) {
@@ -494,10 +561,6 @@ thich-nhat-hanh.html styling
         width: 35px;
     }
 
-    .show .divider .verticalLine, .show .divider .verticalLine .circle {
-        opacity: 1;
-    }
-
     .show .year h3 {
         font-size: 5vw;
     }
@@ -508,9 +571,7 @@ thich-nhat-hanh.html styling
     }
 
     .timeline {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 20px 100px;
     }
 
     .timelineArticle {
@@ -523,16 +584,32 @@ thich-nhat-hanh.html styling
         margin: 20px;
     }
 
+    #timelineImage {
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .verticalLine {
+        align-items: center;
+        background-color: #FFF;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        opacity: 0;
+        position: relative;
+        transition: opacity 1s;
+        width: 2px;
+        z-index: 0;
+    }
+
     .year {
         align-items: center;
         display: flex;
         justify-content: flex-end;
         min-height: 100%;
         width: 20%;
-    }
-
-    .year h3 {
-        transition: font-size 1s;
     }
 
     .yearInfo {
@@ -542,13 +619,17 @@ thich-nhat-hanh.html styling
         width: 60%;
     }
 
-    .yearInfo > * {
-        padding: 10px 0px;
-    }
-
     .yearInfo h4 {
         font-size: 4vw;
     }
+}
+
+.year h3 {
+    transition: font-size 1s;
+}
+
+.yearInfo > * {
+    padding: 10px 0px;
 }
 
 .show {
