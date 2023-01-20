@@ -418,6 +418,12 @@ index.html styling
 thich-nhat-hanh.html styling
 ========================================================================== */
 
+/**
+ * Section is sorted alphabetically, with two media queries at the end to handle responsive design
+ * of web page. 
+ */
+
+ /* Create circle shape to add visual dissonance to divider div */
 .circle {
     background-color: #FFF;
     border-radius: 50%;
@@ -428,7 +434,8 @@ thich-nhat-hanh.html styling
     width: 0px;
 }
 
-.show .divider .verticalLine, .show .divider .verticalLine .circle {
+/* Update opacity to divider elements when show class is applied */
+.show .divider .verticalLine, .show .divider .horizontallLine, .show .divider .verticalLine .circle {
     opacity: 1;
 }
 
@@ -447,6 +454,7 @@ thich-nhat-hanh.html styling
     margin: 0px auto;
 }
 
+/* Ensure timeline articles are invisible by default */
 .timelineArticle {
     visibility: hidden;
 }
@@ -455,6 +463,7 @@ thich-nhat-hanh.html styling
     font-weight: 200;
 }
 
+/* Ensure body correctl fit screen with z-index image */
 #timelineBody {
     display: flex;
     flex-direction: column;
@@ -462,6 +471,7 @@ thich-nhat-hanh.html styling
     max-width: 100%;
 }
 
+/* Style for timeline image to ensure it stays behind all other objects */
 #timelineImage {
     height: 100%;
     position: fixed;
@@ -474,6 +484,17 @@ thich-nhat-hanh.html styling
     color: #FFF;
 }
 
+.year h3 {
+    transition: font-size 1s;
+}
+
+.yearInfo > * {
+    padding: 10px 0px;
+}
+
+/* small device media query
+========================================================================== */
+
 @media only screen and (max-width: 769px) {
     .divider {
         align-items: center;
@@ -483,6 +504,7 @@ thich-nhat-hanh.html styling
         width: 100%;
     }
 
+    /* Create horzontal line style to create seperation between year and yearInfo */
     .horizontalLine {
         align-items: center;
         background-color: #FFF;
@@ -547,6 +569,8 @@ thich-nhat-hanh.html styling
     }
 }
 
+/* large device media query
+========================================================================== */
 @media only screen and (min-width: 770px) {
     .divider {
         align-items: center;
@@ -584,6 +608,7 @@ thich-nhat-hanh.html styling
         margin: 20px;
     }
 
+    /* Create vertical line to create seperation between year and yearInfo*/
     .verticalLine {
         align-items: center;
         background-color: #FFF;
@@ -617,14 +642,7 @@ thich-nhat-hanh.html styling
     }
 }
 
-.year h3 {
-    transition: font-size 1s;
-}
-
-.yearInfo > * {
-    padding: 10px 0px;
-}
-
+/* Put at end to ensure it is applied to elements */
 .show {
     visibility: visible;
 }
