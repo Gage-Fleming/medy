@@ -51,6 +51,10 @@ function checkShow() {
                     timelineImage.src="../images/thich-nhat-hanh-images/1966.jpg";
                     break;
                 case 3:
+                    timelineImage.src="../images/thich-nhat-hanh-images/1967.jpg";
+                    break;
+                case 4:
+                    timelineImage.src="../images/thich-nhat-hanh-images/1982.jpg";
                     break;
                 default:
             }
