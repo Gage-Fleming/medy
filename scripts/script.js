@@ -42,15 +42,13 @@ function checkShow() {
         if (timelineArticles[i].classList.contains('show')) {
             switch (i) {
                 case 0:
-                    timelineImage.src="../images/thich-nhat-hanh-images/1951.jpg";
+                    timelineImage.src="../images/thich-nhat-hanh-images/1950s.jpg";
                     break;
                 case 1:
-                    timelineImage.src="../images/page-banner.jpg";
-                    console.log(i);
+                    timelineImage.src="../images/thich-nhat-hanh-images/1962.jpg";
                     break;
                 case 2:
-                    timelineImage.src="../images/sample-1.jpg";
-                    console.log(i);
+                    timelineImage.src="../images/thich-nhat-hanh-images/1966.jpg";
                     break;
                 case 3:
                     break;
