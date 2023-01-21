@@ -120,6 +120,10 @@ nav a:hover {
     color: #0d0d17;
 }
 
+input:hover, select:hover {
+    cursor: pointer;
+}
+
 /* ==========================================================================
 general class selectors
 ========================================================================== */
@@ -667,15 +671,16 @@ tools.html styling
 * of web page. 
 */
 
-#lowerSettingThree {
-    margin-bottom: 0px;
+#meditationCircle {
+    position: relative;
+    z-index: 1;
 }
 
 .meditationLowerSetting {
     align-items: space-between;
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 20px 0px;
     width: 75%;
 }
 
@@ -688,7 +693,42 @@ tools.html styling
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 100%;
+}
+
+#meditationTimer {
+    fill: none;
+    stroke: none;
+}
+
+#meditationTimerContainer {
+    position: relative;
+}
+
+#meditationTimerDisplay {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#meditationTimerOutline {
+    stroke-width: 7px;
+    stroke: #3f3e6c;
+}
+
+#meditationTimer svg {
+    height: 100%;
+    width: 100%;
+}
+
+.radioImage:hover {
+    cursor: pointer;
 }
 
 #soundType {
@@ -702,7 +742,7 @@ tools.html styling
 
 #soundType > * {
     height: 100%;
-    padding: 0px 20px;
+    margin: 0px 10px;
     width: 33%;
 }
 
@@ -718,15 +758,15 @@ tools.html styling
 .tool {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
+    box-shadow: 5px 5px 5px #716fc1;
     display: flex;
-    flex-direction: column;
     padding: 20px;
-    width: 75%;
+    width: 80%;
 }
 
-.tool:hover {
-    transform: scale(1.05);
-    transition: transform 250ms;
+.tool > * {
+    padding: 0px 10px;
+    width: 50%;
 }
 
 /* small device media query
