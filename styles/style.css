@@ -479,6 +479,15 @@ thich-nhat-hanh.html styling
     z-index: -1;
 }
 
+#timelineIntro > * {
+    text-align: center;
+}
+
+#tnhFoundation {
+    color: #c0c16f;
+    text-decoration: underline;
+}
+
 #timelineHeader, #timelineFooter, #timelineIntro {
     background-color: #706fc17b;
     color: #FFF;
