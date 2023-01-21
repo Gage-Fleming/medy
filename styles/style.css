@@ -659,6 +659,32 @@ thich-nhat-hanh.html styling
 }
 
 /* ==========================================================================
+tools.html styling
+========================================================================== */
+
+/**
+ * Section is sorted alphabetically, with two media queries at the end to handle responsive design
+ * of web page. 
+ */
+
+ #toolsIntro > * {
+    text-align: center;
+ }
+
+/* small device media query
+========================================================================== */
+
+@media only screen and (max-width: 769px) {
+    
+}
+
+/* large device media query
+========================================================================== */
+@media only screen and (min-width: 770px) {
+    
+}
+
+/* ==========================================================================
 Section comment block
 ========================================================================== */
 
