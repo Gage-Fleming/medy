@@ -162,6 +162,10 @@ general class selectors
     display: flex;
 }
 
+.pageIntro > *{
+    text-align: center;
+}
+
 .seeThrough {
     opacity: .5;
 }
@@ -479,10 +483,6 @@ thich-nhat-hanh.html styling
     z-index: -1;
 }
 
-#timelineIntro > * {
-    text-align: center;
-}
-
 #tnhFoundation {
     color: #c0c16f;
     text-decoration: underline;
@@ -666,10 +666,6 @@ tools.html styling
  * Section is sorted alphabetically, with two media queries at the end to handle responsive design
  * of web page. 
  */
-
- #toolsIntro > * {
-    text-align: center;
- }
 
 /* small device media query
 ========================================================================== */
