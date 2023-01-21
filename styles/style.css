@@ -667,6 +667,11 @@ tools.html styling
  * of web page. 
  */
 
+ .tool {
+    background-color: #e2e2ef;
+    border: 1px solid #716fc1;
+ }
+
 /* small device media query
 ========================================================================== */
 
