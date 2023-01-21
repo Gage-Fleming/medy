@@ -42,25 +42,27 @@
             <h2>Below you can find basic mindfulness tools to help with your practice</h2>
         </div>
 
-        <div class="standardBox toolsContainer flexRow">
+        <div class="standardBox toolsContainer flexColumn">
             <div class="tool" id="meditationTimer">
                 <div id="meditationSettings">
                     <form id="meditationForm">
                         <!-- Radio buttons for interval bell -->
-                        <label for="gong">
-                            <img src="./images/tools-images/gong.png">
-                        </label>
-                        <input type="radio" id="gong" value="gong" checked="checked">
+                        <fieldset id="soundType">
+                            <label for="gong">
+                                <img src="./images/tools-images/gong.png">
+                            </label>
+                            <input type="radio" id="gong" value="gong" checked="checked">
 
-                        <label for="chime">
-                            <img src="./images/tools-images/chime.png">
-                        </label>
-                        <input type="radio" id="chime" value="chime">
+                            <label for="chime">
+                                <img src="./images/tools-images/chime.png">
+                            </label>
+                            <input type="radio" id="chime" value="chime">
 
-                        <label for="bell">
-                            <img src="./images/tools-images/bell.png">
-                        </label>
-                        <input type="radio" id="bell" value="bell">
+                            <label for="bell">
+                                <img src="./images/tools-images/bell.png">
+                            </label>
+                            <input type="radio" id="bell" value="bell">
+                        </fieldset>
 
                         <!-- Duration dropdown menu -->
                         <label for="duration">Duration</label>
@@ -87,6 +89,9 @@
                             <option>5 minutes</option>
                             <option>10 minutes</option>
                         </select>
+
+                        <label for="sound">Bell Sound</label>
+                        <input type="range" min="1" max="100" value="50" id="sound">
                     </form>
                 </div>
                 <div id="meditationTimer">

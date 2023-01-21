@@ -667,10 +667,24 @@ tools.html styling
  * of web page. 
  */
 
- .tool {
+#meditationForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.tool {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
- }
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.tool:hover {
+    transform: scale(1.05);
+    transition: transform 250ms;
+}
 
 /* small device media query
 ========================================================================== */
