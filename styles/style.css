@@ -663,9 +663,25 @@ tools.html styling
 ========================================================================== */
 
 /**
- * Section is sorted alphabetically, with two media queries at the end to handle responsive design
- * of web page. 
- */
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
+
+#lowerSettingThree {
+    margin-bottom: 0px;
+}
+
+.meditationLowerSetting {
+    align-items: space-between;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    width: 75%;
+}
+
+.meditationLowerSetting > * {
+    width: 50%;
+}
 
 #meditationForm {
     align-items: center;
@@ -675,21 +691,18 @@ tools.html styling
     width: 50%;
 }
 
-#meditationForm > *:not(:first-child){
-    width: 50%;
-}
-
 #soundType {
     align-items: center;
     border: none;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
     width: 100%;
 }
 
 #soundType > * {
     height: 100%;
-    margin: 0px 20px;
+    padding: 0px 20px;
     width: 33%;
 }
 
