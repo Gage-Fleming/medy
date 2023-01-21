@@ -668,9 +668,38 @@ tools.html styling
  */
 
 #meditationForm {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 50%;
+}
+
+#meditationForm > *:not(:first-child){
+    width: 50%;
+}
+
+#soundType {
+    align-items: center;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#soundType > * {
+    height: 100%;
+    margin: 0px 20px;
+    width: 33%;
+}
+
+#soundType img {
+    height: 100%;
+    width: 100%;
+}
+
+#soundType label {
+    margin-bottom: 10px;
 }
 
 .tool {
@@ -678,6 +707,7 @@ tools.html styling
     border: 1px solid #716fc1;
     display: flex;
     flex-direction: column;
+    padding: 20px;
     width: 75%;
 }
 

@@ -43,27 +43,33 @@
         </div>
 
         <div class="standardBox toolsContainer flexColumn">
-            <div class="tool" id="meditationTimer">
+            <div class="tool standardFirst" id="meditationTimer">
                 <div id="meditationSettings">
                     <form id="meditationForm">
                         <!-- Radio buttons for interval bell -->
                         <fieldset id="soundType">
-                            <label for="gong">
-                                <img src="./images/tools-images/gong.png">
-                            </label>
-                            <input type="radio" id="gong" value="gong" checked="checked">
+                            <div class="flexColumn">
+                                <label for="gong">
+                                    <img src="./images/tools-images/gong.png">
+                                </label>
+                                <input type="radio" id="gong" name="sounds" value="gong" checked="checked">
+                            </div>
 
-                            <label for="chime">
-                                <img src="./images/tools-images/chime.png">
-                            </label>
-                            <input type="radio" id="chime" value="chime">
+                            <div class="flexColumn">
+                                <label for="chime">
+                                    <img src="./images/tools-images/chime.png">
+                                </label>
+                                <input type="radio" id="chime" name="sounds" value="chime">
+                            </div>
 
-                            <label for="bell">
-                                <img src="./images/tools-images/bell.png">
-                            </label>
-                            <input type="radio" id="bell" value="bell">
+                            <div class="flexColumn">
+                                <label for="bell">
+                                    <img src="./images/tools-images/bell.png">
+                                </label>
+                                <input type="radio" id="bell" name="sounds" value="bell">
+                            </div>
                         </fieldset>
-
+                        
                         <!-- Duration dropdown menu -->
                         <label for="duration">Duration</label>
                         <select id="duration">
