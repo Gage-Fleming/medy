@@ -1,5 +1,6 @@
-
-// thich-nhat-hanh.html JS
+/* ==========================================================================
+thich-nhat-hanh.html JS
+========================================================================== */
 /**
  * Please note the intersection obsever code was inspired by the below video.
  * https://www.youtube.com/watch?v=2IbRtjez6ag
@@ -39,7 +40,7 @@ timelineArticles.forEach(timelineArticle => {
 
 /**
  * Checks if global array timelineArticles has any elements
- * with the class show
+ * with the class show. If so it changes to the correct baxkground image
  */
 function checkShow() {
     for (let i = 0; i < timelineArticles.length; i++) {
@@ -90,4 +91,3 @@ if (document.URL.includes('thich-nhat-hanh.html')) {
 } else {
     clearInterval(timelineInterval);
 }
-  
