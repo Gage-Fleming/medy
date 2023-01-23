@@ -15,13 +15,15 @@ let intervalBellSelector = document.getElementById('intervalBell');
 let bellVolumeSelector = document.getElementById('sound');
 
 // Decalre variables that will hold the value of the elements in the user form
+// Any time variable is to be stored in seconds
 let soundType;
 let duration;
-let interval;
+// Make interval default to null in the case no bells is selected.
+let interval = null;
 let volume;
 
 meditationFormSubmit.onclick = function() {
-    // Get the sound type the user has selected form radio buttons
+    // Get the sound type the user has selected from radio buttons
     for (let i = 0; i < soundTypeOptions.length; i++) {
         if (soundTypeOptions[i].checked) {
             soundType = soundTypeOptions[i].value;
@@ -29,10 +31,18 @@ meditationFormSubmit.onclick = function() {
         }
     }
 
-    duration = durationSelector.value;
+    // Retrieve the selected duration and convert it to seconds
+    duration = Number(durationSelector.value.slice(0, 3)) * 60;
     
-    interval = intervalBellSelector.value;
+    // Check to see if user selected no bells. If so leave value of interval as null.
+    // Otherwise, get seconds of chosen interval
+    if (intervalBellSelector.value == "No Bells") {
 
+    } else {
+        interval = intervalBellSelector.value.slice(0, 3) * 60;
+    };
+
+    // Get volume user has selected
     volume = bellVolumeSelector.value;
 };
 /* ==========================================================================
