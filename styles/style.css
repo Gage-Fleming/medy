@@ -120,7 +120,7 @@ nav a:hover {
     color: #0d0d17;
 }
 
-input:hover, select:hover {
+input:hover, select:hover, button:hover {
     cursor: pointer;
 }
 
@@ -670,6 +670,17 @@ tools.html styling
 * Section is sorted alphabetically, with two media queries at the end to handle responsive design
 * of web page. 
 */
+
+.bottomButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 75%;
+}
+
+.bottomButtons > * {
+    width: 40%;
+}
 
 #meditationCircle {
     position: relative;

@@ -9,10 +9,14 @@ tools.html Code
 
 // Declare the variables to references to all the elements in the user form
 let meditationFormSubmit = document.getElementById('meditationFormSubmit');
+let meditationFormStop = document.getElementById('meditationFormStop');
+
 let soundTypeOptions = document.querySelectorAll('input[name="sounds"]');
 let durationSelector = document.getElementById('duration');
 let intervalBellSelector = document.getElementById('intervalBell');
 let bellVolumeSelector = document.getElementById('sound');
+
+let outputTime = document.getElementById('outputTime');
 
 // Decalre variables that will hold the value of the elements in the user form
 // Any time variable is to be stored in seconds
@@ -47,7 +51,14 @@ function formatTime(time) {
     return `${minutes}:${seconds}`
 }
 
-console.log(formatTime(654));
+function startTimer(timePassed, timeLeft) {
+    timerInterval = setInterval(() => {
+        timePassed = timePassed += 1;
+        timeLeft = duration - timePassed;
+
+        outputTime.innerHTML = formatTime(timeLeft);
+    }, 1000);
+}
 
 meditationFormSubmit.onclick = function() {
     // Get the sound type the user has selected from radio buttons
@@ -60,6 +71,14 @@ meditationFormSubmit.onclick = function() {
 
     // Retrieve the selected duration and convert it to seconds
     duration = Number(durationSelector.value.slice(0, 3)) * 60;
+
+    // Create variables to store the time that has passed since the select button has been clicked.
+    // And a variable to store the timeleft when subtracting timePassed from timeLeft
+    let timePassed = 0;
+    let timeLeft = duration;
+
+    // Update outputTime to display chosen time
+    outputTime.innerHTML = formatTime(timeLeft);
     
     // Check to see if user selected no bells. If so leave value of interval as null.
     // Otherwise, get seconds of chosen interval
@@ -71,6 +90,8 @@ meditationFormSubmit.onclick = function() {
 
     // Get volume user has selected
     volume = bellVolumeSelector.value;
+
+    startTimer(timePassed, timeLeft);
 };
 /* ==========================================================================
 Section comment block

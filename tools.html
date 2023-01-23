@@ -100,12 +100,15 @@
                             </select>
                         </div>
 
-                        <div class="meditationLowerSetting" id="lowerSettingThree">
+                        <div class="meditationLowerSetting">
                             <label for="sound">Bell Sound</label>
                             <input type="range" min="1" max="100" value="50" id="sound">
                         </div>
 
-                        <button type="button" id="meditationFormSubmit">Submit</button>
+                        <div class="bottomButtons">
+                            <button type="button" id="meditationFormSubmit">Submit</button>
+                            <button type="button" id="meditationFormStop">Stop</button>
+                        </div>
                     </form>
                 </div>
                 
@@ -116,7 +119,7 @@
                         </g>
                     </svg>
                     <span id="meditationTimerDisplay">
-                        <p>0:00</p>
+                        <p id="outputTime">Create a timer!</p>
                     </span>
                 </div>
             </div>
