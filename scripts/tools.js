@@ -89,8 +89,8 @@ function setTimer() {
         }
     }
 
-    if (timeLeft === 0) {
-        stopTimer;
+    if (timeLeft <= 0) {
+        stopTimer();
         intervalOn = false;
     }}, 1000);
 
@@ -133,6 +133,10 @@ meditationFormSubmit.onclick = function() {
     // Check to see if user selected no bells. If so leave value of interval as null.
     // Otherwise, get seconds of chosen interval
     intervalBellSelector.value == "No Bells" ? interval : interval = intervalBellSelector.value.slice(0, 3) * 60;
+
+    gong.volume = bellVolumeSelector.value;
+    chime.volume = bellVolumeSelector.value;
+    bell.volume = bellVolumeSelector.value;
 
     setTimer();
 };
