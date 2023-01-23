@@ -19,9 +19,9 @@ let bellVolumeSelector = document.getElementById('sound');
 let outputTime = document.getElementById('outputTime');
 
 // Create variables to hold audio files when user clicks submit button
-let gong;
-let chime;
-let bell;
+let gong = new Audio('../audio/gong.wav');
+let chime = new Audio('../audio/chime.wav');
+let bell = new Audio('../audio/bell.wav');
 
 // Create timer interval variable
 let timerInterval;
@@ -40,7 +40,6 @@ let soundType;
 let duration;
 // Make interval default to null in the case no bells is selected.
 let interval = null;
-let volume;
 
 /**
  * 
@@ -135,9 +134,6 @@ meditationFormSubmit.onclick = function() {
     // Otherwise, get seconds of chosen interval
     intervalBellSelector.value == "No Bells" ? interval : interval = intervalBellSelector.value.slice(0, 3) * 60;
 
-    // Get volume user has selected
-    volume = bellVolumeSelector.value;
-
     setTimer();
 };
 
@@ -172,6 +168,12 @@ soundTypeOptions[1].onclick = function() {
 
 soundTypeOptions[2].onclick = function() {
     bell.play();
+};
+
+bellVolumeSelector.onchange = function() {
+    gong.volume = bellVolumeSelector.value;
+    chime.volume = bellVolumeSelector.value;
+    bell.volume = bellVolumeSelector.value;
 };
 /* ==========================================================================
 Section comment block
