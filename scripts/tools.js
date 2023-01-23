@@ -7,15 +7,33 @@ tools.html Code
  * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
  */
 
-// Declare the variables to store input from the user form.
+// Declare the variables to references to all the elements in the user form
 let meditationFormSubmit = document.getElementById('meditationFormSubmit');
-let soundType;
+let soundTypeOptions = document.querySelectorAll('input[name="sounds"]');
 let durationSelector = document.getElementById('duration');
-let intervalBellSelector = document.getElementById('intervalBell');;
+let intervalBellSelector = document.getElementById('intervalBell');
 let bellVolumeSelector = document.getElementById('sound');
 
+// Decalre variables that will hold the value of the elements in the user form
+let soundType;
+let duration;
+let interval;
+let volume;
+
 meditationFormSubmit.onclick = function() {
+    // Get the sound type the user has selected form radio buttons
+    for (let i = 0; i < soundTypeOptions.length; i++) {
+        if (soundTypeOptions[i].checked) {
+            soundType = soundTypeOptions[i].value;
+            break;
+        }
+    }
+
+    duration = durationSelector.value;
     
+    interval = intervalBellSelector.value;
+
+    volume = bellVolumeSelector.value;
 };
 /* ==========================================================================
 Section comment block
