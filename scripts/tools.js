@@ -22,6 +22,33 @@ let duration;
 let interval = null;
 let volume;
 
+/**
+ * 
+ * @param {Number} time - a Time in seconds
+ * @returns {String} - The input time formatted in MM:SS format.
+ * 
+ * Please note this function was taken almost directly from 
+ * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
+ * 
+ */
+function formatTime(time) {
+    // Retrieve the largest round number when dividing the input time in seconds to get the current minute
+    let minutes = String(Math.floor(time / 60));
+
+    // Reteieve the seconds left by getting the remainder of modulo 60
+    let seconds = String(time % 60);
+
+    // If seconds is less than 10 add a leading zero for formatting
+    if (seconds < 10) {
+        seconds = `0${seconds}`;
+    }
+
+    // Output the remaining time in MM:SS
+    return `${minutes}:${seconds}`
+}
+
+console.log(formatTime(654));
+
 meditationFormSubmit.onclick = function() {
     // Get the sound type the user has selected from radio buttons
     for (let i = 0; i < soundTypeOptions.length; i++) {
