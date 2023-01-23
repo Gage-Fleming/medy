@@ -3,19 +3,21 @@ tools.html Code
 ========================================================================== */
 
 /**
- * Please note this code was inspired by the below walkthrough:
+ * Please note some code was inspired by the below walkthrough:
  * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
  */
 
-// Declare the variables to references to all the elements in the user form
+// Declare variable to store reference to submit and pause buttons on form
 let meditationFormSubmit = document.getElementById('meditationFormSubmit');
 let meditationFormPause = document.getElementById('meditationFormPause');
 
+// Declare variable to store references to options on timer form 
 let soundTypeOptions = document.querySelectorAll('input[name="sounds"]');
 let durationSelector = document.getElementById('duration');
 let intervalBellSelector = document.getElementById('intervalBell');
 let bellVolumeSelector = document.getElementById('sound');
 
+// Create reference to p tag to store updated time
 let outputTime = document.getElementById('outputTime');
 
 // Create variables to hold audio files when user clicks submit button
@@ -38,6 +40,7 @@ let timeLeft;
 // Any time variable is to be stored in seconds
 let soundType;
 let duration;
+
 // Make interval default to null in the case no bells is selected.
 let interval = null;
 
@@ -67,6 +70,10 @@ function formatTime(time) {
     return `${minutes}:${seconds}`
 }
 
+/**
+ * Creates a timer that runs every second. It updates the time variables and the output timer.
+ * It also runs a check to see if the timer is over and if so, clears the current interval
+ */
 function setTimer() {
     // Create timer interval to count the clock down.
     timerInterval = setInterval(() => {
@@ -97,6 +104,9 @@ function setTimer() {
     intervalOn = true;
 }
 
+/**
+ * Stops the current timer
+ */
 function stopTimer() {
     clearInterval(timerInterval);
     intervalOn = false;
@@ -162,23 +172,36 @@ meditationFormPause.onclick = function() {
     }
 };
 
+/**
+ * If the user selects the gong radio button the sound will play
+ */
 soundTypeOptions[0].onclick = function() {
     gong.play();
 };
 
+/**
+ * If the user selects the chime radio button the sound will play
+ */
 soundTypeOptions[1].onclick = function() {
     chime.play();
 };
 
+/**
+ * If the user selects the bell radio button the sound will play
+ */
 soundTypeOptions[2].onclick = function() {
     bell.play();
 };
 
+/**
+ * Updates the sound if the user adjusts the bell slider input
+ */
 bellVolumeSelector.onchange = function() {
     gong.volume = bellVolumeSelector.value;
     chime.volume = bellVolumeSelector.value;
     bell.volume = bellVolumeSelector.value;
 };
+
 /* ==========================================================================
 Section comment block
 ========================================================================== */
