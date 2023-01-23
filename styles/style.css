@@ -738,8 +738,26 @@ tools.html styling
     width: 100%;
 }
 
+#meditationToolContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#meditationToolContainer > * {
+    padding: 0px 10px;
+    width: 50%;
+}
+
 .radioImage:hover {
     cursor: pointer;
+}
+
+#sceneForm {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #soundType {
@@ -771,13 +789,19 @@ tools.html styling
     border: 1px solid #716fc1;
     box-shadow: 5px 5px 5px #716fc1;
     display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
     padding: 20px;
     width: 80%;
 }
 
-.tool > * {
-    padding: 0px 10px;
-    width: 50%;
+.toolTitle {
+    align-items: center;
+    border-bottom: solid #716fc1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 /* small device media query

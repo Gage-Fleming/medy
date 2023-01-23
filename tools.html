@@ -44,84 +44,117 @@
 
         <div class="standardBox toolsContainer flexColumn">
             <div class="tool standardFirst" id="meditationTimer">
-                <div id="meditationSettings">
-                    <form id="meditationForm">
-                        <!-- Radio buttons for interval bell -->
-                        <fieldset id="soundType">
-                            <div class="flexColumn">
-                                <label for="gong" class="radioImage">
-                                    <img src="./images/tools-images/gong.png">
-                                </label>
-                                <input type="radio" id="gong" name="sounds" value="gong" checked="checked">
-                            </div>
-
-                            <div class="flexColumn">
-                                <label for="chime" class="radioImage">
-                                    <img src="./images/tools-images/chime.png">
-                                </label>
-                                <input type="radio" id="chime" name="sounds" value="chime">
-                            </div>
-
-                            <div class="flexColumn">
-                                <label for="bell" class="radioImage">
-                                    <img src="./images/tools-images/bell.png">
-                                </label>
-                                <input type="radio" id="bell" name="sounds" value="bell">
-                            </div>
-                        </fieldset>
-                        
-                        <!-- Duration dropdown menu -->
-                        <div class="meditationLowerSetting">
-                            <label for="duration">Duration</label>
-                            <select id="duration">
-                                <option>05 minutes</option>
-                                <option>10 minutes</option>
-                                <option>15 minutes</option>
-                                <option>20 minutes</option>
-                                <option>25 minutes</option>
-                                <option>30 minutes</option>
-                                <option>35 minutes</option>
-                                <option>40 minutes</option>
-                                <option>45 minutes</option>
-                                <option>50 minutes</option>
-                                <option>55 minutes</option>
-                                <option>60 minutes</option>
-                            </select>
-                        </div>
-
-                        <div class="meditationLowerSetting">
-                            <label for="intervalBell">Interval Bells</label>
-                            <select id="intervalBell">
-                                <option selected="selected">No Bells</option>
-                                <option>01 minute</option>
-                                <option>02 minutes</option>
-                                <option>05 minutes</option>
-                                <option>10 minutes</option>
-                            </select>
-                        </div>
-
-                        <div class="meditationLowerSetting">
-                            <label for="sound">Bell Sound</label>
-                            <input type="range" min="0" max="1" step=".01" value="1" id="sound">
-                        </div>
-
-                        <div class="bottomButtons">
-                            <button type="button" id="meditationFormSubmit">Submit</button>
-                            <button type="button" id="meditationFormPause">Pause</button>
-                        </div>
-                    </form>
+                <div class="toolTitle">
+                    <h3>Meditation Timer</h3>
                 </div>
-                
-                <div id="meditationTimerContainer">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="meditationCircle">
-                        <g id="meditationTimerOutline">
-                            <circle r="35%" cx="50%" cy="50%"></circle>
-                        </g>
-                    </svg>
-                    <span id="meditationTimerDisplay">
-                        <p id="outputTime">Click submit!</p>
-                    </span>
+                <div id="meditationToolContainer">
+                    <div id="meditationSettings">
+                        <form id="meditationForm">
+                            <!-- Radio buttons for interval bell -->
+                            <fieldset id="soundType">
+                                <div class="flexColumn">
+                                    <label for="gong" class="radioImage">
+                                        <img src="./images/tools-images/gong.png">
+                                    </label>
+                                    <input type="radio" id="gong" name="sounds" value="gong" checked="checked">
+                                </div>
+
+                                <div class="flexColumn">
+                                    <label for="chime" class="radioImage">
+                                        <img src="./images/tools-images/chime.png">
+                                    </label>
+                                    <input type="radio" id="chime" name="sounds" value="chime">
+                                </div>
+
+                                <div class="flexColumn">
+                                    <label for="bell" class="radioImage">
+                                        <img src="./images/tools-images/bell.png">
+                                    </label>
+                                    <input type="radio" id="bell" name="sounds" value="bell">
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Duration dropdown menu -->
+                            <div class="meditationLowerSetting">
+                                <label for="duration">Duration</label>
+                                <select id="duration">
+                                    <option>05 minutes</option>
+                                    <option>10 minutes</option>
+                                    <option>15 minutes</option>
+                                    <option>20 minutes</option>
+                                    <option>25 minutes</option>
+                                    <option>30 minutes</option>
+                                    <option>35 minutes</option>
+                                    <option>40 minutes</option>
+                                    <option>45 minutes</option>
+                                    <option>50 minutes</option>
+                                    <option>55 minutes</option>
+                                    <option>60 minutes</option>
+                                </select>
+                            </div>
+
+                            <div class="meditationLowerSetting">
+                                <label for="intervalBell">Interval Bells</label>
+                                <select id="intervalBell">
+                                    <option selected="selected">No Bells</option>
+                                    <option>01 minute</option>
+                                    <option>02 minutes</option>
+                                    <option>05 minutes</option>
+                                    <option>10 minutes</option>
+                                </select>
+                            </div>
+
+                            <div class="meditationLowerSetting">
+                                <label for="sound">Bell Sound</label>
+                                <input type="range" min="0" max="1" step=".01" value="1" id="sound">
+                            </div>
+
+                            <div class="bottomButtons">
+                                <button type="button" id="meditationFormSubmit">Submit</button>
+                                <button type="button" id="meditationFormPause">Pause</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div id="meditationTimerContainer">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="meditationCircle">
+                            <g id="meditationTimerOutline">
+                                <circle r="35%" cx="50%" cy="50%"></circle>
+                            </g>
+                        </svg>
+                        <span id="meditationTimerDisplay">
+                            <p id="outputTime">Click submit!</p>
+                        </span>
+                    </div>
                 </div>
+            </div>
+
+            <div class="tool standardFirst" id="sceneSounds">
+                <div class="toolTitle">
+                    <h3>Scenic sounds</h3>
+                </div>
+                <form id="sceneForm">
+                    <div class="sceneOption flexColumn">
+                        <label for="forrest" class="radioImage">
+                            <img src="./images/tools-images/gong.png">
+                        </label>
+                        <input type="radio" id="forrest" name="scenes" value="forrest">
+                    </div>
+
+                    <div class="sceneOption flexColumn">
+                        <label for="forrest" class="radioImage">
+                            <img src="./images/tools-images/gong.png">
+                        </label>
+                        <input type="radio" id="forrest" name="scenes" value="forrest">
+                    </div>
+
+                    <div class="sceneOption flexColumn">
+                        <label for="forrest" class="radioImage">
+                            <img src="./images/tools-images/gong.png">
+                        </label>
+                        <input type="radio" id="forrest" name="scenes" value="forrest">
+                    </div>
+                </form>
             </div>
         </div>
     </main>
