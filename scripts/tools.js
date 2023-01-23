@@ -18,6 +18,11 @@ let bellVolumeSelector = document.getElementById('sound');
 
 let outputTime = document.getElementById('outputTime');
 
+// Create variables to hold audio files when user clicks submit button
+let gong;
+let chime;
+let bell;
+
 // Create timer interval variable
 let timerInterval;
 
@@ -70,7 +75,25 @@ function setTimer() {
     timeLeft = duration - timePassed;
 
     outputTime.innerHTML = formatTime(timeLeft);
-    }, 1000);
+
+    if ((timePassed % interval) == 0) {
+        switch (soundType) {
+            case 'gong':
+                gong.play();
+                break;
+            case 'chime':
+                chime.play();
+                break;
+            case 'bell':
+                bell.play();
+                break;
+        }
+    }
+
+    if (timeLeft === 0) {
+        stopTimer;
+        intervalOn = false;
+    }}, 1000);
 
     intervalOn = true;
 }
@@ -80,6 +103,12 @@ function stopTimer() {
     intervalOn = false;
 }
 
+/* onclick handlers
+========================================================================== */
+
+/**
+ * handles click action on submit button
+ */
 meditationFormSubmit.onclick = function() {
     // Ensure Interval is cleared at start.
     clearInterval(timerInterval);
@@ -104,11 +133,7 @@ meditationFormSubmit.onclick = function() {
     
     // Check to see if user selected no bells. If so leave value of interval as null.
     // Otherwise, get seconds of chosen interval
-    if (intervalBellSelector.value == "No Bells") {
-
-    } else {
-        interval = intervalBellSelector.value.slice(0, 3) * 60;
-    };
+    intervalBellSelector.value == "No Bells" ? interval : interval = intervalBellSelector.value.slice(0, 3) * 60;
 
     // Get volume user has selected
     volume = bellVolumeSelector.value;
@@ -116,18 +141,37 @@ meditationFormSubmit.onclick = function() {
     setTimer();
 };
 
+/**
+ * Handles click action on pause button
+ */
 meditationFormPause.onclick = function() {
+    // If the timer is running upon click stop the timer, change the inner html of the buton and output timer.
+    // Also change global intervalOn variable to be off.
     if (intervalOn && meditationFormPause.innerHTML == 'Pause') {
         stopTimer();
         outputTime.innerHTML = 'Paused';
         meditationFormPause.innerHTML = 'Continue'
         intervalOn = false;
+    // If inertval is not on and continue is showing.
+    // Start timer back up and change relevant innerhtml
     } else if (!intervalOn && meditationFormPause.innerHTML == 'Continue') {
         outputTime.innerHTML = formatTime(timeLeft);
         setTimer();
         meditationFormPause.innerHTML = 'Pause'
         intervalOn = true;
     }
+};
+
+soundTypeOptions[0].onclick = function() {
+    gong.play();
+};
+
+soundTypeOptions[1].onclick = function() {
+    chime.play();
+};
+
+soundTypeOptions[2].onclick = function() {
+    bell.play();
 };
 /* ==========================================================================
 Section comment block
