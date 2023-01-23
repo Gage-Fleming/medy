@@ -730,7 +730,7 @@ tools.html styling
 
 #meditationTimerOutline {
     stroke-width: 7px;
-    stroke: #3f3e6c;
+    stroke: #716fc1;
 }
 
 #meditationTimer svg {
@@ -790,7 +790,9 @@ tools.html styling
 /* large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
-    
+    #outputTime {
+        font-size: 2vw;
+    }
 }
 
 /* ==========================================================================
