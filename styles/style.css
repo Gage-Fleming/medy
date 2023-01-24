@@ -682,11 +682,6 @@ tools.html styling
     width: 40%;
 }
 
-#meditationCircle {
-    position: relative;
-    z-index: 1;
-}
-
 .meditationLowerSetting {
     align-items: space-between;
     display: flex;
@@ -712,6 +707,7 @@ tools.html styling
     stroke: none;
 }
 
+/* Set container to be next position for display to reference */
 #meditationTimerContainer {
     position: relative;
 }
@@ -725,7 +721,6 @@ tools.html styling
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 2;
 }
 
 #meditationTimerOutline {

@@ -138,10 +138,11 @@
                 </div><!-- #meditationToolContainer -->
             </div><!-- #meditationTimer -->
 
+            <!-- scenic sounds tool -->
             <div class="tool standardFirst" id="sceneSounds">
                 <div class="toolTitle">
                     <h3>Scenic sounds</h3>
-                </div>
+                </div><!-- .toolTitle -->
                 <form id="sceneForm">
                     <div id="sceneOptions">
                         <div class="sceneOption flexColumn">
@@ -149,46 +150,46 @@
                                 <img src="./images/tools-images/stop.png">
                             </label>
                             <input type="radio" id="noSound" name="scenes" value="noSound" checked="checked">
-                        </div>
+                        </div><!-- .sceneOption -->
 
                         <div class="sceneOption flexColumn">
                             <label for="forrest" class="radioImage">
                                 <img src="./images/tools-images/forrest.png">
                             </label>
                             <input type="radio" id="forrest" name="scenes" value="forrest">
-                        </div>
+                        </div><!-- .sceneOption -->
 
                         <div class="sceneOption flexColumn">
                             <label for="rain" class="radioImage">
                                 <img src="./images/tools-images/rain.png">
                             </label>
                             <input type="radio" id="rain" name="scenes" value="rain">
-                        </div>
+                        </div><!-- .sceneOption -->
 
                         <div class="sceneOption flexColumn">
                             <label for="river" class="radioImage">
                                 <img src="./images/tools-images/river.png">
                             </label>
                             <input type="radio" id="river" name="scenes" value="river">
-                        </div>
-                    </div>
+                        </div><!-- .sceneOption -->
+                    </div><!-- #sceneOptions -->
                     <div id="sceneSoundContainer">
                         <label for="sceneSound">Scene Sound</label>
                         <input type="range" min="0" max="1" step=".01" value="1" id="sceneSound">
-                    </div>
-                </form>
-            </div>
+                    </div><!-- #sceneSoundContainer -->
+                </form><!-- #sceneForm -->
+            </div><!-- #sceneSounds -->
         </div><!-- #toolsContainer -->
     </main>
 
     <!-- FOOTER -->
     <footer class="flexColumn standardBox">
-        <!-- Logo to link to index.html -->
+        <!-- logo to link to index.html -->
         <a href="index.html" class="standardFirst logoA">
             <img src="./images/medy-logo.png" height="424px" width="1000px" id="footerLogo">
         </a>
 
-        <!-- Nav bar to stay between large and small displays -->
+        <!-- nav bar to stay between large and small displays -->
         <nav id="footerNav" class="flexRow">
             <a href="./index.html">Home</a>
             <a href="./meditations.html">Meditations</a>
@@ -198,11 +199,11 @@
             <a href="./tools.html">Tools</a>
         </nav>
 
-        <!-- Copyright notice -->
+        <!-- copyright notice -->
         <p class="standardLast">© copyright Escapyst, implemented by Gage Fleming</p>
     </footer>
 
-    <!-- Link to JS -->
+    <!-- link to JS -->
     <script src="./scripts/tools.js"></script>
 </body>
 </html>
