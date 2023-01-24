@@ -166,7 +166,7 @@ general class selectors
     display: flex;
 }
 
-.pageIntro > *{
+.pageIntro > * {
     text-align: center;
 }
 
@@ -744,11 +744,6 @@ tools.html styling
     width: 100%;
 }
 
-#meditationToolContainer > * {
-    padding: 0px 10px;
-    width: 50%;
-}
-
 .radioImage:hover {
     cursor: pointer;
 }
@@ -762,7 +757,7 @@ tools.html styling
 }
 
 .sceneOption {
-    margin: 20px;
+    margin: 10px;
     width: 25%;
 }
 
@@ -824,6 +819,12 @@ tools.html styling
     width: 80%;
 }
 
+#toolsContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .toolTitle {
     align-items: center;
     border-bottom: solid #716fc1;
@@ -837,14 +838,55 @@ tools.html styling
 ========================================================================== */
 
 @media only screen and (max-width: 769px) {
+    #meditationTimerContainer {
+        height: 330px;
+        width: 100%
+    }
+
+    #meditationToolContainer {
+        flex-direction: column;
+    }
+
+    #meditationToolContainer > * {
+        margin: 10px 0px;
+        width: 100%;
+    }
+
+    #outputTime {
+        font-size: 5vw;
+    }
+
+    #sceneSoundContainer {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        width: 100%;
+    }
     
+    #sceneSoundContainer > * {
+        width: 50%;
+    }
 }
 
 /* large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    #meditationSettings {
+        width: 100%;
+    }
+
+    #meditationToolContainer > * {
+        padding: 0px 10px;
+        width: 100%;
+    }
+
     #outputTime {
         font-size: 2vw;
+    }
+
+    .sceneOption {
+        margin: 20px;
     }
 }
 

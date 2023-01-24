@@ -13,15 +13,15 @@
 <body class="flexColumn">
     <!-- HEADER -->
     <header class="flexRow">
-        <!-- Hamburger menu for smaller devices. Will be hidden for larger devices -->
+        <!-- hamburger menu for smaller devices. Will be hidden for larger devices -->
         <img src="./images/hamburger.png" height="128px" width="128px" id="hamburgerLogo" class="small headerImage" alt="Hamburger menu">
 
-        <!-- Logo to link to index.html -->
+        <!-- logo to link to index.html -->
         <a href="index.html">
             <img src="./images/medy-logo.png" height="424px" width="1000px" id="headerLogo" class="logoA" alt="Escapyst logo">
         </a>
 
-        <!-- Navbar to be dynamic and only shown in Desktop mode -->
+        <!-- navbar to be dynamic and only shown in Desktop mode -->
         <nav id="headerNav" class="large">
             <a href="./index.html" class="large">Home</a>
             <a href="./meditations.html" class="large">Meditations</a>
@@ -31,7 +31,7 @@
             <a href="./tools.html" class="large">Tools</a>
         </nav>
         
-        <!-- Clickable search image to bring up search engine -->
+        <!-- clickable search image to bring up search engine -->
         <img src="./images/search.png" height="512px" width="512px" id="searchLogo" class="headerImage" alt="Search button">
     </header>
 
@@ -40,41 +40,46 @@
         <div class="flexColumn standardBox pageIntro">
             <h1>Mindfulness Tools</h1>
             <h2>Below you can find basic mindfulness tools to help with your practice</h2>
-        </div>
+        </div><!-- .pageIntro -->
 
-        <div class="standardBox toolsContainer flexColumn">
-            <div class="tool standardFirst" id="meditationTimer">
+        <div id="toolsContainer">
+            <div class="tool" id="meditationTimer">
                 <div class="toolTitle">
                     <h3>Meditation Timer</h3>
-                </div>
+                </div><!-- .toolTitle -->
+
+                <!-- meditation timer tool -->
                 <div id="meditationToolContainer">
                     <div id="meditationSettings">
                         <form id="meditationForm">
-                            <!-- Radio buttons for interval bell -->
+                            <!-- radio buttons for interval bell -->
                             <fieldset id="soundType">
+                                <!-- gong -->
                                 <div class="flexColumn">
                                     <label for="gong" class="radioImage">
                                         <img src="./images/tools-images/gong.png">
-                                    </label>
+                                    </label><!-- .radioImage -->
                                     <input type="radio" id="gong" name="sounds" value="gong" checked="checked">
-                                </div>
+                                </div><!-- .flexColumn -->
 
+                                <!-- chime -->
                                 <div class="flexColumn">
                                     <label for="chime" class="radioImage">
                                         <img src="./images/tools-images/chime.png">
-                                    </label>
+                                    </label><!-- .radioImage -->
                                     <input type="radio" id="chime" name="sounds" value="chime">
-                                </div>
+                                </div><!-- .flexColumn -->
 
+                                <!-- bell -->
                                 <div class="flexColumn">
                                     <label for="bell" class="radioImage">
                                         <img src="./images/tools-images/bell.png">
-                                    </label>
+                                    </label><!-- .radioImage -->
                                     <input type="radio" id="bell" name="sounds" value="bell">
-                                </div>
-                            </fieldset>
+                                </div><!-- .flexColumn -->
+                            </fieldset><!-- #soundType -->
                             
-                            <!-- Duration dropdown menu -->
+                            <!-- duration dropdown menu -->
                             <div class="meditationLowerSetting">
                                 <label for="duration">Duration</label>
                                 <select id="duration">
@@ -93,6 +98,7 @@
                                 </select>
                             </div>
 
+                            <!-- interval bell selector -->
                             <div class="meditationLowerSetting">
                                 <label for="intervalBell">Interval Bells</label>
                                 <select id="intervalBell">
@@ -104,30 +110,33 @@
                                 </select>
                             </div>
 
+                            <!-- bell volume slider -->
                             <div class="meditationLowerSetting">
                                 <label for="sound">Bell Sound</label>
                                 <input type="range" min="0" max="1" step=".01" value="1" id="sound">
                             </div>
 
+                            <!-- submit and pause buttons -->
                             <div class="bottomButtons">
                                 <button type="button" id="meditationFormSubmit">Submit</button>
                                 <button type="button" id="meditationFormPause">Pause</button>
-                            </div>
-                        </form>
-                    </div>
+                            </div><!-- .bottomButtons -->
+                        </form><!-- #meditationForm -->
+                    </div><!-- #meditationSettings -->
                     
+                    <!-- meditation timer -->
                     <div id="meditationTimerContainer">
                         <svg xmlns="http://www.w3.org/2000/svg" id="meditationCircle">
                             <g id="meditationTimerOutline">
                                 <circle r="35%" cx="50%" cy="50%"></circle>
-                            </g>
-                        </svg>
+                            </g><!-- #meditationTimerOutline -->
+                        </svg><!-- #meditationCircle -->
                         <span id="meditationTimerDisplay">
                             <p id="outputTime">Click submit!</p>
                         </span>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- #meditationTimerContainer -->
+                </div><!-- #meditationToolContainer -->
+            </div><!-- #meditationTimer -->
 
             <div class="tool standardFirst" id="sceneSounds">
                 <div class="toolTitle">
@@ -169,7 +178,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div><!-- #toolsContainer -->
     </main>
 
     <!-- FOOTER -->
