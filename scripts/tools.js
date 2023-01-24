@@ -152,6 +152,7 @@ meditationFormSubmit.onclick = function() {
     bell.volume = bellVolumeSelector.value;
 
     setTimer();
+    intervalOn = true;
 };
 
 /**
@@ -226,18 +227,24 @@ sceneVolume.onchange = function () {
 };
 
 sceneOptions[0].onchange = function () {
-    forrest.play();
+    forrest.pause();
     rain.pause();
     river.pause();
 };
 
 sceneOptions[1].onchange = function () {
+    forrest.play();
+    rain.pause();
+    river.pause();
+};
+
+sceneOptions[2].onchange = function () {
     forrest.pause();
     rain.play();
     river.pause();
 };
 
-sceneOptions[2].onchange = function () {
+sceneOptions[3].onchange = function () {
     forrest.pause();
     rain.pause();
     river.play();
