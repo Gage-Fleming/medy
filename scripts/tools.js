@@ -3,9 +3,12 @@ tools.html Code
 ========================================================================== */
 
 /**
- * Please note some code was inspired by the below walkthrough:
+ * Please note some of the timer code was inspired by the below walkthrough:
  * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
  */
+
+/* meditation timer code
+========================================================================== */
 
 // Declare variables to store reference to submit and pause buttons on meditation form
 let meditationFormSubmit = document.getElementById('meditationFormSubmit');
@@ -24,22 +27,6 @@ let outputTime = document.getElementById('outputTime');
 let gong = new Audio('../audio/gong.wav');
 let chime = new Audio('../audio/chime.wav');
 let bell = new Audio('../audio/bell.wav');
-
-// Create variables to hold audio files for scenes. This is also set to loop.
-let forrest = new Audio({
-    loop: true,
-    src: '../audio/forrest.mp3',
-});
-
-let river = new Audio({
-    loop: true,
-    src: '../audio/river.mp3',
-});
-
-let rain = new Audio({
-    loop: true,
-    src: '../audio/rain.mp3',
-});
 
 // Create timer interval variable
 let timerInterval;
@@ -216,6 +203,44 @@ bellVolumeSelector.onchange = function() {
     gong.volume = bellVolumeSelector.value;
     chime.volume = bellVolumeSelector.value;
     bell.volume = bellVolumeSelector.value;
+};
+
+/* scene sounds code
+========================================================================== */
+
+// variables to store reference to radio buttons and slider
+let sceneVolume = document.getElementById('sceneSound');
+let sceneOptions = document.querySelectorAll('input[name="scenes"]');
+
+// Create variables to hold audio files for scenes. This is also set to loop.
+let forrest = new Audio('../audio/forrest.mp3');
+let river = new Audio('../audio/river.mp3');
+let rain = new Audio('../audio/rain.mp3');
+
+console.log(rain);
+
+sceneVolume.onchange = function () {
+    forrest.volume = sceneVolume.value;
+    rain.volume = sceneVolume.value;
+    river.volume = sceneVolume.value;
+};
+
+sceneOptions[0].onchange = function () {
+    forrest.play();
+    rain.pause();
+    river.pause();
+};
+
+sceneOptions[1].onchange = function () {
+    forrest.pause();
+    rain.play();
+    river.pause();
+};
+
+sceneOptions[2].onchange = function () {
+    forrest.pause();
+    rain.pause();
+    river.play();
 };
 
 /* ==========================================================================

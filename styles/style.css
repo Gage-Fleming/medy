@@ -778,6 +778,17 @@ tools.html styling
     width: 100%;
 }
 
+#sceneSoundContainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+#sceneSoundContainer > * {
+    width: 45%;
+}
+
 #soundType {
     align-items: center;
     border: none;
