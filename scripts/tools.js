@@ -7,11 +7,11 @@ tools.html Code
  * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
  */
 
-// Declare variable to store reference to submit and pause buttons on form
+// Declare variables to store reference to submit and pause buttons on meditation form
 let meditationFormSubmit = document.getElementById('meditationFormSubmit');
 let meditationFormPause = document.getElementById('meditationFormPause');
 
-// Declare variable to store references to options on timer form 
+// Declare variables to store references to options on timer meditation form
 let soundTypeOptions = document.querySelectorAll('input[name="sounds"]');
 let durationSelector = document.getElementById('duration');
 let intervalBellSelector = document.getElementById('intervalBell');
@@ -20,10 +20,26 @@ let bellVolumeSelector = document.getElementById('sound');
 // Create reference to p tag to store updated time
 let outputTime = document.getElementById('outputTime');
 
-// Create variables to hold audio files when user clicks submit button
+// Create variables to hold audio files for bells
 let gong = new Audio('../audio/gong.wav');
 let chime = new Audio('../audio/chime.wav');
 let bell = new Audio('../audio/bell.wav');
+
+// Create variables to hold audio files for scenes. This is also set to loop.
+let forrest = new Audio({
+    loop: true,
+    src: '../audio/forrest.mp3',
+});
+
+let river = new Audio({
+    loop: true,
+    src: '../audio/river.mp3',
+});
+
+let rain = new Audio({
+    loop: true,
+    src: '../audio/rain.mp3',
+});
 
 // Create timer interval variable
 let timerInterval;
