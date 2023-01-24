@@ -755,7 +755,25 @@ tools.html styling
 
 #sceneForm {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
+    width: 100%;
+}
+
+.sceneOption {
+    margin: 20px;
+    width: 25%;
+}
+
+.sceneOption img {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#sceneOptions {
+    align-items: center;
+    display: flex;
     justify-content: space-between;
     width: 100%;
 }
