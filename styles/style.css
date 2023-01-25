@@ -423,6 +423,87 @@ index.html styling
 }
 
 /* ==========================================================================
+posts.html styling
+========================================================================== */
+/**
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
+
+#popularPostsList li {
+    color: #716fc1;
+    margin: 20px 0px;
+}
+
+#popularPostsList li a{
+    text-decoration: none;
+    color: #716fc1;
+}
+
+#popularPostsList li a:hover{
+    text-decoration: underline;
+    color: #716fc1;
+}
+
+#postIntroFirst h1 {
+    border-bottom: solid 1px #716fc1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#postIntroLast h2 {
+    border-bottom: solid 1px #716fc1;
+    margin-bottom: 20px;
+}
+
+/* small device media query
+========================================================================== */
+@media only screen and (max-width: 769px) {
+    .photoLink img {
+        width: 100%;
+    }
+
+    #popularPostsList {
+        width: 87%;
+    }
+
+    #popularPostsList li a, #popularPostsList li{
+        font-size: 4vw;
+    }
+
+    #postsIntro {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #postsIntro > * {
+        width: 90%;
+    }
+
+    #postIntroFirst h1 {
+        text-align: center;
+    }
+
+    #postIntroLast {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #postIntroLast h2 {
+        text-align: center;
+    }
+}
+
+/* large device media query
+========================================================================== */
+@media only screen and (min-width: 770px) {
+    
+}
+
+/* ==========================================================================
 thich-nhat-hanh.html styling
 ========================================================================== */
 
@@ -507,7 +588,6 @@ thich-nhat-hanh.html styling
 
 /* small device media query
 ========================================================================== */
-
 @media only screen and (max-width: 769px) {
     .divider {
         align-items: center;
