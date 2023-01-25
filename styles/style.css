@@ -200,6 +200,10 @@ general class selectors
         text-align: center;
     }
 
+    .standardArticle h3 {
+        text-align: center;
+    }
+
     .standardBox {
         padding: 20px 20px;
     }
