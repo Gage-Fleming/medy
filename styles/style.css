@@ -29,6 +29,7 @@ element selectors
 * of web page. 
 */
 
+/* Remove some basic browser styles to stop potential clashes */
 * {
     box-sizing: border-box;
     font-family: Poppins, Helvetica, sans-serif;
