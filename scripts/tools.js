@@ -3,7 +3,7 @@ tools.html Code
 ========================================================================== */
 
 /**
- * Please note some of the timer code was inspired by the below walkthrough:
+ * Please note some of the timer code was inspired by the below walk through:
  * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
  */
 
@@ -35,11 +35,11 @@ let timerInterval;
 let intervalOn = false;
 
 // Create variables to store the time that has passed since the select button has been clicked.
-// And a variable to store the timeleft when subtracting timePassed from timeLeft
+// And a variable to store the time left when subtracting timePassed from timeLeft
 let timePassed;
 let timeLeft;
 
-// Decalre variables that will hold the value of the elements in the user form
+// Declare variables that will hold the value of the elements in the user form
 // Any time variable is to be stored in seconds
 let soundType;
 let duration;
@@ -161,15 +161,15 @@ meditationFormSubmit.onclick = function() {
  * Handles click action on pause button
  */
 meditationFormPause.onclick = function() {
-    // If the timer is running upon click stop the timer, change the inner html of the buton and output timer.
+    // If the timer is running upon click stop the timer, change the inner html of the button and output timer.
     // Also change global intervalOn variable to be off.
     if (intervalOn && meditationFormPause.innerHTML == 'Pause') {
         stopTimer();
         outputTime.innerHTML = 'Paused';
         meditationFormPause.innerHTML = 'Continue'
         intervalOn = false;
-    // If inertval is not on and continue is showing.
-    // Start timer back up and change relevant innerhtml
+    // If interval is not on and continue is showing.
+    // Start timer back up and change relevant inner html
     } else if (!intervalOn && meditationFormPause.innerHTML == 'Continue') {
         outputTime.innerHTML = formatTime(timeLeft);
         setTimer();
@@ -239,7 +239,7 @@ sceneOptions[0].onchange = function () {
 };
 
 /**
- * Plays the forest sound and pauses the others if this rdio button is clicked
+ * Plays the forest sound and pauses the others if this radio button is clicked
  */
 sceneOptions[1].onchange = function () {
     forest.play();
@@ -248,7 +248,7 @@ sceneOptions[1].onchange = function () {
 };
 
 /**
- * Plays the rain sound and pauses the others if this rdio button is clicked
+ * Plays the rain sound and pauses the others if this radio button is clicked
  */
 sceneOptions[2].onchange = function () {
     forest.pause();
@@ -257,7 +257,7 @@ sceneOptions[2].onchange = function () {
 };
 
 /**
- * Plays the river sound and pauses the others if this rdio button is clicked
+ * Plays the river sound and pauses the others if this radio button is clicked
  */
 sceneOptions[3].onchange = function () {
     forest.pause();

@@ -10,7 +10,7 @@
  * games.html styling
  * movies.html styling
  * tv.html styling
- * uncder-construction.html styling
+ * under-construction.html styling
  */
 
 /* ==========================================================================
@@ -590,7 +590,7 @@ thich-nhat-hanh.html styling
 }
 
 /* Update opacity to divider elements when show class is applied */
-.show .divider .verticalLine, .show .divider .horizontallLine, .show .divider .verticalLine .circle {
+.show .divider .verticalLine, .show .divider .horizontalLine, .show .divider .verticalLine .circle {
     opacity: 1;
 }
 
@@ -618,7 +618,7 @@ thich-nhat-hanh.html styling
     font-weight: 200;
 }
 
-/* Ensure body correctl fit screen with z-index image */
+/* Ensure body correctly fits screen with z-index image */
 #timelineBody {
     display: flex;
     flex-direction: column;
@@ -663,7 +663,7 @@ thich-nhat-hanh.html styling
         width: 100%;
     }
 
-    /* Create horzontal line style to create seperation between year and yearInfo */
+    /* Create horizontal line style to create separation between year and yearInfo */
     .horizontalLine {
         align-items: center;
         background-color: #FFF;
@@ -768,7 +768,7 @@ thich-nhat-hanh.html styling
         margin: 20px;
     }
 
-    /* Create vertical line to create seperation between year and yearInfo*/
+    /* Create vertical line to create separation between year and yearInfo*/
     .verticalLine {
         align-items: center;
         background-color: #FFF;
