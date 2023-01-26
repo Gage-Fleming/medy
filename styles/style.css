@@ -41,6 +41,11 @@ a {
     text-decoration: none;
 }
 
+/* Give images a cover property to ensure they fill their parent containers properly */
+img {
+    object-fit: cover;
+}
+
 /* Ensure footer and header have similar color styling */
 footer, header {
     background-color: #716fc1;
@@ -148,7 +153,7 @@ general class selectors
     justify-content: space-between;
 }
 
-/* Give the header logo a hard coded height to help with sizing */
+/* Give any header images a hard coded height to help with sizing */
 .headerImage {
     height: 30px;
     width: 30px;
@@ -325,6 +330,7 @@ general id selectors
 * of web page. 
 */
 
+/* Ensure footer logo has a height of 120px to help with sizing */
 #footerLogo {
     height: 120px;
     width: auto;
@@ -334,24 +340,22 @@ general id selectors
     width: 100%;
 }
 
+/* Ensure footer logo has a height of 60px to help with sizing */
 #headerLogo {
     height: 60px;
     width: auto;
 }
 
-img {
-    object-fit: cover;
-}
-
-/* small device media query
+/* general id | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
     
 }
 
-/* large device media query
+/* general id | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* When the header nav is visible ensure it fills it's space correctly */
     #headerNav {
         align-items: center;
         display: flex;
