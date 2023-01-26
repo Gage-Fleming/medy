@@ -61,7 +61,7 @@ function formatTime(time) {
     // Retrieve the largest round number when dividing the input time in seconds to get the current minute
     let minutes = String(Math.floor(time / 60));
 
-    // Reteieve the seconds left by getting the remainder of modulo 60
+    // Retrieve the seconds left by getting the remainder of modulo 60
     let seconds = String(time % 60);
 
     // If seconds is less than 10 add a leading zero for formatting
@@ -99,12 +99,13 @@ function setTimer() {
         }
     }
 
+    intervalOn = true;
+
+    // Check if timeLeft is less than or equal to 0. If so stop this current interval.
     if (timeLeft <= 0) {
         stopTimer();
         intervalOn = false;
     }}, 1000);
-
-    intervalOn = true;
 }
 
 /**
@@ -119,7 +120,8 @@ function stopTimer() {
 ========================================================================== */
 
 /**
- * handles click action on submit button
+ * Handles click action on submit button. Initializes global variables to form input.
+ * Then sets the timer
  */
 meditationFormSubmit.onclick = function() {
     // Ensure Interval is cleared at start.
@@ -214,68 +216,51 @@ let sceneVolume = document.getElementById('sceneSound');
 let sceneOptions = document.querySelectorAll('input[name="scenes"]');
 
 // Create variables to hold audio files for scenes. This is also set to loop.
-let forrest = new Audio('../audio/forrest.mp3');
+let forest = new Audio('../audio/forest.mp3');
 let river = new Audio('../audio/river.mp3');
 let rain = new Audio('../audio/rain.mp3');
 
-console.log(rain);
-
+/**
+ * Updates the volume of the three sounds if the scene volume slider is adjusted.
+ */
 sceneVolume.onchange = function () {
-    forrest.volume = sceneVolume.value;
+    forest.volume = sceneVolume.value;
     rain.volume = sceneVolume.value;
     river.volume = sceneVolume.value;
 };
 
+/**
+ * Pauses all scene sounds if the no sound button is clicked
+ */
 sceneOptions[0].onchange = function () {
-    forrest.pause();
+    forest.pause();
     rain.pause();
     river.pause();
 };
 
+/**
+ * Plays the forest sound and pauses the others if this rdio button is clicked
+ */
 sceneOptions[1].onchange = function () {
-    forrest.play();
+    forest.play();
     rain.pause();
     river.pause();
 };
 
+/**
+ * Plays the rain sound and pauses the others if this rdio button is clicked
+ */
 sceneOptions[2].onchange = function () {
-    forrest.pause();
+    forest.pause();
     rain.play();
     river.pause();
 };
 
+/**
+ * Plays the river sound and pauses the others if this rdio button is clicked
+ */
 sceneOptions[3].onchange = function () {
-    forrest.pause();
+    forest.pause();
     rain.pause();
     river.play();
 };
-
-/* ==========================================================================
-Section comment block
-========================================================================== */
-
-/* Sub-section comment block
-========================================================================== */
-
-/**
- * Short description using Doxygen-style comment format
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * TODO: This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-
-/* Basic comment */
-
-/* ==========================================================================
-CSS sorting information
-========================================================================== */
