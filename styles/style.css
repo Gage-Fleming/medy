@@ -41,6 +41,7 @@ a {
     text-decoration: none;
 }
 
+/* Ensure footer and header have similar color styling */
 footer, header {
     background-color: #716fc1;
     color: #fff;
@@ -54,6 +55,7 @@ header {
     padding: 10px 20px;
 }
 
+/* Set color and size for hr used in footer */
 hr {
     color: #0d0d17;
     margin: 0px;
@@ -64,15 +66,17 @@ nav a {
     color: #fff;
 }
 
+/* Change nav links to a darker purple upon hover */
 nav a:hover {
     color: #0d0d17;
 }
 
+/* Ensure mouse changes to pointer when hovering over form elements */
 input:hover, select:hover, button:hover {
     cursor: pointer;
 }
 
-/* small device media query
+/* element selectors | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
     * {
@@ -97,7 +101,7 @@ input:hover, select:hover, button:hover {
     }
 }
 
-/* large device media query
+/* element selectors | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
     * {
@@ -130,6 +134,7 @@ general class selectors
 * of web page. 
 */
 
+/* Create flexColumn and flexRow classes to allow for easy flex application to basic elements */
 .flexColumn {
     align-items: center;
     display: flex;
@@ -143,22 +148,16 @@ general class selectors
     justify-content: space-between;
 }
 
+/* Give the header logo a hard coded height to help with sizing */
 .headerImage {
     height: 30px;
     width: 30px;
 }
 
+/* If an image has an anchor tag around it, ensure it is a flex item and give it a bottom margin of 10px */
 .imageA {
     display: flex;
     margin-bottom: 10px;
-}
-
-.imageA img {
-    opacity: .5;
-}
-
-.imageA img:hover {
-    opacity: 1;
 }
 
 .darkPurpleBackground {
@@ -177,6 +176,7 @@ general class selectors
     opacity: .5;
 }
 
+/* Styling for standard articles. */
 .standardArticle {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
@@ -185,6 +185,7 @@ general class selectors
     box-shadow: 5px 5px 5px #716fc1;
 }
 
+/* Ensure color is black for most elements in standard article containers */
 .standardArticle > div {
     color: black;
 }
@@ -197,16 +198,19 @@ general class selectors
     color: #000;
 }
 
+/* Help the user identify that the header is a link when hovering */
 .standardArticle h3:hover {
     color: #716fc1;
 }
 
+/* Ensure the standard article image behaves */
 .standardArticle img {
     border-radius: 20px;
     height: auto;
     width: 100%;
 }
 
+/* To go in standard boxes to help format the margin on the top and bottom elements */
 .standardFirst {
     margin-top: 0px;
 }
@@ -237,13 +241,17 @@ general class selectors
         margin: 10px 0px;
     }
 
+    /* Ensure the article information has space between it and the header */
     .standardArticle p:first-of-type {
         margin-top: 10px;
         text-align: center;
     }
 
+    /* Give h3 a constant color of purple with an underline to help show it is a link */
     .standardArticle h3 {
+        color: #716fc1;
         text-align: center;
+        text-decoration: underline;
     }
 
     .standardBox {
@@ -258,6 +266,15 @@ general class selectors
 /* large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* On desktop screen show clickable images with a low opacity, then increase it when hovering over image */
+    .imageA img {
+        opacity: .5;
+    }
+    
+    .imageA img:hover {
+        opacity: 1;
+    }
+
    /* Ensure any items with class small are not displayed */
    .small {
         display: none;
@@ -269,6 +286,7 @@ general class selectors
         width: 75%;
     }
 
+    /* When a mouse goes over an article increase it's size to help focus on the article */
     .standardArticle:hover {
         transform: scale(1.02);
         transition: transform 250ms;
@@ -446,7 +464,6 @@ index.html styling
         opacity: .5;
     }
 
-    /* TODO How to make hover nice when leaving object? */
     .rotateLinks img:hover {
         box-shadow: 0px 15px 15px #706fc158;
         opacity: 1;
