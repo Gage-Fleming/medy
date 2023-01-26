@@ -610,7 +610,7 @@ thich-nhat-hanh.html styling
  * of web page. 
  */
 
- /* Create circle shape to add visual dissonance to divider div */
+ /* Create circle shape to add visual dissonance to divider div ALso provide animations to help it slide into the screen */
 .circle {
     background-color: #FFF;
     border-radius: 50%;
@@ -626,11 +626,16 @@ thich-nhat-hanh.html styling
     opacity: 1;
 }
 
+/* When the yearInfo is show ensure it goes to it's base position */
 .show .yearInfo {
     opacity: 1;
     transform: translateX(0px);
 }
 
+/* 
+* Ensure timeline container shows the child elements correctly. 
+* Also give it a faint background color to help provide contrast for writing over background image 
+*/
 .timeline {
     align-items: center;
     background-color: #706fc17b;
@@ -666,16 +671,19 @@ thich-nhat-hanh.html styling
     z-index: -1;
 }
 
+/* Style foundation link to help show it is clickable */
 #tnhFoundation {
     color: #c0c16f;
     text-decoration: underline;
 }
 
+/* Change background color to help provide contrast for writing in these containers */
 #timelineHeader, #timelineFooter, #timelineIntro {
     background-color: #706fc17b;
     color: #FFF;
 }
 
+/* Give the year h3 a transition animation speed for it's font-size */
 .year h3 {
     transition: font-size 1s;
 }
@@ -687,6 +695,7 @@ thich-nhat-hanh.html styling
 /* small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    /* For smaller devices make the divider height oriented as opposed to width oriented */
     .divider {
         align-items: center;
         display: flex;
@@ -695,7 +704,10 @@ thich-nhat-hanh.html styling
         width: 100%;
     }
 
-    /* Create horizontal line style to create separation between year and yearInfo */
+    /* 
+    * Create horizontal line style to create separation between year and yearInfo 
+    * Also give it some animation to help it appear fluidly 
+    */
     .horizontalLine {
         align-items: center;
         background-color: #FFF;
@@ -709,6 +721,7 @@ thich-nhat-hanh.html styling
         z-index: 0;
     }
 
+    /* Use show class to help style elements as they appear on the screen */ 
     .show .divider .verticalLine .circle {
         height: 20px;
         width: 20px;
@@ -764,6 +777,7 @@ thich-nhat-hanh.html styling
 /* large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* For larger screens use divider to separate on a width basis */
     .divider {
         align-items: center;
         display: flex;
@@ -772,6 +786,7 @@ thich-nhat-hanh.html styling
         width: 20%;
     }
 
+    /* Use show class to help animate and hide timeline elements s they come into the screen */
     .show .divider .verticalLine .circle {
         height: 35px;
         width: 35px;
@@ -800,7 +815,7 @@ thich-nhat-hanh.html styling
         margin: 20px;
     }
 
-    /* Create vertical line to create separation between year and yearInfo*/
+    /* Create vertical line to create separation between year and yearInfo */
     .verticalLine {
         align-items: center;
         background-color: #FFF;
@@ -835,7 +850,7 @@ thich-nhat-hanh.html styling
     }
 }
 
-/* Put at end to ensure it is applied to elements */
+/* Put at end to ensure show class is applied to elements This class appears when intersection observer shows the element as on the screen*/
 .show {
     visibility: visible;
 }
