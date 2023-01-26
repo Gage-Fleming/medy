@@ -372,10 +372,11 @@ index.html styling
 * of web page. 
 */
 
-.mediumIntro {
-    padding: 20px 100px;
+#elevatorPitch p {
+    text-align: center;
 }
 
+/* Create page banner container that will hold introductory background image */
 #pageBanner {
     background-image: url(".././images/page-banner.jpg");
     background-size: cover;
@@ -384,6 +385,7 @@ index.html styling
     width: 100%;
 }
 
+/* Styles the text blurb in page banner. */
 #pageBannerText {
     background-color: #706fc1bd;
     border-radius: 75px;
@@ -395,33 +397,34 @@ index.html styling
     color: #fff;
 }
 
+/* curve the rotate slides image borders and ensure no margin is applied */
 .rotateLinks img{
     border-radius: 20px;
     margin: 0px;
 }
 
+/* Help the slides take up all their space and maintain a automatic height */
 .slides {
     width: 100%;
     height: auto;
 }
 
-#elevatorPitch p {
-    text-align: center;
-}
-
-/* small device media query
+/* index.html | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    /* For smaller screen help ensure the page banner takes up a good amount of space and the text bubble fits well */
     #pageBanner {
-        height: 250px;
+        height: 400px;
         align-items: flex-end;
         padding: 10px 20px;
     }
 
+    /* Ensure text bubble takes up all it's given width */
     #pageBannerText {
         width: 100%;
     }
 
+    /* On smaller devices let the spotlight images overflow for the user to scroll horizontally */
     .rotateLinks {
         overflow-x: scroll;
         white-space: nowrap;
@@ -431,15 +434,17 @@ index.html styling
         margin: 0px 10px;
     }
 
+    /* Make the spotlight links half the screen size */
     .rotateLinks img {
         width: 50%;
         height: auto;
     }
 }
 
-/* large device media query
+/* index.html | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* For larger screen help ensure the page banner takes up a good amount of space and the text bubble fits well */
     #pageBanner {
         align-items: flex-end;
         height: 500px;
@@ -447,6 +452,7 @@ index.html styling
         padding: 20px 100px;
     }
 
+    /* Give the text bubble an offset size for a unique banner look */
     #pageBannerText {
         width: 65%;
     }
@@ -462,12 +468,17 @@ index.html styling
         margin: 0px 10px;
     }
 
+    /* 
+    * For the spotlight links make them see through when not hovering over them. 
+    * Also ensure they take up their parent container
+    */
     .rotateLinks img {
         max-height: 100%;
         max-width: 100%;
         opacity: .5;
     }
 
+    /* When the user hovers over the spotlight links translate them up and make them fully opaque. Adding some interactivity */
     .rotateLinks img:hover {
         box-shadow: 0px 15px 15px #706fc158;
         opacity: 1;
