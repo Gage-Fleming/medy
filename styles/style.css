@@ -1006,6 +1006,26 @@ tools.html styling
 }
 
 /* ==========================================================================
+under-construction.html styling
+========================================================================== */
+#constructionContainer {
+    width: 100%;
+}
+#constructionImage {
+    border-radius: 100px;
+    width: 100%;
+}
+
+#linkHome {
+    color: #c0c16f;
+}
+
+#linkHome:hover {
+    color: #716fc1;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
 Section comment block
 ========================================================================== */
 
