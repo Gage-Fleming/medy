@@ -379,7 +379,6 @@ index.html styling
 .rotateLinks img{
     border-radius: 20px;
     margin: 0px;
-    opacity: .5;
 }
 
 @media only screen and (max-width: 769px) {
@@ -413,6 +412,7 @@ index.html styling
     .rotateLinks img {
         max-height: 100%;
         max-width: 100%;
+        opacity: .5;
     }
 
     /* TODO How to make hover nice when leaving object? */
@@ -422,6 +422,11 @@ index.html styling
         transform: translateY(-10px);
         transition: transform 250ms;
     }
+}
+
+.slides {
+    width: 100%;
+    height: auto;
 }
 
 #elevatorPitch p {
@@ -492,7 +497,7 @@ posts.html styling
     background-size: cover;
 }
 
-#postsMain {
+#postsMain, #toolsMain {
     background-color: rgba(255, 255, 255, 0.783);
 }
 
@@ -932,6 +937,14 @@ tools.html styling
     margin: 20px 0px;
     padding: 20px;
     width: 80%;
+}
+
+#toolsBody {
+    background-attachment: fixed;
+    background-image: url('../images/tools-images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #toolsContainer {
