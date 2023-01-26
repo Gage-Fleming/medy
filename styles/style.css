@@ -346,6 +346,29 @@ general id selectors
     width: auto;
 }
 
+/* Make the background color slightly see through to help sure background image on these pages */
+#postsMain, #toolsMain {
+    background-color: rgba(255, 255, 255, 0.783);
+}
+
+/* Set the body elements to have a background image that is centered */
+#postsBody, #toolsBody {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Set posts body background image */
+#postsBody {
+    background-image: url('../images/posts-images/background.jpg');
+}
+
+/* Set tools body background image */
+#toolsBody {
+    background-image: url('../images/tools-images/background.jpg');
+}
+
 /* general id | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
@@ -501,6 +524,7 @@ posts.html styling
     align-items: center;
 }
 
+/* Make the intro photo link round */
 .photoLink img {
     border-radius: 500px;
     width: 100%;
@@ -511,48 +535,23 @@ posts.html styling
     margin: 20px 0px;
 }
 
-#popularPostsList li a{
+#popularPostsList li {
     text-decoration: none;
     color: #716fc1;
 }
 
-#popularPostsList li a:hover{
+/* When the user hovers over a popular post link a underline should appear and it's color should change to help indicate it's a link */
+#popularPostsList li:hover, #popularPostsList li a:hover{
     text-decoration: underline;
-    color: #716fc1;
+    color: #0d0d17;
 }
 
-#postIntroFirst h1 {
-    border-bottom: solid 1px #716fc1;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#postIntroLast h2 {
-    border-bottom: solid 1px #716fc1;
-    margin-bottom: 20px;
-}
-
+/* Help visualize the separation between the headings and the content */
 #postIntroFirst h1, #postIntroLast h2 {
+    border-bottom: solid 1px #716fc1;
+    margin-bottom: 20px;
     text-align: center;
     width: 100%;
-}
-
-#postIntroLast {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-#postsBody {
-    background-attachment: fixed;
-    background-image: url('../images/posts-images/background.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-#postsMain, #toolsMain {
-    background-color: rgba(255, 255, 255, 0.783);
 }
 
 /* small device media query
@@ -593,6 +592,7 @@ posts.html styling
         width: 100%;
     }
 
+    /* Ensure the intro div's have a 60 40 split in width for visual spacing */
     #postIntroFirst {
         width: 60%;
     }
@@ -989,14 +989,6 @@ tools.html styling
     margin: 20px 0px;
     padding: 20px;
     width: 80%;
-}
-
-#toolsBody {
-    background-attachment: fixed;
-    background-image: url('../images/tools-images/background.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 #toolsContainer {
