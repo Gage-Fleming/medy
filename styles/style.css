@@ -10,6 +10,7 @@
  * games.html styling
  * movies.html styling
  * tv.html styling
+ * uncder-construction.html styling
  */
 
 /* ==========================================================================
@@ -23,6 +24,10 @@ font declarations
 /* ==========================================================================
 element selectors
 ========================================================================== */
+/**
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
 
 * {
     box-sizing: border-box;
@@ -119,6 +124,10 @@ input:hover, select:hover, button:hover {
 /* ==========================================================================
 general class selectors
 ========================================================================== */
+/**
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
 
 .flexColumn {
     align-items: center;
@@ -292,6 +301,10 @@ general class selectors
 /* ==========================================================================
 general id selectors
 ========================================================================== */
+/**
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
 
 #footerLogo {
     height: 120px;
@@ -307,6 +320,18 @@ general id selectors
     width: auto;
 }
 
+img {
+    object-fit: cover;
+}
+
+/* small device media query
+========================================================================== */
+@media only screen and (max-width: 769px) {
+    
+}
+
+/* large device media query
+========================================================================== */
 @media only screen and (min-width: 770px) {
     #headerNav {
         align-items: center;
@@ -316,13 +341,13 @@ general id selectors
     }
 }
 
-img {
-    object-fit: cover;
-}
-
 /* ==========================================================================
 index.html styling
 ========================================================================== */
+/**
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
 
 .mediumIntro {
     padding: 20px 100px;
@@ -347,6 +372,22 @@ index.html styling
     color: #fff;
 }
 
+.rotateLinks img{
+    border-radius: 20px;
+    margin: 0px;
+}
+
+.slides {
+    width: 100%;
+    height: auto;
+}
+
+#elevatorPitch p {
+    text-align: center;
+}
+
+/* small device media query
+========================================================================== */
 @media only screen and (max-width: 769px) {
     #pageBanner {
         height: 250px;
@@ -357,27 +398,7 @@ index.html styling
     #pageBannerText {
         width: 100%;
     }
-}
 
-@media only screen and (min-width: 770px) {
-    #pageBanner {
-        align-items: flex-end;
-        height: 500px;
-        justify-content: flex-start;
-        padding: 20px 100px;
-    }
-
-    #pageBannerText {
-        width: 65%;
-    }
-}
-
-.rotateLinks img{
-    border-radius: 20px;
-    margin: 0px;
-}
-
-@media only screen and (max-width: 769px) {
     .rotateLinks {
         overflow-x: scroll;
         white-space: nowrap;
@@ -393,7 +414,20 @@ index.html styling
     }
 }
 
+/* large device media query
+========================================================================== */
 @media only screen and (min-width: 770px) {
+    #pageBanner {
+        align-items: flex-end;
+        height: 500px;
+        justify-content: flex-start;
+        padding: 20px 100px;
+    }
+
+    #pageBannerText {
+        width: 65%;
+    }
+
     .rotateLinks {
         display: flex;
         justify-content: space-between;
@@ -418,15 +452,6 @@ index.html styling
         transform: translateY(-10px);
         transition: transform 250ms;
     }
-}
-
-.slides {
-    width: 100%;
-    height: auto;
-}
-
-#elevatorPitch p {
-    text-align: center;
 }
 
 /* ==========================================================================
@@ -547,7 +572,6 @@ posts.html styling
 /* ==========================================================================
 thich-nhat-hanh.html styling
 ========================================================================== */
-
 /**
  * Section is sorted alphabetically, with two media queries at the end to handle responsive design
  * of web page. 
@@ -786,7 +810,6 @@ thich-nhat-hanh.html styling
 /* ==========================================================================
 tools.html styling
 ========================================================================== */
-
 /**
 * Section is sorted alphabetically, with two media queries at the end to handle responsive design
 * of web page. 
@@ -1017,6 +1040,11 @@ tools.html styling
 /* ==========================================================================
 under-construction.html styling
 ========================================================================== */
+/**
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
+
 #constructionContainer {
     width: 100%;
 }
