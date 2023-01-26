@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escapyst</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="./scripts/script.js"></script>
+</head>
+
+<body class="flexColumn">
+    <!-- HEADER -->
+    <header class="flexRow">
+        <!-- Hamburger menu for smaller devices. Will be hidden for larger devices -->
+        <img src="./images/hamburger.png" height="128px" width="128px" id="hamburgerLogo" class="small headerImage" alt="Hamburger menu">
+
+        <!-- Logo to link to index.html -->
+        <a href="index.html">
+            <img src="./images/medy-logo.png" height="424px" width="1000px" id="headerLogo" class="logoA" alt="Escapyst logo">
+        </a>
+
+        <!-- Navbar to be dynamic and only shown in Desktop mode -->
+        <nav id="headerNav" class="large">
+            <a href="./index.html" class="large">Home</a>
+            <a href="./meditations.html" class="large">Meditations</a>
+            <a href="./posts.html" class="large">Posts</a>
+            <a href="./report.html" class="large">Report</a>
+            <a href="./thich-nhat-hanh.html" class="large">T.N.H</a>
+            <a href="./tools.html" class="large">Tools</a>
+        </nav>
+        
+        <!-- Clickable search image to bring up search engine -->
+        <img src="./images/search.png" height="512px" width="512px" id="searchLogo" class="headerImage" alt="Search button">
+    </header>
+
+    <main>
+        <div class="standardBox">
+            <img class="standardFirst" src="./images/under-construction-images/builders.jpg" width="1000px">
+            <h1>Under Construction</h1>
+            <p>This part of medy.com is under construction. Take a deep breathe and find your way <a href="./index.html">home</a></p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="flexColumn standardBox">
+        <!-- Logo to link to index.html -->
+        <a href="index.html" class="standardFirst logoA">
+            <img src="./images/medy-logo.png" height="424px" width="1000px" id="footerLogo">
+        </a>
+
+        <!-- Nav bar to stay between large and small displays -->
+        <nav id="footerNav" class="flexRow">
+            <a href="./index.html">Home</a>
+            <a href="./meditations.html">Meditations</a>
+            <a href="./posts.html">Posts</a>
+            <a href="./report.html">Report</a>
+            <a href="./thich-nhat-hanh.html">T.N.H</a>
+            <a href="./tools.html">Tools</a>
+        </nav>
+
+        <!-- Copyright notice -->
+        <p class="standardLast">© copyright Escapyst, implemented by Gage Fleming</p>
+    </footer>
+
+    <!-- Link to JS -->
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
