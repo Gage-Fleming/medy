@@ -20,7 +20,6 @@ font declarations
 ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 
-
 /* ==========================================================================
 element selectors
 ========================================================================== */
@@ -168,6 +167,46 @@ general class selectors
     opacity: .5;
 }
 
+.standardArticle {
+    background-color: #e2e2ef;
+    border: 1px solid #716fc1;
+    margin: 40px 0px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #716fc1;
+}
+
+.standardArticle > div {
+    color: black;
+}
+
+.standardArticle > div > p:nth-last-of-type(-n+2) {
+    font-style: italic;
+}
+
+.standardArticle h3 {
+    color: #000;
+}
+
+.standardArticle h3:hover {
+    color: #716fc1;
+}
+
+.standardArticle img {
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+}
+
+.standardFirst {
+    margin-top: 0px;
+}
+
+.standardLast {
+    margin-bottom: 0px;
+}
+
+/* small device media query
+========================================================================== */
 @media only screen and (max-width: 769px) {
     /* Ensure any items with class large are not displayed */
     .large {
@@ -206,9 +245,11 @@ general class selectors
     }
 }
 
+/* large device media query
+========================================================================== */
 @media only screen and (min-width: 770px) {
-    /* Ensure any items with class small are not displayed */
-    .small {
+   /* Ensure any items with class small are not displayed */
+   .small {
         display: none;
     }
 
@@ -246,44 +287,6 @@ general class selectors
     .standardBox > * {
         margin: 10px 0px;
     }
-}
-
-.standardArticle {
-    background-color: #e2e2ef;
-    border: 1px solid #716fc1;
-    margin: 40px 0px;
-    padding: 20px;
-    box-shadow: 5px 5px 5px #716fc1;
-}
-
-.standardArticle > div {
-    color: black;
-}
-
-.standardArticle > div > p:nth-last-of-type(-n+2) {
-    font-style: italic;
-}
-
-.standardArticle h3 {
-    color: #000;
-}
-
-.standardArticle h3:hover {
-    color: #716fc1;
-}
-
-.standardArticle img {
-    border-radius: 20px;
-    height: auto;
-    width: 100%;
-}
-
-.standardFirst {
-    margin-top: 0px;
-}
-
-.standardLast {
-    margin-bottom: 0px;
 }
 
 /* ==========================================================================
