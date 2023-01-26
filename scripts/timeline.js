@@ -2,7 +2,7 @@
 thich-nhat-hanh.html JS
 ========================================================================== */
 /**
- * Please note the intersection obsever code was inspired by the below video.
+ * Please note the intersection observer code was inspired by the below video.
  * https://www.youtube.com/watch?v=2IbRtjez6ag
  */
 
@@ -40,7 +40,7 @@ timelineArticles.forEach(timelineArticle => {
 
 /**
  * Checks if global array timelineArticles has any elements
- * with the class show. If so it changes to the correct baxkground image
+ * with the class show. If so it changes to the correct background image
  */
 function checkShow() {
     for (let i = 0; i < timelineArticles.length; i++) {
@@ -52,7 +52,7 @@ function checkShow() {
                     break;
                 case 1:
                     timelineImage.src="../images/thich-nhat-hanh-images/1962.jpg";
-                    timelineImage.alt="Thich Nhat Hanh in the midts of teaching a class full of children";
+                    timelineImage.alt="Thich Nhat Hanh in the middle of teaching a class full of children";
                     break;
                 case 2:
                     timelineImage.src="../images/thich-nhat-hanh-images/1966.jpg";
@@ -64,7 +64,7 @@ function checkShow() {
                     break;
                 case 4:
                     timelineImage.src="../images/thich-nhat-hanh-images/1982.jpg";
-                    timelineImage.alt="A forest pathway with monks in the midts of a communcal meditation";
+                    timelineImage.alt="A forest pathway with monks in the middles of a communal meditation";
                     break;
                 case 5:
                     timelineImage.src="../images/thich-nhat-hanh-images/2014.jpg";
