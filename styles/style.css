@@ -351,6 +351,14 @@ general id selectors
     width: 100%;
 }
 
+#hamburgerButton {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+
 /* Ensure footer logo has a height of 60px to help with sizing */
 #headerLogo {
     height: 60px;
