@@ -2,10 +2,34 @@
 navbar code to handle hamburger menu and search button
 ========================================================================== */
 
+// Get reference to Hamburger menu button and set a boolean variable to track if menu is shown or not
+let hamburgerMenu = document.getElementById('hamburgerButton');
+let menuShown = false;
 
+// Get reference to the header nav
+let headerNav = document.getElementById('headerNav');
 
+function showMenu() {
+    headerNav.classList.add('showHeaderNav');
+    headerNav.classList.remove('hideHeaderNav');
+}
 
+function hideMenu() {
+    headerNav.classList.remove('showHeaderNav');
+    headerNav.classList.add('hideHeaderNav');
+}
 
+hamburgerMenu.onclick = function() {
+    if (menuShown) {
+        hideMenu();
+        menuShown = !menuShown;
+    } else {
+        showMenu();
+        menuShown = !menuShown;
+    }
+
+    console.log(menuShown);
+};
 
 
 /* Sub-section comment block

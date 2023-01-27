@@ -110,6 +110,10 @@ input:hover, select:hover, button:hover {
         font-weight: 500;
         font-size: 4vw;
     }
+
+    nav a {
+        font-size: 4vw;
+    }
 }
 
 /* element selectors | large device media query
@@ -356,7 +360,9 @@ general id selectors
     border: none;
     display: flex;
     height: 30px;
+    position: relative;
     width: 30px;
+    z-index: 6;
 }
 
 /* Ensure footer logo has a height of 60px to help with sizing */
@@ -391,12 +397,41 @@ general id selectors
 /* general id | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
-    
+    .hideHeaderNav {
+        transition: transform .5s;
+    }
+
+    .headerNavBar {
+        align-items: flex-end;
+        background: #716fc1;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 30px 100px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(-100%);
+        z-index: 5;
+    }
+
+    .headerNavBar > *{
+        margin: 10px;
+    }
+
+    .showHeaderNav {
+        transform: translateX(0px);
+        transition: transform 1s;
+    }
 }
 
 /* general id | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    #hamburgerButton {
+        display: none;
+    }
     /* When the header nav is visible ensure it fills it's space correctly */
     #headerNav {
         align-items: center;
