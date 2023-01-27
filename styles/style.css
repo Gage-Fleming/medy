@@ -105,6 +105,11 @@ input:hover, select:hover, button:hover {
         font-weight: 1000;
         font-size: 5vw;
     }
+
+    h4 {
+        font-weight: 500;
+        font-size: 4vw;
+    }
 }
 
 /* element selectors | large device media query
@@ -129,6 +134,11 @@ input:hover, select:hover, button:hover {
     h3 {
         font-weight: 1000;
         font-size: 2vw;
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 1.75vw;
     }
 }
 
@@ -182,8 +192,8 @@ general class selectors
     opacity: .5;
 }
 
-/* Styling for standard articles. */
-.standardArticle {
+/* Styling for standard articles and reportArticles */
+.standardArticle, .reportArticle {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
     margin: 40px 0px;
@@ -610,6 +620,18 @@ report.html styling
  * Section is sorted alphabetically, with two media queries at the end to handle responsive design
  * of web page. 
  */
+
+ .reportArticle {
+    margin: 30px 0px;
+ }
+
+ .reportArticle > *{
+    margin: 10px 0px;
+ }
+
+.reportArticle h3, .reportArticle h4 {
+    text-align: center;
+ }
 
  /* report.html | small device media query
 ========================================================================== */
