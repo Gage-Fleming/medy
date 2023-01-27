@@ -432,12 +432,17 @@ general id selectors
     #hamburgerButton {
         display: none;
     }
+
     /* When the header nav is visible ensure it fills it's space correctly */
     #headerNav {
         align-items: center;
         display: flex;
         justify-content: space-between;
         width: 50%;
+    }
+
+    .hideHeaderNav {
+        transition: transform .1s;
     }
 }
 
