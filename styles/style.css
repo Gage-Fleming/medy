@@ -6,10 +6,11 @@
  * general class selectors
  * general id selectors
  * index.html styling
- * books.html styling
- * games.html styling
- * movies.html styling
- * tv.html styling
+ * meditations.html styling
+ * posts.html styling
+ * report.html styling
+ * thich-nhat-hanh.html styling
+ * tools.html styling
  * under-construction.html styling
  */
 
@@ -600,6 +601,26 @@ posts.html styling
     #postIntroLast {
         width: 40%;
     }
+}
+
+/* ==========================================================================
+report.html styling
+========================================================================== */
+/**
+ * Section is sorted alphabetically, with two media queries at the end to handle responsive design
+ * of web page. 
+ */
+
+ /* report.html | small device media query
+========================================================================== */
+ @media only screen and (max-width: 769px) {
+    
+}
+
+/* report.html | large device media query
+========================================================================== */
+@media only screen and (min-width: 770px) {
+    
 }
 
 /* ==========================================================================
