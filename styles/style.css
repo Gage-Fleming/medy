@@ -757,12 +757,6 @@ thich-nhat-hanh.html styling
     z-index: -1;
 }
 
-/* Style foundation link to help show it is clickable */
-#tnhFoundation {
-    color: #c0c16f;
-    text-decoration: underline;
-}
-
 /* Change background color to help provide contrast for writing in these containers */
 #timelineHeader, #timelineFooter, #timelineIntro {
     background-color: #706fc17b;
