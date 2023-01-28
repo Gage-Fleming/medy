@@ -5,6 +5,12 @@ search tool code
 // Get reference to search button
 let searchButton = document.getElementById('searchButton');
 
+// Get reference to close button on search field
+let closeButton = document.getElementById('closeButton');
+
+// Get reference to search container
+let searchContainer = document.getElementById('searchContainer');
+
 // Get a reference to all standard articles
 let standArticles = document.querySelectorAll('.standardArticle');
 
@@ -85,5 +91,11 @@ for (let i = 0; i < tools.length; i++) {
 }
 
 searchButton.onclick = function () {
-    
+    searchContainer.classList.add('searchContainerShow');
+    searchContainer.classList.remove('searchContainerHide');
+}
+
+closeButton.onclick = function () {
+    searchContainer.classList.remove('searchContainerShow');
+    searchContainer.classList.add('searchContainerHide');
 }

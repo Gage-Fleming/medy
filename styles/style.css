@@ -200,37 +200,12 @@ general class selectors
     text-align: center;
 }
 
-.searchBox {
-    background-color: #716fc1;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    padding: 30px;
-    width: 40%;
+.searchContainerHide {
+    transform: translateX(-100%);
 }
 
-.searchBox > * {
-    margin: 10px 0px;
-}
-
-.searchContainer {
-    align-items: center;
-    backdrop-filter: blur(5px);
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 10;
-}
-
-.searchHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.searchContainerShow {
+    transform: translateX(0px);
 }
 
 .seeThrough {
@@ -432,6 +407,39 @@ general id selectors
     color: #FFF;
     height: 10%;
     padding: 0px 10px;
+}
+
+#searchBox {
+    background-color: #716fc1;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    padding: 30px;
+    width: 40%;
+}
+
+#searchBox > * {
+    margin: 10px 0px;
+}
+
+#searchContainer {
+    align-items: center;
+    backdrop-filter: blur(5px);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+#searchHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Set tools body background image */
