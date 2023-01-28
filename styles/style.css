@@ -258,9 +258,37 @@ general class selectors
 /* small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    .headerNavBar > *{
+        margin: 10px;
+    }
+
+    .hideHeaderNav {
+        transition: transform .5s;
+    }
+
+    .headerNavBar {
+        align-items: flex-end;
+        background: #716fc1;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 30px 100px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(-100%);
+        z-index: 5;
+    }
+
     /* Ensure any items with class large are not displayed */
     .large {
         display: none;
+    }
+
+    .showHeaderNav {
+        transform: translateX(0px);
+        transition: transform 1s;
     }
 
     .standardArticle {
@@ -414,9 +442,7 @@ general id selectors
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    height: 80%;
     padding: 30px;
-    width: 40%;
 }
 
 #searchBox > * {
@@ -450,32 +476,9 @@ general id selectors
 /* general id | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
-    .hideHeaderNav {
-        transition: transform .5s;
-    }
-
-    .headerNavBar {
-        align-items: flex-end;
-        background: #716fc1;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        left: 0;
-        padding: 30px 100px;
-        position: fixed;
-        right: 0;
-        top: 0;
-        transform: translateX(-100%);
-        z-index: 5;
-    }
-
-    .headerNavBar > *{
-        margin: 10px;
-    }
-
-    .showHeaderNav {
-        transform: translateX(0px);
-        transition: transform 1s;
+    #searchBox {
+        height: 80%;
+        width: 90%;
     }
 }
 
@@ -494,8 +497,9 @@ general id selectors
         width: 50%;
     }
 
-    .hideHeaderNav {
-        transition: transform .1s;
+    #searchBox {
+        height: 80%;
+        width: 40%;
     }
 }
 

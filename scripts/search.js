@@ -90,11 +90,17 @@ for (let i = 0; i < tools.length; i++) {
     );
 }
 
+/**
+ * Create onclick listener to add a show class and remove the hide class for the search container when the search button is clicked
+ */
 searchButton.onclick = function () {
     searchContainer.classList.add('searchContainerShow');
     searchContainer.classList.remove('searchContainerHide');
 }
 
+/**
+ * Create onclick listener to add a hide class and remove the show class for the search container when the close button is clicked
+ */
 closeButton.onclick = function () {
     searchContainer.classList.remove('searchContainerShow');
     searchContainer.classList.add('searchContainerHide');
