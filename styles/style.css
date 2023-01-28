@@ -77,6 +77,14 @@ nav a:hover {
     color: #0d0d17;
 }
 
+.navButton {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+
 /* Ensure mouse changes to pointer when hovering over form elements */
 input:hover, select:hover, button:hover {
     cursor: pointer;
@@ -190,6 +198,29 @@ general class selectors
 
 .pageIntro > * {
     text-align: center;
+}
+
+.searchBox {
+    background-color: #716fc1;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    padding: 30px;
+    width: 40%;
+}
+
+.searchContainer {
+    align-items: center;
+    backdrop-filter: blur(5px);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
 }
 
 .seeThrough {
@@ -356,12 +387,7 @@ general id selectors
 }
 
 #hamburgerButton {
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    display: flex;
-    height: 30px;
     position: relative;
-    width: 30px;
     z-index: 6;
 }
 
@@ -387,6 +413,15 @@ general id selectors
 /* Set posts body background image */
 #postsBody {
     background-image: url('../images/posts-images/background.jpg');
+}
+
+#searchBar {
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px #FFF;
+    border-radius: 10px;
+    color: #FFF;
+    height: 10%;
+    padding: 0px 10px;
 }
 
 /* Set tools body background image */

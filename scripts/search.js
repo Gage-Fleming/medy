@@ -2,6 +2,9 @@
 search tool code
 ========================================================================== */
 
+// Get reference to search button
+let searchButton = document.getElementById('searchButton');
+
 // Get a reference to all standard articles
 let standArticles = document.querySelectorAll('.standardArticle');
 
@@ -79,4 +82,8 @@ for (let i = 0; i < tools.length; i++) {
             type: 'tool',
         }
     );
+}
+
+searchButton.onclick = function () {
+    
 }
