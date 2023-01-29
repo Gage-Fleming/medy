@@ -23,6 +23,9 @@ let standArticles = document.querySelectorAll('.standardArticle');
 // Get a reference to all timeline articles
 let timeArticles = document.querySelectorAll('.timelineArticle');
 
+// Get a reference to all meditation articles
+let meditationArticles = document.querySelectorAll('.meditationArticle');
+
 // Get a reference to all tools
 let tools = document.querySelectorAll('.tool');
 
@@ -95,6 +98,29 @@ for (let i = 0; i < tools.length; i++) {
             heading: currentToolInfo.children[0].children[0].innerHTML,
             number: i,
             type: 'tool',
+        }
+    );
+}
+
+/**
+ * Loop through all elements that have the class meditation article and store the text in these articles in an array of objects. Each object will represent the 
+ * article in question. The information on the object properties can be found below.
+ * 
+ * author: Stores the author name {String}
+ * heading: Stores the text in the heading of the article {String}
+ * number: stores the number of the article {Int}
+ * textBlurb: Stores the text in the body of the article {String}
+ * type: Used to help javascript decide how to display the return result {String}
+ */
+for (let i = 0; i < meditationArticles.length; i++) {
+    let currentArticleInfo = meditationArticles[i];
+    searchArray.push(
+        {
+            author: currentArticleInfo.children[1].children[2].innerHTML,
+            heading: currentArticleInfo.children[1].children[0].innerHTML,
+            number: i,
+            textBlurb: currentArticleInfo.children[1].children[1].innerHTML,
+            type: 'meditation',
         }
     );
 }

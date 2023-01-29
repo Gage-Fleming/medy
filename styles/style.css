@@ -441,6 +441,7 @@ general id selectors
     align-items: center;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 #results a {
@@ -471,7 +472,6 @@ general id selectors
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
     padding: 30px;
 }
 
