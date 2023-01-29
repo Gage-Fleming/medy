@@ -36,10 +36,10 @@ let searchArray = [];
  * Loop through all elements that have the class standard article and store the text in these articles in an array of objects. Each object will represent the article
  * in question. The information on the object properties can be found below.
  * 
- * articleNumber: stores the number of the article {String}
  * author: Stores the author name {String}
  * date: Stores the article date {String}
  * heading: Stores the text in the heading of the article {String}
+ * number: stores the number of the article {Int}
  * textBlurb: Stores the text in the body of the article {String}
  * type: Used to help javascript decide how to display the return result {String}
  */
@@ -47,10 +47,10 @@ for (let i = 0; i < standArticles.length; i++) {
     let currentArticleInfo = standArticles[i].children[1];
     searchArray.push(
         {
-            articleNumber: String(i),
             author: currentArticleInfo.children[2].innerHTML,
             date: currentArticleInfo.children[3].innerHTML,
             heading: currentArticleInfo.children[0].children[0].innerHTML,
+            number: i,
             textBlurb: currentArticleInfo.children[1].innerHTML,
             type: 'standard',
         }
@@ -61,8 +61,8 @@ for (let i = 0; i < standArticles.length; i++) {
  * Loop through all elements that have the class timeline article and store the text in these articles in an array of objects. Each object will represent the article
  * in question. The information on the object properties can be found below.
  * 
- * articleNumber: stores the number of the article {String}
  * heading: Stores the text in the heading of the article {String}
+ * number: stores the number of the article {Int}
  * textBlurb: Stores the text in the body of the article {String}
  * type: Used to help javascript decide how to display the return result {String}
  * year: Stores the year of the current timeline article {String}
@@ -71,8 +71,8 @@ for (let i = 0; i < timeArticles.length; i++) {
     let currentArticleInfo = timeArticles[i];
     searchArray.push(
         {
-            articleNumber: String(i),
             heading: currentArticleInfo.children[2].children[0].innerHTML,
+            number: i,
             textBlurb: currentArticleInfo.children[2].children[1].innerHTML,
             type: 'timeline',
             year: currentArticleInfo.children[0].children[0].innerHTML,
@@ -85,7 +85,7 @@ for (let i = 0; i < timeArticles.length; i++) {
  * in question. The information on the object properties can be found below.
  * 
  * heading: Stores the text in the heading of the article {String}
- * toolNumber: stores the number of the article {Int}
+ * number: stores the number of the article {Int}
  * type: Used to help javascript decide how to display the return result {String}
  */
 for (let i = 0; i < tools.length; i++) {
@@ -93,7 +93,7 @@ for (let i = 0; i < tools.length; i++) {
     searchArray.push(
         {
             heading: currentToolInfo.children[0].children[0].innerHTML,
-            toolNumber: String(i),
+            number: i,
             type: 'tool',
         }
     );
@@ -132,14 +132,21 @@ closeButton.onclick = hideSearchContainer;
  * Create event listener to track when input is entered into the search bar. When input is entered update the results to show items that contain the input wording
  */
 searchBar.addEventListener('input', e => {
+    const USERINPUT = e.target.value;
+    results.innerHTML = '';
     for (let i = 0; i < searchArray.length; i++) {
         for (const key in searchArray[i]) {
-            if (searchArray[i][key].includes(e)) {
-                
+            let currentValue = searchArray[i][key];
+            if (typeof currentValue === 'string' && currentValue.includes(USERINPUT)) {
+                results.innerHTML += `
+                <div class="result">
+                    <a class="searchLink" href="#standardArticle${i+1}"><h3>${searchArray[i]['heading']}</h3></a>
+                </div>`;
             }
         }
     }
 
+    // Every time the user types, reassign the showing links to searchLinks and add an event listener that closer to searchContainer if the link is clicked
     searchLinks = document.querySelectorAll('.searchLink');
     for (let i = 0; i < searchLinks.length; i++) {
         searchLinks[i].addEventListener('click', () => {

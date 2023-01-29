@@ -467,6 +467,7 @@ general id selectors
     border-radius: 25px;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
     padding: 30px;
 }
 
