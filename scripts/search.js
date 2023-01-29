@@ -130,16 +130,19 @@ searchButton.onclick = showSearchContainer;
 closeButton.onclick = hideSearchContainer;
 
 /**
- * Create event listener to track when input is entered into the search bar. When input is entered update the results to show items that contain the input wording
+ * Create event listener to track when input is entered into the search bar. When input is entered update the results inner HTML to show items that contain the input * wording
  */
 searchBar.addEventListener('input', e => {
     const USERINPUT = e.target.value;
     results.innerHTML = '';
 
+    /** Loop through every article object in the array. At the start assign false to the addedToResulst tracker to check if the current item has already been added. * Also create currentArticle to lessen the load om the stack.
+    */
     for (let i = 0; i < searchArray.length; i++) {
         let addedToResults = false;
         let currentArticle = searchArray[i];
 
+        // Loop through each key in the current article and check if any strings contain what the user typed. If so add the header to results inner html for display
         for (const key in currentArticle) {
             let currentValue = currentArticle[key];
             if (typeof currentValue === 'string' && currentValue.toLowerCase().includes(USERINPUT)) {
