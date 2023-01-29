@@ -419,13 +419,17 @@ general id selectors
     width: auto;
 }
 
+#meditationsBody {
+    background-image: url('../images/meditations-images/background.jpg');
+}
+
 /* Make the background color slightly see through to help sure background image on these pages */
-#postsMain, #toolsMain {
+#postsMain, #toolsMain, #meditationsMain {
     background-color: rgba(255, 255, 255, 0.783);
 }
 
 /* Set the body elements to have a background image that is centered */
-#postsBody, #toolsBody {
+#postsBody, #toolsBody, #meditationsBody {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
