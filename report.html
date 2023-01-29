@@ -124,22 +124,23 @@
         <p class="standardLast">© copyright Medy, implemented by Gage Fleming</p>
     </footer>
 
-    <!-- 
+   <!-- 
         Create search container to store search pop-up. his is hidden off the screen by default and is only shown when the user clicks on the search button. It will then be hidden when the user either clicks on a search result or clicks the close button.
     -->
     <div class="searchContainerHide" id="searchContainer">
         <div id="searchBox">
-            <div  id="searchHeader">
-                <div></div>
+            <div id="searchHeader">
+                <!-- Create empty div on left side to ensure spacing is correct on flex box for searchHeader -->
+                <div class="leftEmptyDiv"></div>
                 <h4>Search This Page</h4>
                 <button type="button" class="navButton" id="closeButton">
                     <img src="./images/close.png" height="128px" width="128px" id="closeLogo" class="headerImage" alt="close button">
                 </button>
-            </div>
+            </div><!-- #searchHeader -->
             <input type="text" placeholder="Search..." id="searchBar">
             <div id="results"></div>
-        </div>
-    </div>
+        </div><!-- #searchBox -->
+    </div><!-- #searchContainer -->
 
     <!-- Link to JS -->
     <script src="./scripts/nav.js"></script>
