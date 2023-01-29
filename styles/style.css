@@ -221,8 +221,8 @@ general class selectors
     opacity: .5;
 }
 
-/* Styling for standard articles and reportArticles */
-.standardArticle, .reportArticle {
+/* Styling for standard articles, meditation articles and report articles */
+.standardArticle, .reportArticle, .meditationArticle {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
     margin: 40px 0px;
@@ -653,6 +653,66 @@ index.html styling
         opacity: 1;
         transform: translateY(-10px);
         transition: transform 250ms;
+    }
+}
+
+/* ==========================================================================
+meditations.html styling
+========================================================================== */
+/**
+* Section is sorted alphabetically, with two media queries at the end to handle responsive design
+* of web page. 
+*/
+
+.iFrameContainer iframe {
+    max-height: 100%;
+    width: 100%;
+}
+
+.meditationArticle {
+    display: flex;
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.meditationArticleInfo h3 {
+    text-align: center;
+}
+
+/* meditations.html | small device media query
+========================================================================== */
+@media only screen and (max-width: 769px) {
+    .meditationArticle {
+        flex-direction: column;
+    }
+
+    .meditationArticleInfo p {
+        padding-top: 10px;
+    }
+
+    .meditationArticleInfo p:first-of-type {
+        text-align: center;
+    }
+}
+
+/* meditations.html | large device media query
+========================================================================== */
+@media only screen and (min-width: 770px) {
+    .iFrameContainer {
+        width: 70%;
+    }
+
+    .iFrameContainer iframe {
+        height: 100%;
+    }
+
+    .meditationArticleInfo {
+        width: 30%;
+    }
+
+    .meditationArticleInfo p {
+        padding-top: 20px;
+        padding-left: 20px;
     }
 }
 
