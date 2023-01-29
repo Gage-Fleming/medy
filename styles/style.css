@@ -68,6 +68,11 @@ hr {
     width: 100%;
 }
 
+.leftEmptyDiv {
+    height: 30px;
+    width: 30px;
+}
+
 nav a {
     color: #fff;
 }
@@ -426,6 +431,26 @@ general id selectors
 /* Set posts body background image */
 #postsBody {
     background-image: url('../images/posts-images/background.jpg');
+}
+
+#results {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#results a {
+    color: #c0c16f;
+}
+
+#results a:hover {
+    color: #c0c16f;
+    text-decoration: underline;
+}
+
+#results h3 {
+    text-align: center;
+    width: 100%;
 }
 
 #searchBar {

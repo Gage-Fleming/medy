@@ -11,6 +11,12 @@ let closeButton = document.getElementById('closeButton');
 // Get reference to search container
 let searchContainer = document.getElementById('searchContainer');
 
+// Get reference to search text input
+let searchBar = document.getElementById('searchBar');
+
+// Get Reference to results div to store positive search results
+let results = document.getElementById('results');
+
 // Get a reference to all standard articles
 let standArticles = document.querySelectorAll('.standardArticle');
 
@@ -20,6 +26,9 @@ let timeArticles = document.querySelectorAll('.timelineArticle');
 // Get a reference to all tools
 let tools = document.querySelectorAll('.tool');
 
+// Create empty variable to store reference to all .searchLink elements. This is to be updated whenever the user types in the search bar
+let searchLinks;
+
 // Create an article array to hold data for searchable items
 let searchArray = [];
 
@@ -27,7 +36,7 @@ let searchArray = [];
  * Loop through all elements that have the class standard article and store the text in these articles in an array of objects. Each object will represent the article
  * in question. The information on the object properties can be found below.
  * 
- * articleNumber: stores the number of the article {Int}
+ * articleNumber: stores the number of the article {String}
  * author: Stores the author name {String}
  * date: Stores the article date {String}
  * heading: Stores the text in the heading of the article {String}
@@ -38,7 +47,7 @@ for (let i = 0; i < standArticles.length; i++) {
     let currentArticleInfo = standArticles[i].children[1];
     searchArray.push(
         {
-            articleNumber: i,
+            articleNumber: String(i),
             author: currentArticleInfo.children[2].innerHTML,
             date: currentArticleInfo.children[3].innerHTML,
             heading: currentArticleInfo.children[0].children[0].innerHTML,
@@ -52,21 +61,21 @@ for (let i = 0; i < standArticles.length; i++) {
  * Loop through all elements that have the class timeline article and store the text in these articles in an array of objects. Each object will represent the article
  * in question. The information on the object properties can be found below.
  * 
- * articleNumber: stores the number of the article {Int}
+ * articleNumber: stores the number of the article {String}
  * heading: Stores the text in the heading of the article {String}
  * textBlurb: Stores the text in the body of the article {String}
  * type: Used to help javascript decide how to display the return result {String}
- * year: Stores the year of the current timeline article {Int}
+ * year: Stores the year of the current timeline article {String}
  */
 for (let i = 0; i < timeArticles.length; i++) {
     let currentArticleInfo = timeArticles[i];
     searchArray.push(
         {
-            articleNumber: i,
+            articleNumber: String(i),
             heading: currentArticleInfo.children[2].children[0].innerHTML,
             textBlurb: currentArticleInfo.children[2].children[1].innerHTML,
             type: 'timeline',
-            year: Number(currentArticleInfo.children[0].children[0].innerHTML),
+            year: currentArticleInfo.children[0].children[0].innerHTML,
         }
     );
 }
@@ -84,24 +93,57 @@ for (let i = 0; i < tools.length; i++) {
     searchArray.push(
         {
             heading: currentToolInfo.children[0].children[0].innerHTML,
-            toolNumber: i,
+            toolNumber: String(i),
             type: 'tool',
         }
     );
 }
 
 /**
- * Create onclick listener to add a show class and remove the hide class for the search container when the search button is clicked
+ * Create function that adjusts the classlist of the search container. Which removes the show class and applies the hide class
  */
-searchButton.onclick = function () {
+function hideSearchContainer() {
+    searchContainer.classList.remove('searchContainerShow');
+    searchContainer.classList.add('searchContainerHide');
+    // Clear the search box if search container is being hidden.
+    searchBar.value = '';
+    // TODO Also clear any html from results
+}
+
+/**
+ * Create function that adjusts the classlist of the search container. Which removes the hide class and applies the show class
+ */
+function showSearchContainer() {
     searchContainer.classList.add('searchContainerShow');
     searchContainer.classList.remove('searchContainerHide');
 }
 
 /**
- * Create onclick listener to add a hide class and remove the show class for the search container when the close button is clicked
+ * Create onclick listener that calls the function showSearch Container when the search button is clicked
  */
-closeButton.onclick = function () {
-    searchContainer.classList.remove('searchContainerShow');
-    searchContainer.classList.add('searchContainerHide');
-}
+searchButton.onclick = showSearchContainer;
+
+/**
+ * Create onclick listener that calls the function hideSearch Container when the close button is clicked
+ */
+closeButton.onclick = hideSearchContainer;
+
+/**
+ * Create event listener to track when input is entered into the search bar. When input is entered update the results to show items that contain the input wording
+ */
+searchBar.addEventListener('input', e => {
+    for (let i = 0; i < searchArray.length; i++) {
+        for (const key in searchArray[i]) {
+            if (searchArray[i][key].includes(e)) {
+                
+            }
+        }
+    }
+
+    searchLinks = document.querySelectorAll('.searchLink');
+    for (let i = 0; i < searchLinks.length; i++) {
+        searchLinks[i].addEventListener('click', () => {
+            hideSearchContainer();
+        });
+    }
+})
