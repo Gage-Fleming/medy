@@ -684,23 +684,14 @@ meditations.html styling
     text-align: center;
 }
 
-.donations > button {
-    background-color: #4240b9;
-    border: 3px solid #e2e2ef;
-    margin: 10px;
-    padding: 10px;
-    transition: background-color 1s, border 1s, color 1s;
-}
-
-.donations > button:hover {
-    background-color: #e2e2ef;
-    border: 3px solid #4240b9;
-    color: #4240b9;
-}
-
 .iFrameContainer iframe {
     max-height: 100%;
     width: 100%;
+}
+
+.salesLeft img, .salesRight img {
+    width: 80%;
+    height: 40%;
 }
 
 .meditationArticle {
@@ -713,8 +704,39 @@ meditations.html styling
     text-align: center;
 }
 
+.meditationButton {
+    background-color: #4240b9;
+    border: 3px solid #e2e2ef;
+    color: #e2e2ef;
+    margin: 10px;
+    padding: 10px;
+    transition: background-color 1s, border 1s, color 1s;
+}
+
+.meditationButton:hover {
+    background-color: #e2e2ef;
+    border: 3px solid #4240b9;
+    color: #4240b9;
+}
+
 .meditationSalesContainer {
-    
+    display: flex;
+    justify-content: space-between;
+}
+
+.meditationSalesContainer > * {
+    align-items: center;
+    background-color: #e2e2ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 50%;
+}
+
+.meditationSalesContainer > * > *{
+    margin: 10px 0px;
+    text-align: center;
 }
 
 /* meditations.html | small device media query
