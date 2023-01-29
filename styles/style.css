@@ -664,6 +664,40 @@ meditations.html styling
 * of web page. 
 */
 
+.donations, .meditationSalesContainer {
+    background-color: #716fc1;
+    border: 2px solid #e2e2ef;
+    box-shadow: 5px 5px 5px #e2e2ef;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+}
+
+.donations {
+    align-items: center;
+    flex-direction: column;
+}
+
+.donations > * {
+    color: #e2e2ef;
+    margin: 10px;
+    text-align: center;
+}
+
+.donations > button {
+    background-color: #4240b9;
+    border: 3px solid #e2e2ef;
+    margin: 10px;
+    padding: 10px;
+    transition: background-color 1s, border 1s, color 1s;
+}
+
+.donations > button:hover {
+    background-color: #e2e2ef;
+    border: 3px solid #4240b9;
+    color: #4240b9;
+}
+
 .iFrameContainer iframe {
     max-height: 100%;
     width: 100%;
@@ -677,6 +711,10 @@ meditations.html styling
 
 .meditationArticleInfo h3 {
     text-align: center;
+}
+
+.meditationSalesContainer {
+    
 }
 
 /* meditations.html | small device media query
