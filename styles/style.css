@@ -1066,7 +1066,7 @@ tools.html styling
     width: 100%;
 }
 
-#meditationTimer {
+#toolArticle1 {
     fill: none;
     stroke: none;
 }
@@ -1092,7 +1092,7 @@ tools.html styling
     stroke: #716fc1;
 }
 
-#meditationTimer svg {
+#toolArticle1 svg {
     height: 100%;
     width: 100%;
 }

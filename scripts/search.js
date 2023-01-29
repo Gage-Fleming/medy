@@ -142,7 +142,7 @@ searchBar.addEventListener('input', e => {
 
         for (const key in currentArticle) {
             let currentValue = currentArticle[key];
-            if (typeof currentValue === 'string' && currentValue.includes(USERINPUT)) {
+            if (typeof currentValue === 'string' && currentValue.toLowerCase().includes(USERINPUT)) {
                 results.innerHTML += `
                 <div class="result">
                     <a class="searchLink" href="#${currentArticle.type}Article${i+1}"><h3>${currentArticle['heading']}</h3></a>
