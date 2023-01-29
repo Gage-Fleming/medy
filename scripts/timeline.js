@@ -26,7 +26,7 @@ const timelineIntersectionCallback = (entries) => {
 // Define options for the observer
 // Ensures the observer only recognizes fully onscreen elements
 let options = {
-    threshold: 1,
+    threshold: .75,
 }
 
 // Create Observer object to store intersection observer for timelineArticles

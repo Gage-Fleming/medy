@@ -108,6 +108,7 @@ function hideSearchContainer() {
     // Clear the search box if search container is being hidden.
     searchBar.value = '';
     // TODO Also clear any html from results
+    results.innerHTML = '';
 }
 
 /**
@@ -134,15 +135,23 @@ closeButton.onclick = hideSearchContainer;
 searchBar.addEventListener('input', e => {
     const USERINPUT = e.target.value;
     results.innerHTML = '';
+
     for (let i = 0; i < searchArray.length; i++) {
-        for (const key in searchArray[i]) {
-            let currentValue = searchArray[i][key];
+        let addedToResults = false;
+        let currentArticle = searchArray[i];
+
+        for (const key in currentArticle) {
+            let currentValue = currentArticle[key];
             if (typeof currentValue === 'string' && currentValue.includes(USERINPUT)) {
                 results.innerHTML += `
                 <div class="result">
-                    <a class="searchLink" href="#standardArticle${i+1}"><h3>${searchArray[i]['heading']}</h3></a>
+                    <a class="searchLink" href="#${currentArticle.type}Article${i+1}"><h3>${currentArticle['heading']}</h3></a>
                 </div>`;
+                addedToResults = true;
             }
+
+            //If addToResults is true break out of oop to prevent duplicate search items from showing in results
+            if (addedToResults) break;
         }
     }
 
