@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medy website introduction. Find the latest news on all things mindfulness. Get ahead on your practice">
+    <meta name="keywords" content="meditation, mindfulness, practice, self-love, communication, help, happiness">
     <title>Medy Meditations</title>
 
+    <!-- Link to stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <!-- BODY -->
+<!-- Meditations body id is assigned to help with background image -->
 <body id="meditationsBody">
     <!-- HEADER -->
     <header class="flexRow">
@@ -39,12 +44,14 @@
     </header>
 
     <!-- MAIN -->
+    <!-- Meditation main id to help with background coloring to see background image on body -->
     <main id="meditationsMain">
         <div class="flexColumn pageIntro standardBox" id="meditationIntro">
             <h1>Meditation Guides</h1>
             <h2>Get a Little Guidance on Your Practice</h2>
         </div><!-- #meditationIntro -->
 
+        <!-- Meditation container to hold meditation articles and some extra information in between articles -->
         <div class="standardBox flexColumn" id="meditationContainer">
             <!-- MEDITATION ARTICLE 1 -->
             <article class="standardFirst meditationArticle" id="meditationArticle1">
@@ -85,7 +92,7 @@
                 </div><!-- .meditationArticleInfo -->
             </article><!-- #meditationArticle3 -->
 
-            <!-- Donations information -->
+            <!-- Donations container to store CTA for user to click on -->
             <div class="donations">
                 <h5>Donations</h5>
                 <p>Please consider providing a donation. It helps keep this site ad-free!</p>
@@ -93,7 +100,7 @@
             </div><!-- .donations -->
 
             <!-- MEDITATION ARTICLE 4 -->
-            <article class="meditationArticle standardLast" id="meditationArticle4">
+            <article class="meditationArticle" id="meditationArticle4">
                 <div class="iFrameContainer">
                     <!-- iFrame to hold youtube video -->
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/yzCWBpS67jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -136,7 +143,6 @@
                 </div><!-- .meditationArticleInfo -->
             </article><!-- #meditationArticle5 -->
         </div><!-- #meditationContainer -->
-    </div>
     </main>
 
     <!-- FOOTER -->
@@ -144,7 +150,7 @@
         <!-- Logo to link to index.html -->
         <a href="index.html" class="standardFirst logoA">
             <img src="./images/medy-logo.png" height="424px" width="1000px" id="footerLogo">
-        </a>
+        </a><!-- .logoA -->
 
         <!-- Nav bar to stay between large and small displays -->
         <nav id="footerNav" class="flexRow">
@@ -154,7 +160,7 @@
             <a href="./report.html">Report</a>
             <a href="./thich-nhat-hanh.html">T.N.H</a>
             <a href="./tools.html">Tools</a>
-        </nav>
+        </nav><!-- #footerNav -->
 
         <!-- Copyright notice -->
         <p class="standardLast">© copyright Medy, implemented by Gage Fleming</p>
@@ -178,9 +184,12 @@
         </div><!-- #searchBox -->
     </div><!-- #searchContainer -->
 
-    <!-- Link to JS -->
+    <!-- LINK TO JS -->
+    <!-- Script for navigation menu on smaller devices -->
     <script src="./scripts/nav.js"></script>
+    <!-- Script for search tool -->
     <script src="./scripts/search.js"></script>
+    <!-- Script for small general purpose functions -->
     <script src="./scripts/script.js"></script>
 </body>
 </html>
