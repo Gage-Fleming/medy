@@ -574,6 +574,58 @@ index.html styling
     color: #fff;
 }
 
+.podcastButton {
+    height: 100%;
+    padding: 5px;
+    width: 100%;
+}
+
+#podcastHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+}
+
+#podcastHeader::after {
+    border-bottom: 1px solid black;
+    content: '';
+    height: 1px;
+    width: 30%;
+}
+
+#podcastHeader::before {
+    border-bottom: 1px solid black;
+    content: '';
+    height: 1px;
+    width: 30%;
+}
+
+#podcastInfo {
+    background-color: #e2e2ef;
+    padding-bottom: 30px;
+}
+
+.podcastOption {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    margin: 10px;
+    width: 60px;
+}
+
+.podcastOption img {
+    width: 100%;
+}
+
+#podcastOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
 /* curve the rotate slides image borders and ensure no margin is applied */
 .rotateLinks img{
     border-radius: 20px;
@@ -598,6 +650,23 @@ index.html styling
 
     /* Ensure text bubble takes up all it's given width */
     #pageBannerText {
+        width: 100%;
+    }
+    
+    #podcastHeader::after {
+        width: 10%;
+    }
+
+    #podcastHeader::before {
+        border-bottom: 1px solid black;
+        content: '';
+        height: 1px;
+        width: 10%;
+    }
+
+    #podcastOptions {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
     }
 
