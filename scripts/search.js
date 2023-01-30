@@ -133,7 +133,7 @@ function hideSearchContainer() {
     searchContainer.classList.add('searchContainerHide');
     // Clear the search box if search container is being hidden.
     searchBar.value = '';
-    // TODO Also clear any html from results
+    // Also clear any html from results
     results.innerHTML = '';
 }
 
@@ -146,12 +146,12 @@ function showSearchContainer() {
 }
 
 /**
- * Create onclick listener that calls the function showSearch Container when the search button is clicked
+ * Create onclick listener that calls the function showSearchContainer when the search button is clicked
  */
 searchButton.onclick = showSearchContainer;
 
 /**
- * Create onclick listener that calls the function hideSearch Container when the close button is clicked
+ * Create onclick listener that calls the function hideSearchContainer when the close button is clicked
  */
 closeButton.onclick = hideSearchContainer;
 
@@ -160,9 +160,12 @@ closeButton.onclick = hideSearchContainer;
  */
 searchBar.addEventListener('input', e => {
     const USERINPUT = e.target.value;
+    // Clear results to load in new search returns
     results.innerHTML = '';
 
-    /** Loop through every article object in the array. At the start assign false to the addedToResulst tracker to check if the current item has already been added. * Also create currentArticle to lessen the load om the stack.
+    /** 
+     * Loop through every article object in the array. At the start assign false to the addedToResults tracker to check if the current item has already been added.
+     * Also create currentArticle to lessen the load on the stack by storing a reference to the article we will be checking against
     */
     for (let i = 0; i < searchArray.length; i++) {
         let addedToResults = false;
@@ -179,12 +182,12 @@ searchBar.addEventListener('input', e => {
                 addedToResults = true;
             }
 
-            //If addToResults is true break out of oop to prevent duplicate search items from showing in results
+            //If addToResults is true break out of loop to prevent duplicate search items from showing in results
             if (addedToResults) break;
         }
     }
 
-    // Every time the user types, reassign the showing links to searchLinks and add an event listener that closer to searchContainer if the link is clicked
+    // Every time the user types, reassign the showing links to searchLinks and add an event listener that closes to searchContainer if the link is clicked
     searchLinks = document.querySelectorAll('.searchLink');
     for (let i = 0; i < searchLinks.length; i++) {
         searchLinks[i].addEventListener('click', () => {
