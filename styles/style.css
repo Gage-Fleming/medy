@@ -112,6 +112,7 @@ input:hover, select:hover, button:hover {
 
     h2 {
         font-size: 6vw;
+        text-align: center;
     }
 
     h3 {
@@ -146,6 +147,7 @@ input:hover, select:hover, button:hover {
 
     h2 {
         font-size: 2.5vw;
+        text-align: center;
     }
 
     h3 {
@@ -553,6 +555,19 @@ index.html styling
     text-align: center;
 }
 
+#indexPopularPosts {
+    height: 600px;
+}
+
+#indexPopularPosts > * {
+    width: 45%;
+}
+
+#indexPopularPosts .standardArticle img {
+    height: 100%;
+    width: 100%;
+}
+
 /* Create page banner container that will hold introductory background image */
 #pageBanner {
     background-image: url(".././images/page-banner.jpg");
@@ -575,8 +590,19 @@ index.html styling
 }
 
 .podcastButton {
+    background-color: #e2e2ef;
+    display: flex;
     height: 100%;
     padding: 5px;
+    width: 100%;
+}
+
+.podcastButton:hover {
+    box-shadow: 0px 2px 2px #000;
+}
+
+.podcastButton img {
+    height: 100%;
     width: 100%;
 }
 
@@ -616,10 +642,6 @@ index.html styling
     width: 60px;
 }
 
-.podcastOption img {
-    width: 100%;
-}
-
 #podcastOptions {
     display: flex;
     justify-content: space-between;
@@ -651,6 +673,10 @@ index.html styling
     /* Ensure text bubble takes up all it's given width */
     #pageBannerText {
         width: 100%;
+    }
+
+    .podcastButton {
+        box-shadow: 0px 2px 2px #000;
     }
     
     #podcastHeader::after {
