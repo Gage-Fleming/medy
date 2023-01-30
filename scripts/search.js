@@ -1,6 +1,10 @@
 /* ==========================================================================
 search tool code
 ========================================================================== */
+/**
+ * This file handles the search function of the website. If a page has an article of some kind. Then the user is able to search through them. The function does not 
+ * do that whole website as that is out of my scope and I did not want to rely on a library to do the heavy lifting. 
+ */
 
 // Get reference to search button
 let searchButton = document.getElementById('searchButton');
