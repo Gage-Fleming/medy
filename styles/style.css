@@ -659,7 +659,7 @@ index.html styling
     border-radius: 25px;
     box-shadow: 0px 15px 15px #706fc16f;
     padding: 20px;
-    width: 50%;
+    width: 70%;
 }
 
 #poll ol {
@@ -714,7 +714,7 @@ index.html styling
     width: 0%;
     height: 100%;
     overflow: hidden;
-    padding-right: 10px;
+    padding-right: 5px;
     transition: width 3s;
 }
 
@@ -768,6 +768,10 @@ index.html styling
         display: flex;
         justify-content: space-between;
         width: 100%;
+    }
+
+    #poll {
+        width: 80%;
     }
 
     /* On smaller devices let the spotlight images overflow for the user to scroll horizontally */
