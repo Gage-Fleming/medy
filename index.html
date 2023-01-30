@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medy website home page. Find the latest news on all things mindfulness. Get ahead on your practice">
+    <meta name="keywords" content="meditation, mindfulness, practice, self-love, communication, help, happiness, info">
     <title>Medy Home</title>
 
+    <!-- Link to stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
+<!-- BODY -->
 <body>
     <!-- HEADER -->
     <header class="flexRow">
@@ -38,14 +42,17 @@
         </button><!-- .navButton -->
     </header>
 
+    <!-- MAIN -->
     <main>
+        <!-- Create page abnner image and page banner text blurb to introduce user to Medy -->
         <div id="pageBanner">
             <div id="pageBannerText">
                 <h1>Welcome to Medy</h1>
                 <P>Take a deep breathe and enjoy the latest on meditation</P>
-            </div>
-        </div>
+            </div><!-- #pageBannerText -->
+        </div><!-- #pageBanner -->
 
+        <!-- Spotlight container to highlight some Medy's best posts. This section is to overflow on smaller devices to allow the user to scroll horizontally -->
         <div class="flexColumn standardBox">
             <h2 class="standardFirst">Spotlight</h2>
             <div class="rotateLinks standardLast">
@@ -53,44 +60,47 @@
                 <a href="./posts.html" class="slides"><img src="./images/posts-images/article-10.jpg"></a>
                 <a href="./posts.html" class="slides"><img src="./images/posts-images/article-4.jpg"></a>
                 <a href="./posts.html" class="slides"><img src="./images/posts-images/article-5.jpg"></a>
-            </div>
-        </div>
+            </div><!-- .rotateLinks -->
+        </div><!-- .standardBox -->
 
+        <!-- Text blurb to quickly sell our website to the user -->
         <div id='elevatorPitch' class="standardBox flexColumn">
             <h2 class="standardFirst">Improve Your Meditation Practice</h2>
             <p class="standardLast">Welcome to Medy, a platform dedicated to promoting mindfulness and inner peace through the power of meditation. Our aim is to provide valuable resources, tips, and guidance to help individuals navigate their meditation journey and experience the numerous physical and mental benefits that come with a regular practice. Join us as we delve into the world of meditation and unlock a calmer, more centered version of ourselves.</p>
-        </div>
+        </div><!-- #elevatorPitch -->
 
+        <!-- Container to have information on Medy's podcast. Allows the user to subscribe via their favorite apps. Only provides alert -->
         <div class="standardBox flexColumn" id="podcastInfo">
             <h3 class="standardFirst" id="podcastHeader">Subscribe to MedyPod</h3>
             <div id="podcastOptions">
                 <div class="podcastOption" id="apple">
                     <button type="button" class="podcastButton" id="appleButton">
                         <img src="./images/index-images/apple.png" alt="apple podcasts logo">
-                    </button>
+                    </button><!-- #appleButton -->
                     <label for="appleButton">Apple</label>
-                </div>
+                </div><!-- #apple -->
                 <div class="podcastOption" id="google">
                     <button type="button" class="podcastButton" id="googleButton">
                         <img src="./images/index-images/google.png" alt="google podcasts logo stand-in">
-                    </button>
+                    </button><!-- #googleButton -->
                     <label for="googleButton">Google</label>
-                </div>
+                </div><!-- #google -->
                 <div class="podcastOption" id="spotify">
                     <button type="button" class="podcastButton" id="spotifyButton">
                         <img src="./images/index-images/spotify.png" alt="spotify logo">
-                    </button>
+                    </button><!-- #spotifyButton -->
                     <label for="spotifyButton">Spotify</label>
-                </div>
+                </div><!-- #spotify -->
                 <div class="podcastOption standardLast" id="web">
                     <button type="button" class="podcastButton" id="webButton">
                         <img src="./images/index-images/web.png" alt="rss feed icon">
-                    </button>
+                    </button><!-- #webButton -->
                     <label for="webButton">Web</label>
-                </div>
-            </div>
-        </div>
+                </div><!-- #web -->
+            </div><!-- #podcastOptions -->
+        </div><!-- #podcastInfo -->
 
+        <!-- Create articles container to hold some popular posts highlighted by Medy -->
         <div class="articleContainer standardBox">
             <h2>Popular Posts</h2>
             <!-- STANDARD ARTICLE 1 -->
@@ -118,8 +128,9 @@
                     <p>January 19, 2023</p>
                 </div><!-- .flexColumn -->
             </article><!-- #standardArticle2 -->
-        </div>
+        </div><!-- .articleContainer -->
 
+        <!-- Create meditations container to highlight popular videos on Medy -->
         <div class="standardBox" id="meditationsContainer">
             <h2>Popular Videos</h2>
             <!-- MEDITATION ARTICLE 1 -->
@@ -147,8 +158,9 @@
                     <p>- Calm | Tamara Levitt</p>
                 </div><!-- .meditationArticleInfo -->
             </article><!-- #meditationArticle2 -->
-        </div>
+        </div><!-- #meditationsContainer -->
 
+        <!-- Create poll container for user to interact with a meditation practice poll. Dynamically shows the results after clicking on an option -->
         <div class="pollContainer standardBox">
             <h3>How long have you been meditating for?</h3>
             <div id="poll">
@@ -170,13 +182,13 @@
                         <div class="pollNoResults"></div>
                     </li>
                 </ol>
-            </div>
-        </div>
+            </div><!-- #poll -->
+        </div><!-- .pollContainer -->
 
         <div class="standardBox flexColumn" id="introEnding">
             <h2>Take a Deep Breathe</h2>
             <p>Enjoy your time on our website</p>
-        </div>
+        </div><!-- #introEnding -->
     </main>
 
     <!-- FOOTER -->
@@ -219,7 +231,9 @@
     </div><!-- #searchContainer -->
 
     <!-- Link to JS -->
+    <!-- Script for navigation menu on smaller devices -->
     <script src="./scripts/nav.js"></script>
+    <!-- Script for search tool -->
     <script src="./scripts/search.js"></script>
     <!-- Script to handle functions on the homepage -->
     <script src="./scripts/home-page.js"></script>

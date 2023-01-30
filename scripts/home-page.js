@@ -1,3 +1,17 @@
+/* podcast code  
+========================================================================== */
+/**
+ * Create code to have a window alert pop up when the user clicks on a podcast button
+ */
+let podcastButtons = document.querySelectorAll('.podcastButton');
+
+for (let i = 0; i < podcastButtons.length; i++) {
+    podcastButtons[i].onclick = () => {
+        window.alert('Thank you for subscribing!');
+    };
+}
+
+
 /* Poll code    
 ========================================================================== */
 
