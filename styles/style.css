@@ -108,6 +108,7 @@ input:hover, select:hover, button:hover {
 
     h1 {
         font-size: 7vw;
+        text-align: center;
     }
 
     h2 {
@@ -118,11 +119,13 @@ input:hover, select:hover, button:hover {
     h3 {
         font-weight: 1000;
         font-size: 5vw;
+        text-align: center;
     }
 
     h4 {
         font-weight: 500;
         font-size: 4vw;
+        text-align: center;
     }
 
     nav a {
@@ -143,6 +146,7 @@ input:hover, select:hover, button:hover {
 
     h1 {
         font-size: 3.5vw;
+        text-align: center;
     }
 
     h2 {
@@ -153,11 +157,13 @@ input:hover, select:hover, button:hover {
     h3 {
         font-weight: 1000;
         font-size: 2vw;
+        text-align: center;
     }
 
     h4 {
         font-weight: 500;
         font-size: 1.75vw;
+        text-align: center;
     }
 
     nav a {
@@ -228,7 +234,7 @@ general class selectors
 }
 
 /* Styling for standard articles, meditation articles and report articles */
-.standardArticle, .reportArticle, .meditationArticle {
+.standardArticle, .reportArticle, .meditationArticle, #poll {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
     margin: 40px 0px;
@@ -646,6 +652,10 @@ index.html styling
     display: flex;
     justify-content: space-between;
     width: 50%;
+}
+
+#poll {
+    width: 80%;
 }
 
 /* curve the rotate slides image borders and ensure no margin is applied */
