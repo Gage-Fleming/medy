@@ -82,9 +82,10 @@ function setTimer() {
     timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = duration - timePassed;
-
+    // Set output timers inner html to show the starting clock
     outputTime.innerHTML = formatTime(timeLeft);
 
+    // Create code to play bell sound if the correct amount of time has passed based on interval
     if ((timePassed % interval) == 0) {
         switch (soundType) {
             case 'gong':
@@ -99,6 +100,7 @@ function setTimer() {
         }
     }
 
+    // Set interval on to true to ensure it is tracked properly
     intervalOn = true;
 
     // Check if timeLeft is less than or equal to 0. If so stop this current interval.
