@@ -234,7 +234,7 @@ general class selectors
 }
 
 /* Styling for standard articles, meditation articles and report articles */
-.standardArticle, .reportArticle, .meditationArticle, #poll {
+.standardArticle, .reportArticle, .meditationArticle {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
     margin: 40px 0px;
@@ -655,7 +655,41 @@ index.html styling
 }
 
 #poll {
-    width: 80%;
+    background-color: #716fc1;
+    border-radius: 25px;
+    box-shadow: 0px 15px 15px #706fc16f;
+    padding: 20px;
+    width: 50%;
+}
+
+#poll ol li{
+    list-style: none;
+    margin: 10px;
+}
+
+.pollButton {
+    background-color: #716fc1;
+    border: 2px solid #0d0d17;
+    padding: 5px;
+    width: fit-content;
+}
+
+.pollButton:hover {
+    background-color: #e2e2ef;
+    border: 2px solid #0d0d17;
+    padding: 5px;
+    width: fit-content;
+}
+
+.pollButtonHide {
+    display: none;
+}
+
+.pollContainer {
+    background-color: #e2e2ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* curve the rotate slides image borders and ensure no margin is applied */
