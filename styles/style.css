@@ -1059,10 +1059,15 @@ report.html styling
 
  .reportArticle {
     margin: 30px 0px;
+    padding-left: 40px;
  }
 
  .reportArticle > *{
     margin: 10px 0px;
+ }
+
+ .reportArticle ul li {
+    margin: 20px 0px;
  }
 
 .reportArticle h3, .reportArticle h4 {
