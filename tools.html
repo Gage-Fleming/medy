@@ -19,12 +19,12 @@
     <header class="flexRow">
         <!-- Clickable hamburger menu for smaller devices. Will be hidden for larger devices -->
         <button type="button" class="small navButton" id="hamburgerButton">
-            <img src="./images/hamburger.png" height="128px" width="128px" id="hamburgerLogo" class="small headerImage" alt="Hamburger menu">
+            <img src="./images/hamburger.png" height="128" width="128" id="hamburgerLogo" class="small headerImage" alt="Hamburger menu">
         </button><!-- #hamburgerButton -->
 
         <!-- Logo to link to index.html -->
         <a href="index.html">
-            <img src="./images/medy-logo.png" height="424px" width="1000px" id="headerLogo" class="logoA" alt="Medy logo">
+            <img src="./images/medy-logo.png" height="424" width="1000" id="headerLogo" class="logoA" alt="Medy logo">
         </a>
 
         <!-- Navbar to be dynamic and only shown in Desktop mode -->
@@ -39,7 +39,7 @@
         
         <!-- Clickable search image to bring up search engine -->
         <button id="searchButton" class="navButton">
-            <img src="./images/search.png" height="512px" width="512px" id="searchLogo" class="headerImage" alt="Search button">
+            <img src="./images/search.png" height="512" width="512" id="searchLogo" class="headerImage" alt="Search button">
         </button><!-- .navButton -->
     </header>
 
@@ -68,7 +68,7 @@
                                 <!-- gong -->
                                 <div class="flexColumn">
                                     <label for="gong" class="radioImage">
-                                        <img src="./images/tools-images/gong.png">
+                                        <img src="./images/tools-images/gong.png" alt="An icon of a simple gong">
                                     </label><!-- .radioImage -->
                                     <input type="radio" id="gong" name="sounds" value="gong" checked="checked">
                                 </div><!-- .flexColumn -->
@@ -76,7 +76,7 @@
                                 <!-- chime -->
                                 <div class="flexColumn">
                                     <label for="chime" class="radioImage">
-                                        <img src="./images/tools-images/chime.png">
+                                        <img src="./images/tools-images/chime.png" alt="An icon of a simple chime">
                                     </label><!-- .radioImage -->
                                     <input type="radio" id="chime" name="sounds" value="chime">
                                 </div><!-- .flexColumn -->
@@ -84,7 +84,7 @@
                                 <!-- bell -->
                                 <div class="flexColumn">
                                     <label for="bell" class="radioImage">
-                                        <img src="./images/tools-images/bell.png">
+                                        <img src="./images/tools-images/bell.png" alt="An icon of a simple bell">
                                     </label><!-- .radioImage -->
                                     <input type="radio" id="bell" name="sounds" value="bell">
                                 </div><!-- .flexColumn -->
@@ -143,9 +143,9 @@
                                 <circle r="35%" cx="50%" cy="50%"></circle>
                             </g><!-- #meditationTimerOutline -->
                         </svg><!-- #meditationCircle -->
-                        <span id="meditationTimerDisplay">
+                        <div id="meditationTimerDisplay">
                             <p id="outputTime">Click submit!</p>
-                        </span>
+                        </div>
                     </div><!-- #meditationTimerContainer -->
                 </div><!-- #meditationToolContainer -->
             </div><!-- #meditationTimer -->
@@ -161,7 +161,7 @@
                     <div id="sceneOptions">
                         <div class="sceneOption flexColumn">
                             <label for="noSound" class="radioImage">
-                                <img src="./images/tools-images/stop.png">
+                                <img src="./images/tools-images/stop.png" alt="An icon of a simple stop sign">
                             </label>
                             <input type="radio" id="noSound" name="scenes" value="noSound" checked="checked">
                         </div><!-- .sceneOption -->
@@ -169,7 +169,7 @@
                         <!-- Forest sound option -->
                         <div class="sceneOption flexColumn">
                             <label for="forrest" class="radioImage">
-                                <img src="./images/tools-images/forrest.png">
+                                <img src="./images/tools-images/forrest.png" alt="An icon of a simple tree">
                             </label>
                             <input type="radio" id="forrest" name="scenes" value="forrest">
                         </div><!-- .sceneOption -->
@@ -177,7 +177,7 @@
                         <!-- Rain sound option -->
                         <div class="sceneOption flexColumn">
                             <label for="rain" class="radioImage">
-                                <img src="./images/tools-images/rain.png">
+                                <img src="./images/tools-images/rain.png" alt="An icon of a simple rain storm">
                             </label>
                             <input type="radio" id="rain" name="scenes" value="rain">
                         </div><!-- .sceneOption -->
@@ -185,7 +185,7 @@
                         <!-- River sound option -->
                         <div class="sceneOption flexColumn">
                             <label for="river" class="radioImage">
-                                <img src="./images/tools-images/river.png">
+                                <img src="./images/tools-images/river.png" alt="An icon of a simple river">
                             </label>
                             <input type="radio" id="river" name="scenes" value="river">
                         </div><!-- .sceneOption -->
@@ -204,7 +204,7 @@
     <footer class="flexColumn standardBox">
         <!-- logo to link to index.html -->
         <a href="index.html" class="standardFirst logoA">
-            <img src="./images/medy-logo.png" height="424px" width="1000px" id="footerLogo">
+            <img src="./images/medy-logo.png" alt="Medy Logo" height="424" width="1000" id="footerLogo">
         </a><!-- .logoA -->
 
         <!-- nav bar to stay between large and small displays -->
@@ -231,7 +231,7 @@
                 <div class="leftEmptyDiv"></div>
                 <h4>Search This Page</h4>
                 <button type="button" class="navButton" id="closeButton">
-                    <img src="./images/close.png" height="128px" width="128px" id="closeLogo" class="headerImage" alt="close button">
+                    <img src="./images/close.png" height="128" width="128" id="closeLogo" class="headerImage" alt="close button">
                 </button>
             </div><!-- #searchHeader -->
             <input type="text" placeholder="Search..." id="searchBar">
