@@ -86,7 +86,7 @@ let timelineInterval = setInterval(checkShow, 500);
 // If the user is on the page thich-nhat-hanh.html then apply timelineInterval 
 // which calls the checkShow function every half-second to see which article is showing.
 // Otherwise, clear the current set interval
-if (document.URL.includes('thich-nhat-hanh.html')) {
+if (document.URL.includes('timeline.html')) {
     timelineInterval;
 } else {
     clearInterval(timelineInterval);
