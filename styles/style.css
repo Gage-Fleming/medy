@@ -1592,6 +1592,11 @@ under-construction.html styling
 #constructionContainer {
     width: 100%;
 }
+
+#constructionContainer p {
+    text-align: center;
+}
+
 #constructionImage {
     border-radius: 100px;
     width: 100%;
