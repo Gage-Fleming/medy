@@ -1074,6 +1074,15 @@ report.html styling
     text-align: center;
  }
 
+ .reportArticle ul li a {
+    color: #716fc1;
+ }
+
+ .reportArticle ul li a:hover {
+    color: #c0c16f;
+    text-decoration: underline;
+ }
+
  /* report.html | small device media query
 ========================================================================== */
  @media only screen and (max-width: 769px) {
