@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medy website tools. Find the latest news on all things mindfulness. Get ahead on your practice">
+    <meta name="keywords" content="meditation, mindfulness, practice, self-love, communication, help, happiness, Plum Village">
     <title>Medy Tools</title>
 
+    <!-- Link to stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
+<!-- BODY -->
+<!-- tools body id is assigned to help with background image -->
 <body id="toolsBody">
     <!-- HEADER -->
     <header class="flexRow">
@@ -38,12 +44,14 @@
     </header>
 
     <!-- MAIN -->
+    <!-- Tools main id to help with background coloring to see background image on body -->
     <main id="toolsMain">
         <div class="flexColumn standardBox pageIntro">
             <h1>Mindfulness Tools</h1>
             <h2>Below you can find basic mindfulness tools to help with your practice</h2>
         </div><!-- .pageIntro -->
 
+        <!-- Container to hold user interactive tools -->
         <div id="toolsContainer">
             <div class="tool" id="toolArticle1">
                 <div class="toolTitle">
@@ -51,6 +59,7 @@
                 </div><!-- .toolTitle -->
 
                 <!-- meditation timer tool -->
+                <!-- Meditation timer is to allow the user to add a little guide to their practice. -->
                 <div id="meditationToolContainer">
                     <div id="meditationSettings">
                         <form id="meditationForm">
@@ -127,6 +136,7 @@
                     </div><!-- #meditationSettings -->
                     
                     <!-- meditation timer -->
+                    <!-- Please note: This code was inspired by the following tutorial css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/-->
                     <div id="meditationTimerContainer">
                         <svg xmlns="http://www.w3.org/2000/svg" id="meditationCircle">
                             <g id="meditationTimerOutline">
@@ -141,11 +151,13 @@
             </div><!-- #meditationTimer -->
 
             <!-- scenic sounds tool -->
+            <!-- this tool allows the user to create ambient sound during their practice -->
             <div class="tool standardFirst" id="toolArticle2">
                 <div class="toolTitle">
                     <h3>Scenic sounds</h3>
                 </div><!-- .toolTitle -->
                 <form id="sceneForm">
+                    <!-- Option for the user to stop the sound -->
                     <div id="sceneOptions">
                         <div class="sceneOption flexColumn">
                             <label for="noSound" class="radioImage">
@@ -154,6 +166,7 @@
                             <input type="radio" id="noSound" name="scenes" value="noSound" checked="checked">
                         </div><!-- .sceneOption -->
 
+                        <!-- Forest sound option -->
                         <div class="sceneOption flexColumn">
                             <label for="forrest" class="radioImage">
                                 <img src="./images/tools-images/forrest.png">
@@ -161,6 +174,7 @@
                             <input type="radio" id="forrest" name="scenes" value="forrest">
                         </div><!-- .sceneOption -->
 
+                        <!-- Rain sound option -->
                         <div class="sceneOption flexColumn">
                             <label for="rain" class="radioImage">
                                 <img src="./images/tools-images/rain.png">
@@ -168,6 +182,7 @@
                             <input type="radio" id="rain" name="scenes" value="rain">
                         </div><!-- .sceneOption -->
 
+                        <!-- River sound option -->
                         <div class="sceneOption flexColumn">
                             <label for="river" class="radioImage">
                                 <img src="./images/tools-images/river.png">
@@ -175,6 +190,7 @@
                             <input type="radio" id="river" name="scenes" value="river">
                         </div><!-- .sceneOption -->
                     </div><!-- #sceneOptions -->
+                    <!-- SLider to adjust the output volume -->
                     <div id="sceneSoundContainer">
                         <label for="sceneSound">Scene Sound</label>
                         <input type="range" min="0" max="1" step=".01" value="1" id="sceneSound">
@@ -189,7 +205,7 @@
         <!-- logo to link to index.html -->
         <a href="index.html" class="standardFirst logoA">
             <img src="./images/medy-logo.png" height="424px" width="1000px" id="footerLogo">
-        </a>
+        </a><!-- .logoA -->
 
         <!-- nav bar to stay between large and small displays -->
         <nav id="footerNav" class="flexRow">
@@ -199,7 +215,7 @@
             <a href="./report.html">Report</a>
             <a href="./timeline.html">Timeline</a>
             <a href="./tools.html">Tools</a>
-        </nav>
+        </nav><!-- #footerNav -->
 
         <!-- copyright notice -->
         <p class="standardLast">© copyright Medy, implemented by Gage Fleming</p>
@@ -224,8 +240,11 @@
     </div><!-- #searchContainer -->
 
     <!-- link to JS -->
+    <!-- Script for tool interaction -->
     <script src="./scripts/tools.js"></script>
+    <!-- Script for navigation menu on smaller devices -->
     <script src="./scripts/nav.js"></script>
+    <!-- Script for search tool -->
     <script src="./scripts/search.js"></script>
 </body>
 </html>
