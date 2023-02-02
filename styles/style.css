@@ -99,11 +99,19 @@ input:hover, select:hover, button:hover {
 ========================================================================== */
 @media only screen and (max-width: 769px) {
     * {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
-    footer{
+    footer {
         padding: 10px 20px;
+    }
+
+    footer nav a {
+        font-size: 3.5vw;
+    }
+
+    footer p {
+        text-align: center;
     }
 
     h1 {
@@ -124,12 +132,17 @@ input:hover, select:hover, button:hover {
 
     h4 {
         font-weight: 500;
-        font-size: 4vw;
+        font-size: 4.5vw;
         text-align: center;
     }
 
-    nav a {
-        font-size: 4vw;
+    h5 {
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
+    header nav a {
+        font-size: 6vw;
     }
 }
 
@@ -294,7 +307,7 @@ general class selectors
         display: flex;
         flex-direction: column;
         left: 0;
-        padding: 30px 100px;
+        padding: 30px 50px;
         position: fixed;
         right: 0;
         top: 0;
@@ -603,7 +616,7 @@ index.html styling
     width: 100%;
 }
 
-.podcastButton:hover {
+.podcastButton:hover, .podcastButton:focus {
     box-shadow: 0px 2px 2px #000;
 }
 
@@ -680,7 +693,7 @@ index.html styling
     width: fit-content;
 }
 
-.pollButton:hover {
+.pollButton:hover .pollButton:active {
     background-color: #e2e2ef;
     border: 2px solid #0d0d17;
     padding: 5px;
@@ -868,6 +881,10 @@ meditations.html styling
 .iFrameContainer iframe {
     max-height: 100%;
     width: 100%;
+}
+
+.salesLeft, .salesRight {
+    padding: 10px;
 }
 
 .salesLeft img, .salesRight img {

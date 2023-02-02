@@ -130,6 +130,9 @@ meditationFormSubmit.onclick = function() {
     clearInterval(timerInterval);
     intervalOn = false;
 
+    // Ensure pause button is reset to avoid any continue errors
+    meditationFormPause.innerHTML = 'Pause'
+
     // Get the sound type the user has selected from radio buttons
     for (let i = 0; i < soundTypeOptions.length; i++) {
         if (soundTypeOptions[i].checked) {
