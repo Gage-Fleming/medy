@@ -16,7 +16,7 @@
 <body>
     <!-- HEADER -->
     <header class="flexRow">
-        <!-- Clickable hamburger menu for smaller devices. Will be hidden for larger devices -->
+        <!-- Clickable hamburger menu for smaller devices. Will be hidden for larger devices. -->
         <button type="button" class="small navButton" id="hamburgerButton">
             <img src="./images/hamburger.png" height="128px" width="128px" id="hamburgerLogo" class="small headerImage" alt="Hamburger menu">
         </button><!-- #hamburgerButton -->
@@ -72,7 +72,7 @@
         <!-- Container to have information on Medy's podcast. Allows the user to subscribe via their favorite apps. Only provides alert -->
         <div class="standardBox flexColumn" id="podcastInfo">
             <h3 class="standardFirst" id="podcastHeader">Subscribe to MedyPod</h3>
-            <div id="podcastOptions">
+            <div class="standardLast" id="podcastOptions">
                 <div class="podcastOption" id="apple">
                     <button type="button" class="podcastButton" id="appleButton">
                         <img src="./images/index-images/apple.png" alt="apple podcasts logo">
@@ -147,7 +147,7 @@
             </article><!-- #meditationArticle1 -->
 
             <!-- MEDITATION ARTICLE 2 -->
-            <article class="meditationArticle" id="meditationArticle2">
+            <article class="meditationArticle standardLast" id="meditationArticle2">
                 <div class="iFrameContainer">
                     <!-- iFrame to hold youtube video -->
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZToicYcHIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -162,32 +162,37 @@
 
         <!-- Create poll container for user to interact with a meditation practice poll. Dynamically shows the results after clicking on an option -->
         <div class="pollContainer standardBox">
-            <h3>How long have you been meditating for?</h3>
-            <div id="poll">
+            <h3 class="standardFirst">How long have you been meditating for?</h3>
+            <div class="standardLast" id="poll">
                 <ol>
                     <li>
                         <button type="button" class="pollButton">Less than 01 year</button>
+                        <!-- Create empty to be dynamically resized as the poll populates -->
                         <div class="pollNoResults"></div>
                     </li>
                     <li>
                         <button type="button" class="pollButton">Less than 05 years</button>
+                        <!-- Create empty to be dynamically resized as the poll populates -->
                         <div class="pollNoResults"></div>
                     </li>
                     <li>
                         <button type="button" class="pollButton">Less than 10 years</button>
+                        <!-- Create empty to be dynamically resized as the poll populates -->
                         <div class="pollNoResults"></div>
                     </li>
                     <li>
                         <button type="button" class="pollButton">Less than 20 years</button>
+                        <!-- Create empty to be dynamically resized as the poll populates -->
                         <div class="pollNoResults"></div>
                     </li>
                 </ol>
             </div><!-- #poll -->
         </div><!-- .pollContainer -->
 
+        <!-- Homepage exit text blurb -->
         <div class="standardBox flexColumn" id="introEnding">
-            <h2>Take a Deep Breathe</h2>
-            <p>Enjoy your time on our website</p>
+            <h2 class="standardFirst">Take a Deep Breathe</h2>
+            <p class="standardLast">Enjoy your time on our website</p>
         </div><!-- #introEnding -->
     </main>
 
