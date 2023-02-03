@@ -244,28 +244,31 @@ sceneOptions[0].onchange = function () {
 };
 
 /**
- * Plays the forest sound and pauses the others if this radio button is clicked
+ * Plays the forest sound and pauses the others if this radio button is clicked. Also reset the current time.
  */
 sceneOptions[1].onchange = function () {
+    forest.currentTime = 0;
     forest.play();
     rain.pause();
     river.pause();
 };
 
 /**
- * Plays the rain sound and pauses the others if this radio button is clicked
+ * Plays the rain sound and pauses the others if this radio button is clicked. Also reset the current time.
  */
 sceneOptions[2].onchange = function () {
     forest.pause();
+    rain.currentTime = 0;
     rain.play();
     river.pause();
 };
 
 /**
- * Plays the river sound and pauses the others if this radio button is clicked
+ * Plays the river sound and pauses the others if this radio button is clicked. Also reset the current time.
  */
 sceneOptions[3].onchange = function () {
     forest.pause();
     rain.pause();
+    river.currentTime = 0;
     river.play();
 };
