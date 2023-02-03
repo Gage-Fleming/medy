@@ -30,12 +30,20 @@ let answerTwoCount = 25;
 let answerThreeCount = 20;
 let answerFourCount = 10;
 
+// Create total votes variable to store the sum of all 4 above variables.
 let totalVotes;
 
+/**
+ * Assigns the total votes variable to the current vote count.
+ */
 function getTotalVotes() {
     totalVotes = answerOneCount + answerTwoCount + answerThreeCount + answerFourCount;
 }
 
+/**
+ * Function serves to hide the poll buttons and show the poll results. The switch loops through the button and assigned a width of the vote percentage to help the   
+ * animation take effect.
+ */
 function showPoll() {
     for (let i = 0; i < pollButtons.length; i++) {
         let currentButton = pollButtons[i]
@@ -67,24 +75,36 @@ function showPoll() {
     }
 }
 
+/**
+ * Apply a listener that increments the respective vote count and shows the poll results after click
+ */
 answerOne.onclick = function () {
     answerOneCount++;
     getTotalVotes()
     showPoll();
 }
 
+/**
+ * Apply a listener that increments the respective vote count and shows the poll results after click
+ */
 answerTwo.onclick = function () {
     answerTwoCount++;
     getTotalVotes()
     showPoll();
 }
 
+/**
+ * Apply a listener that increments the respective vote count and shows the poll results after click
+ */
 answerThree.onclick = function () {
     answerThreeCount++
     getTotalVotes()
     showPoll();
 }
 
+/**
+ * Apply a listener that increments the respective vote count and shows the poll results after click
+ */
 answerFour.onclick = function () {
     answerFourCount++;
     getTotalVotes()
