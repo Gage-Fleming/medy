@@ -52,7 +52,7 @@ let interval = null;
  * @param {Number} time - a Time in seconds
  * @returns {String} - The input time formatted in MM:SS format.
  * 
- * Please note this function was taken almost directly from 
+ * Please note this function was taken directly from 
  * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
  * 
  */
@@ -76,6 +76,9 @@ function formatTime(time) {
 /**
  * Creates a timer that runs every second. It updates the time variables and the output timer.
  * It also runs a check to see if the timer is over and if so, clears the current interval
+ * 
+ * Please note the interval code was inspired by 
+ * https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
  */
 function setTimer() {
     // Create timer interval to count the clock down.

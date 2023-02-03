@@ -83,7 +83,7 @@ function checkShow() {
 // Define timelineInterval to store a reference to the setInterval that calls checkShow every half-second
 let timelineInterval = setInterval(checkShow, 500);
 
-// If the user is on the page thich-nhat-hanh.html then apply timelineInterval 
+// If the user is on the page timeline.html then apply timelineInterval 
 // which calls the checkShow function every half-second to see which article is showing.
 // Otherwise, clear the current set interval
 if (document.URL.includes('timeline.html')) {
