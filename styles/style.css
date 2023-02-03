@@ -1183,6 +1183,20 @@ report.html styling
    margin: 20px;
 }
 
+#reportMain {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.reportWireframes {
+    width: fit-content;
+}
+
+#siteMap {
+    width: 100%;
+}
+
 .wireframeContainer {
     align-items: flex-start;
     display: flex;
