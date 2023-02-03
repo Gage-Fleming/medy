@@ -1288,10 +1288,12 @@ thich-nhat-hanh.html styling
         transform: translateY(0px);
     }
 
+    /* Give the timeline container some padding to help ensure the children display correctly */
     .timeline {
         padding: 10px 50px;
     }
 
+    /* Give the articles a column appearance on smaller devices */
     .timelineArticle {
         align-items: center;
         display: flex;
@@ -1303,6 +1305,7 @@ thich-nhat-hanh.html styling
         margin: 10px;
     }
 
+    /* Change the year pop-in to be centered on smaller devices */
     .year {
         align-items: center;
         display: flex;
@@ -1357,6 +1360,7 @@ thich-nhat-hanh.html styling
         padding: 20px 100px;
     }
 
+    /* Show the article in a row format for better reading on larger devices */
     .timelineArticle {
         display: flex;
         flex-direction: row;
@@ -1381,6 +1385,7 @@ thich-nhat-hanh.html styling
         z-index: 0;
     }
 
+    /* Force the year to be right align within it's box */
     .year {
         align-items: center;
         display: flex;
@@ -1389,7 +1394,7 @@ thich-nhat-hanh.html styling
         width: 20%;
     }
 
-    /* Ensure yearInfo slides in from right of screen */
+    /* Ensure yearInfo slides in from right of screen as it grows larger */
     .yearInfo {
         opacity: 0;
         transform: translateX(300px);
@@ -1415,6 +1420,7 @@ tools.html styling
 * of web page. 
 */
 
+/* Give the buttons on the timer form a little more space and a standard width to help visually separate them */
 .bottomButtons {
     display: flex;
     justify-content: space-between;
@@ -1426,6 +1432,7 @@ tools.html styling
     width: 40%;
 }
 
+/* Add some simple styles to help separate the time settings */
 .meditationLowerSetting {
     align-items: space-between;
     display: flex;
@@ -1438,6 +1445,7 @@ tools.html styling
     width: 50%;
 }
 
+/* Ensure the whole form displays in a column format and takes up it's container */
 #meditationForm {
     align-items: center;
     display: flex;
@@ -1446,6 +1454,7 @@ tools.html styling
     width: 100%;
 }
 
+/* Ensure the circle encasing the timer has a see through center */
 #toolArticle1 {
     fill: none;
     stroke: none;
@@ -1456,6 +1465,7 @@ tools.html styling
     position: relative;
 }
 
+/* Force the timer to be centered within the svg circle */
 #meditationTimerDisplay {
     align-items: center;
     display: flex;
@@ -1467,11 +1477,13 @@ tools.html styling
     width: 100%;
 }
 
+/* Draw a circle around the timer */
 #meditationTimerOutline {
     stroke-width: 7px;
     stroke: #716fc1;
 }
 
+/* Ensure circle takes up whole container */
 #toolArticle1 svg {
     height: 100%;
     width: 100%;
@@ -1483,10 +1495,12 @@ tools.html styling
     width: 100%;
 }
 
+/* Ensure any radio's with images as the label have a pointer mouse when hovered */
 .radioImage:hover {
     cursor: pointer;
 }
 
+/*Ensure the scene form displays in a column manner and takes up all available space */
 #sceneForm {
     display: flex;
     flex-direction: column;
@@ -1495,6 +1509,7 @@ tools.html styling
     width: 100%;
 }
 
+/* Apply a standard width to each scene option */
 .sceneOption {
     margin: 10px;
     width: 25%;
@@ -1505,6 +1520,7 @@ tools.html styling
     width: 100%;
 }
 
+/* Style the scene options to display in a row fashion */
 #sceneOptions {
     align-items: center;
     display: flex;
@@ -1523,6 +1539,7 @@ tools.html styling
     width: 45%;
 }
 
+/* Container for the sound options to display them in a row fashion */
 #soundType {
     align-items: center;
     border: none;
@@ -1532,6 +1549,7 @@ tools.html styling
     width: 100%;
 }
 
+/* Ensure items take up correct spacing for sound type children */
 #soundType > * {
     height: 100%;
     margin: 0px 10px;
@@ -1547,6 +1565,7 @@ tools.html styling
     margin-bottom: 10px;
 }
 
+/* Create card like look to be applied to all items of the tool class */
 .tool {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
@@ -1564,6 +1583,7 @@ tools.html styling
     flex-direction: column;
 }
 
+/* Give the tool title a bottom border and ensure it is center aligned */
 .toolTitle {
     align-items: center;
     border-bottom: solid #716fc1;
@@ -1573,10 +1593,11 @@ tools.html styling
     width: 100%;
 }
 
-/* small device media query
+/* tools.html | small device media query
 ========================================================================== */
 
 @media only screen and (max-width: 769px) {
+    /* Ensure timer displays properly and never overflows */
     #meditationTimerContainer {
         height: 330px;
         width: 100%
@@ -1591,16 +1612,9 @@ tools.html styling
         width: 100%;
     }
 
+    /* Up the output time size to help with separation */
     #outputTime {
         font-size: 5vw;
-    }
-
-    #sceneSoundContainer {
-        align-items: center;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-        width: 100%;
     }
     
     #sceneSoundContainer > * {
@@ -1608,7 +1622,7 @@ tools.html styling
     }
 }
 
-/* large device media query
+/* tools.html | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
     #meditationSettings {
@@ -1620,6 +1634,7 @@ tools.html styling
         width: 100%;
     }
 
+    /* Up the output time sizing to ensure visual separation */
     #outputTime {
         font-size: 2vw;
     }
@@ -1637,6 +1652,7 @@ under-construction.html styling
 * of web page. 
 */
 
+/* Apply simple styles to construction container */
 #constructionContainer {
     width: 100%;
 }
@@ -1645,11 +1661,14 @@ under-construction.html styling
     text-align: center;
 }
 
+/* APply a slight shadow under the image for some added weight */
 #constructionImage {
     border-radius: 100px;
+    box-shadow: 5px 5px 5px #4240b930;
     width: 100%;
 }
 
+/* Ensure home link has visual distinction */
 #linkHome {
     color: #c0c16f;
 }
@@ -1658,33 +1677,3 @@ under-construction.html styling
     color: #716fc1;
     text-decoration: underline;
 }
-
-/* ==========================================================================
-Section comment block
-========================================================================== */
-
-/* Sub-section comment block
-========================================================================== */
-
-/**
- * Short description using Doxygen-style comment format
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * TODO: This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-
-/* Basic comment */
-
-/* ==========================================================================
-CSS sorting information
-========================================================================== */
