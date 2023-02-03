@@ -1160,6 +1160,17 @@ report.html styling
     text-decoration: underline;
  }
 
+ /* Ensure any report images are centered and there is sufficient space between them */
+ .reportImageContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .reportImageContainer > * {
+    margin: 20px;
+ }
+
 /* ==========================================================================
 thich-nhat-hanh.html styling
 ========================================================================== */
