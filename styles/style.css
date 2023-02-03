@@ -38,6 +38,7 @@ element selectors
     padding: 0px;
 }
 
+/* Ensure a tags have no styling by default */
 a {
     text-decoration: none;
 }
@@ -68,11 +69,7 @@ hr {
     width: 100%;
 }
 
-.leftEmptyDiv {
-    height: 30px;
-    width: 30px;
-}
-
+/* Ensure nav anchor tags are white */
 nav a {
     color: #fff;
 }
@@ -82,6 +79,7 @@ nav a:hover {
     color: #0d0d17;
 }
 
+/* For any buttons with this class ensure they are displayed properly in the nav section */
 .navButton {
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -98,6 +96,7 @@ input:hover, select:hover, button:hover {
 /* element selectors | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    /* Most code here just ensure's the text is off sufficient size */
     * {
         font-size: 4vw;
     }
@@ -141,6 +140,7 @@ input:hover, select:hover, button:hover {
         text-align: center;
     }
 
+    /* Adjust the size to be larger here for proper hamburger menu display */
     header nav a {
         font-size: 6vw;
     }
@@ -149,6 +149,7 @@ input:hover, select:hover, button:hover {
 /* element selectors | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* Most code here just ensure's the text is off sufficient size */
     * {
         font-size: 1.5vw;
     }
@@ -222,6 +223,13 @@ general class selectors
     background-color: #3f3e6c;
 }
 
+/* Style the left div for the search header. This ensure's the search this page text is centered */
+.leftEmptyDiv {
+    height: 30px;
+    width: 30px;
+}
+
+/* Style the anchor tag surrounding the websites logo */
 .logoA {
     display: flex;
 }
@@ -230,23 +238,27 @@ general class selectors
     text-align: center;
 }
 
+/* Ensure any of the search results have sufficient spacing between them */
 .result {
     margin: 10px 0px;
 }
 
+/* When applied to the search container it will hide it from user view */
 .searchContainerHide {
     transform: translateX(-100%);
 }
 
+/* Show's the search container when javascript applied this to it */
 .searchContainerShow {
     transform: translateX(0px);
 }
 
+/* Add opacity to items with this class */
 .seeThrough {
     opacity: .5;
 }
 
-/* Styling for standard articles, meditation articles and report articles */
+/* Styling for standard articles, meditation articles and report articles. Creates the light purple background card */
 .standardArticle, .reportArticle, .meditationArticle {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
@@ -260,6 +272,7 @@ general class selectors
     color: black;
 }
 
+/* Style the author info and date info on standard articles */
 .standardArticle > div > p:nth-last-of-type(-n+2) {
     font-style: italic;
 }
@@ -273,7 +286,7 @@ general class selectors
     color: #716fc1;
 }
 
-/* Ensure the standard article image behaves */
+/* Ensure the standard article image behaves correctly */
 .standardArticle img {
     border-radius: 20px;
     height: auto;
@@ -289,17 +302,20 @@ general class selectors
     margin-bottom: 0px;
 }
 
-/* small device media query
+/* general class selector | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    /* Ensure hamburger menu items have sufficient spacing */
     .headerNavBar > *{
         margin: 10px;
     }
 
+    /* Apply an animation for the hamburger menu to slide away. Make it a little faster to enable quicker navigation */
     .hideHeaderNav {
         transition: transform .5s;
     }
 
+    /* Ensure the hamburger menu takes up the full screen and displays in a easy to digest manner */
     .headerNavBar {
         align-items: flex-end;
         background: #716fc1;
@@ -320,11 +336,13 @@ general class selectors
         display: none;
     }
 
+    /* Shows the header nav when JS applies this class to it */
     .showHeaderNav {
         transform: translateX(0px);
         transition: transform 1s;
     }
 
+    /* Ensures standard article displays in a column manner for smaller devices */
     .standardArticle {
         display: flex;
         flex-direction: column;
@@ -352,6 +370,7 @@ general class selectors
         text-decoration: underline;
     }
 
+    /* Get standard boxes to display in a correct manner for smaller devices */
     .standardBox {
         padding: 20px 20px;
     }
@@ -361,7 +380,7 @@ general class selectors
     }
 }
 
-/* large device media query
+/* general class selector | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
     /* On desktop screen show clickable images with a low opacity, then increase it when hovering over image */
@@ -374,7 +393,7 @@ general class selectors
     }
 
    /* Ensure any items with class small are not displayed */
-   .small {
+    .small {
         display: none;
     }
 
@@ -390,6 +409,7 @@ general class selectors
         transition: transform 250ms;
     }
 
+    /* Ensure anchor tags correctly wrap images and headers in standard articles */
     .standardArticle > a {
         height: auto;
         margin-right: 10px;
@@ -402,6 +422,7 @@ general class selectors
         width: 50%;
     }
 
+    /* Ensure separation between the header and info in a standard article */
     .standardArticle p:first-of-type {
         margin: 10px 0px;
     }
@@ -433,6 +454,7 @@ general id selectors
     width: 100%;
 }
 
+/* Make the hamburger button stay in the same place for easy manipulation */
 #hamburgerButton {
     position: relative;
     z-index: 6;
@@ -444,6 +466,7 @@ general id selectors
     width: auto;
 }
 
+/* Assign background image to meditations page */
 #meditationsBody {
     background-image: url('../images/meditations-images/background.jpg');
 }
@@ -466,6 +489,7 @@ general id selectors
     background-image: url('../images/posts-images/background.jpg');
 }
 
+/* Ensure the results container shows the results properly in a column format */
 #results {
     align-items: center;
     display: flex;
@@ -487,6 +511,7 @@ general id selectors
     width: 100%;
 }
 
+/* Style the search bar in a manner that blends it with the container and maintains a constant space */
 #searchBar {
     background-color: rgba(0, 0, 0, 0);
     border: solid 1px #FFF;
@@ -496,6 +521,7 @@ general id selectors
     padding: 0px 10px;
 }
 
+/* Ensure proper display for the search box */
 #searchBox {
     background-color: #716fc1;
     border-radius: 25px;
@@ -508,6 +534,7 @@ general id selectors
     margin: 10px 0px;
 }
 
+/* Stye the search container and blur the web page out to help focus the user on the search box */
 #searchContainer {
     align-items: center;
     backdrop-filter: blur(5px);
@@ -535,6 +562,7 @@ general id selectors
 /* general id | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    /* Make the search box take up more space on smaller devices */
     #searchBox {
         height: 80%;
         width: 90%;
@@ -544,6 +572,7 @@ general id selectors
 /* general id | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* Ensure the hamburger button does not show on larger devices */
     #hamburgerButton {
         display: none;
     }
@@ -556,6 +585,7 @@ general id selectors
         width: 50%;
     }
 
+    /* Give the search box a correct size for larger devices */
     #searchBox {
         height: 80%;
         width: 40%;
@@ -570,21 +600,9 @@ index.html styling
 * of web page. 
 */
 
+/* Ensure elevator pitch container has centered tex */
 #elevatorPitch p {
     text-align: center;
-}
-
-#indexPopularPosts {
-    height: 600px;
-}
-
-#indexPopularPosts > * {
-    width: 45%;
-}
-
-#indexPopularPosts .standardArticle img {
-    height: 100%;
-    width: 100%;
 }
 
 /* Create page banner container that will hold introductory background image */
@@ -608,6 +626,7 @@ index.html styling
     color: #fff;
 }
 
+/* Style podcast buttons to have a matching background to container and consistent sizing */
 .podcastButton {
     background-color: #e2e2ef;
     display: flex;
@@ -616,15 +635,18 @@ index.html styling
     width: 100%;
 }
 
+/* Respond to the users mouse when it hovers over podcast buttons */
 .podcastButton:hover, .podcastButton:focus {
     box-shadow: 0px 2px 2px #000;
 }
 
+/* ENsure podcast button images fill container */
 .podcastButton img {
     height: 100%;
     width: 100%;
 }
 
+/* Ensure podcast header stays in middle of container */
 #podcastHeader {
     align-items: center;
     display: flex;
@@ -633,6 +655,7 @@ index.html styling
     width: 100%;
 }
 
+/* Apply a pseudo class to the podcast header to create lines going to the edge of the container creating a separating effect */
 #podcastHeader::after {
     border-bottom: 1px solid black;
     content: '';
@@ -647,11 +670,13 @@ index.html styling
     width: 30%;
 }
 
+/* Add colour and padding to podcast container */
 #podcastInfo {
     background-color: #e2e2ef;
     padding-bottom: 30px;
 }
 
+/* Ensure each podcast option has a consistent size and correct display for the label */
 .podcastOption {
     align-items: center;
     display: flex;
@@ -667,6 +692,7 @@ index.html styling
     width: 50%;
 }
 
+/* Apply visual distinction for the poll to highlight that it is an interactive element */
 #poll {
     background-color: #716fc1;
     border-radius: 25px;
@@ -675,17 +701,20 @@ index.html styling
     width: 70%;
 }
 
+/* Ensure each item of the poll displays con the left hand side */
 #poll ol {
     align-items: left;
     display: flex;
     flex-direction: column;
 }
 
+/* Ensure no standard styles make it through on the poll list items */
 #poll ol li{
     list-style: none;
     margin: 10px 0px;
 }
 
+/* Style the poll button to have a slight visual distinction from background */
 .pollButton {
     background-color: #716fc1;
     border: 2px solid #0d0d17;
@@ -693,17 +722,20 @@ index.html styling
     width: fit-content;
 }
 
-.pollButton:hover .pollButton:active {
+/* Help the user see the buttons are interactive with hover affects */
+.pollButton:hover, .pollButton:active {
     background-color: #e2e2ef;
     border: 2px solid #0d0d17;
     padding: 5px;
     width: fit-content;
 }
 
+/* Class to hide the poll buttons once one is pressed */
 .pollButtonHide {
     display: none;
 }
 
+/* Background container to give poll it's own space */
 .pollContainer {
     background-color: #e2e2ef;
     display: flex;
@@ -711,6 +743,7 @@ index.html styling
     align-items: center;
 }
 
+/* Ensure the poll's response div's have visual distinction with a black border and standard sizing */
 .pollResponseBacking {
     border: 2px solid #000;
     height: 50px;
@@ -718,6 +751,8 @@ index.html styling
     width: 100%;
 }
 
+/* 
+* When the user clicks on the poll button the buttons will be hidden and this class will be applied. It will grow to what percent of the poll has selected that button */
 .pollNoResults {
     align-items: center;
     background-color: #000;
@@ -762,18 +797,17 @@ index.html styling
         width: 100%;
     }
 
+    /* Apply the shadow for smaller devices to show that it is touchable */
     .podcastButton {
         box-shadow: 0px 2px 2px #000;
     }
     
+    /* Adjust the sizing of these lines for better display on smaller devices */
     #podcastHeader::after {
         width: 10%;
     }
 
     #podcastHeader::before {
-        border-bottom: 1px solid black;
-        content: '';
-        height: 1px;
         width: 10%;
     }
 
@@ -783,6 +817,7 @@ index.html styling
         width: 100%;
     }
 
+    /* Adjust the width of the poll to take up more screen room for smaller devices */
     #poll {
         width: 80%;
     }
@@ -858,6 +893,7 @@ meditations.html styling
 * of web page. 
 */
 
+/* Give the donations container and sales container a distinct look compared to the articles to help the user separate them */
 .donations, .meditationSalesContainer {
     background-color: #716fc1;
     border: 2px solid #e2e2ef;
@@ -872,12 +908,14 @@ meditations.html styling
     flex-direction: column;
 }
 
+/* Ensure the donations children have a centering appearance to them */
 .donations > * {
     color: #e2e2ef;
     margin: 10px;
     text-align: center;
 }
 
+/* Ensure iFrames take up all available space */
 .iFrameContainer iframe {
     max-height: 100%;
     width: 100%;
@@ -892,6 +930,7 @@ meditations.html styling
     height: 40%;
 }
 
+/* Ensure meditation article takes up all space and has some margin to not cramp the screen */
 .meditationArticle {
     display: flex;
     margin: 20px 0px;
@@ -902,6 +941,7 @@ meditations.html styling
     text-align: center;
 }
 
+/* Give some visual distinction to the buttons on the meditation page and ensure there is an animation when the user hovers over them */
 .meditationButton {
     background-color: #4240b9;
     border: 3px solid #e2e2ef;
@@ -911,6 +951,7 @@ meditations.html styling
     transition: background-color 1s, border 1s, color 1s;
 }
 
+/* Apply colour change to buttons that are hovered over */
 .meditationButton:hover {
     background-color: #e2e2ef;
     border: 3px solid #4240b9;
@@ -922,6 +963,7 @@ meditations.html styling
     justify-content: space-between;
 }
 
+/* Ensure this containers children display in similar manners */
 .meditationSalesContainer > * {
     align-items: center;
     background-color: #e2e2ef;
@@ -932,6 +974,7 @@ meditations.html styling
     width: 50%;
 }
 
+/* Ensure all children of the meditation containers display their text in a centered fashion */
 .meditationSalesContainer > * > *{
     margin: 10px 0px;
     text-align: center;
@@ -940,14 +983,17 @@ meditations.html styling
 /* meditations.html | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    /* CHange the meditation articles to a column display for easier viewing on smaller devices */
     .meditationArticle {
         flex-direction: column;
     }
 
+    /* ENsure the article header has space between that and the info */
     .meditationArticleInfo p {
         padding-top: 10px;
     }
 
+    /* Center align the text blurb */
     .meditationArticleInfo p:first-of-type {
         text-align: center;
     }
@@ -956,18 +1002,22 @@ meditations.html styling
 /* meditations.html | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* Ensure Iframe only takes up 60% of container */
     .iFrameContainer {
-        width: 70%;
+        width: 60%;
     }
 
+    /* Force the iframe to take up all of it's container */
     .iFrameContainer iframe {
         height: 100%;
     }
 
+    /* Force the info to take up rest of container space */
     .meditationArticleInfo {
-        width: 30%;
+        width: 40%;
     }
 
+    /* Ensure there is visual separation between text elements */
     .meditationArticleInfo p {
         padding-top: 20px;
         padding-left: 20px;
@@ -994,11 +1044,13 @@ posts.html styling
     width: 100%;
 }
 
+/* Give the popular list a little more visual separation from the background */
 #popularPostsList li {
     color: #716fc1;
     margin: 20px 0px;
 }
 
+/* Force the number of the list to go purple as well and have no decoration */
 #popularPostsList li {
     text-decoration: none;
     color: #716fc1;
@@ -1021,14 +1073,17 @@ posts.html styling
 /* small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
+    /* For smaller screens give the list a little more width to take up more space */
     #popularPostsList {
         width: 87%;
     }
 
+    /* APply a larger size to these list items for visual aid */
     #popularPostsList li a, #popularPostsList li{
         font-size: 4vw;
     }
 
+    /* Ensure posts intro displays in a column format for smaller screens */
     #postsIntro {
         align-items: center;
         display: flex;
@@ -1036,6 +1091,7 @@ posts.html styling
         width: 100%;
     }
 
+    /* Force posts intro to take up almost all screen space */
     #postsIntro > * {
         width: 90%;
     }
@@ -1044,12 +1100,14 @@ posts.html styling
 /* large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
+    /* Force the popular list to display in a column format with separation from the main image */
     #postIntroLast {
         align-items: center;
         padding-left: 70px;
         justify-content: center;
     }
 
+    /* For larger devices ensure the posts intro is in a row format */
     #postsIntro {
         display: flex;
         flex-direction: row;
@@ -1074,6 +1132,7 @@ report.html styling
  * of web page. 
  */
 
+ /* Simple styling to ensure the report articles are readable and there is visual separation between the text elements */
  .reportArticle {
     margin: 30px 0px;
     padding-left: 40px;
@@ -1091,6 +1150,7 @@ report.html styling
     text-align: center;
  }
 
+ /* Give the report links a little more visual separation to help show they can be clicked */
  .reportArticle ul li a {
     color: #716fc1;
  }
@@ -1099,18 +1159,6 @@ report.html styling
     color: #c0c16f;
     text-decoration: underline;
  }
-
- /* report.html | small device media query
-========================================================================== */
- @media only screen and (max-width: 769px) {
-    
-}
-
-/* report.html | large device media query
-========================================================================== */
-@media only screen and (min-width: 770px) {
-    
-}
 
 /* ==========================================================================
 thich-nhat-hanh.html styling
