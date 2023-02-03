@@ -1132,44 +1132,75 @@ report.html styling
  * of web page. 
  */
 
- /* Simple styling to ensure the report articles are readable and there is visual separation between the text elements */
- .reportArticle {
+.desktopWireframe {
+    object-fit: contain;
+    width: 300px;
+    height: auto;
+}
+
+.mobileWireframe {
+    object-fit: contain;
+    width: 150px;
+    height: auto;
+}
+
+/* Simple styling to ensure the report articles are readable and there is visual separation between the text elements */
+.reportArticle {
     margin: 30px 0px;
     padding-left: 40px;
- }
+}
 
- .reportArticle > *{
+.reportArticle > *{
     margin: 10px 0px;
- }
+}
 
- .reportArticle ul li {
+.reportArticle ul li {
     margin: 20px 0px;
- }
+}
 
 .reportArticle h3, .reportArticle h4 {
     text-align: center;
- }
+}
 
- /* Give the report links a little more visual separation to help show they can be clicked */
- .reportArticle ul li a {
+/* Give the report links a little more visual separation to help show they can be clicked */
+.reportArticle ul li a {
     color: #716fc1;
- }
+}
 
- .reportArticle ul li a:hover {
+.reportArticle ul li a:hover {
     color: #c0c16f;
     text-decoration: underline;
- }
+}
 
- /* Ensure any report images are centered and there is sufficient space between them */
- .reportImageContainer {
+/* Ensure any report images are centered and there is sufficient space between them */
+.reportImageContainer {
     align-items: center;
     display: flex;
     flex-direction: column;
- }
+}
 
- .reportImageContainer > * {
+.reportImageContainer > * {
+   margin: 20px;
+}
+
+.wireframeContainer {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wireframeContainer > * {
+    margin: 10px;
+}
+
+.wireframeScene {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wireframeScene > * {
     margin: 20px;
- }
+}
 
 /* ==========================================================================
 thich-nhat-hanh.html styling
