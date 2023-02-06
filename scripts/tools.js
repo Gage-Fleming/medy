@@ -24,9 +24,9 @@ let bellVolumeSelector = document.getElementById('sound');
 let outputTime = document.getElementById('outputTime');
 
 // Create variables to hold audio files for bells
-let gong = new Audio('../audio/gong.wav');
-let chime = new Audio('../audio/chime.wav');
-let bell = new Audio('../audio/bell.wav');
+let gong = new Audio('./audio/gong.wav');
+let chime = new Audio('./audio/chime.wav');
+let bell = new Audio('./audio/bell.wav');
 
 // Create timer interval variable
 let timerInterval;
@@ -224,9 +224,9 @@ let sceneVolume = document.getElementById('sceneSound');
 let sceneOptions = document.querySelectorAll('input[name="scenes"]');
 
 // Create variables to hold audio files for scenes. This is also set to loop.
-let forest = new Audio('../audio/forest.mp3');
-let river = new Audio('../audio/river.mp3');
-let rain = new Audio('../audio/rain.mp3');
+let forest = new Audio('./audio/forest.mp3');
+let river = new Audio('./audio/river.mp3');
+let rain = new Audio('./audio/rain.mp3');
 
 /**
  * Updates the volume of the three sounds if the scene volume slider is adjusted.
