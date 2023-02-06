@@ -47,31 +47,31 @@ function checkShow() {
         if (timelineArticles[i].classList.contains('show')) {
             switch (i) {
                 case 0:
-                    timelineImage.src="../images/timeline-images/1950s.jpg";
+                    timelineImage.src="./images/timeline-images/1950s.jpg";
                     timelineImage.alt="Thich Nhat Hanh and 5 other monks pose for a photo";
                     break;
                 case 1:
-                    timelineImage.src="../images/timeline-images/1962.jpg";
+                    timelineImage.src="./images/timeline-images/1962.jpg";
                     timelineImage.alt="Thich Nhat Hanh in the middle of teaching a class full of children";
                     break;
                 case 2:
-                    timelineImage.src="../images/timeline-images/1966.jpg";
+                    timelineImage.src="./images/timeline-images/1966.jpg";
                     timelineImage.alt="Young monks posing for the camera in traditional monk clothing";
                     break;
                 case 3:
-                    timelineImage.src="../images/timeline-images/1967.jpg";
+                    timelineImage.src="./images/timeline-images/1967.jpg";
                     timelineImage.alt="Martin Luther King and Thich Nhat Hanh listing to a conversation";
                     break;
                 case 4:
-                    timelineImage.src="../images/timeline-images/1982.jpg";
+                    timelineImage.src="./images/timeline-images/1982.jpg";
                     timelineImage.alt="A forest pathway with monks in the middles of a communal meditation";
                     break;
                 case 5:
-                    timelineImage.src="../images/timeline-images/2014.jpg";
+                    timelineImage.src="./images/timeline-images/2014.jpg";
                     timelineImage.alt="An aged Thich Nhat Hanh poses for a photo";
                     break;
                 case 6:
-                    timelineImage.src="../images/timeline-images/2022.jpg";
+                    timelineImage.src="./images/timeline-images/2022.jpg";
                     timelineImage.alt="Thich Nhat Hanh pictured meditating on his poems";
                     break;
                 default:
