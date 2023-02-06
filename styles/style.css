@@ -1051,7 +1051,13 @@ posts.html styling
 }
 
 /* Force the number of the list to go purple as well and have no decoration */
-#popularPostsList li {
+#popularPostsList li a {
+    text-decoration: none;
+    color: #716fc1;
+}
+
+/* Ensure basic styles do not affect li when link pseudo-class is applied */
+#popularPostsList li a:link {
     text-decoration: none;
     color: #716fc1;
 }
