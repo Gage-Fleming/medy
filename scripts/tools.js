@@ -187,23 +187,32 @@ meditationFormPause.onclick = function() {
 };
 
 /**
- * If the user selects the gong radio button the sound will play
+ * If the user selects the gong radio button the sound will play. Also ensure the time is reset if the
+ * user clicks while the sound is playing.
  */
 soundTypeOptions[0].onclick = function() {
+    gong.pause();
+    gong.currentTime = 0;
     gong.play();
 };
 
 /**
- * If the user selects the chime radio button the sound will play
+ * If the user selects the chime radio button the sound will play. Also ensure the time is reset if the
+ * user clicks while the sound is playing.
  */
 soundTypeOptions[1].onclick = function() {
+    chime.pause();
+    chime.currentTime = 0;
     chime.play();
 };
 
 /**
- * If the user selects the bell radio button the sound will play
+ * If the user selects the bell radio button the sound will play. Also ensure the time is reset if the
+ * user clicks while the sound is playing.
  */
 soundTypeOptions[2].onclick = function() {
+    bell.pause();
+    bell.currentTime = 0;
     bell.play();
 };
 
@@ -238,12 +247,16 @@ sceneVolume.onchange = function () {
 };
 
 /**
- * Pauses all scene sounds if the no sound button is clicked
+ * Pauses all scene sounds if the no sound button is clicked and also resets the current time of all 
+ * scenes.
  */
 sceneOptions[0].onchange = function () {
     forest.pause();
+    forest.currentTime = 0;
     rain.pause();
+    rain.currentTime = 0;
     river.pause();
+    river.currentTime = 0;
 };
 
 /**

@@ -262,9 +262,9 @@ general class selectors
 .standardArticle, .reportArticle, .meditationArticle {
     background-color: #e2e2ef;
     border: 1px solid #716fc1;
+    box-shadow: 5px 5px 5px #716fc1;
     margin: 40px 0px;
     padding: 20px;
-    box-shadow: 5px 5px 5px #716fc1;
 }
 
 /* Ensure color is black for most elements in standard article containers */
