@@ -428,7 +428,7 @@ general class selectors
     }
 
     .standardBox {
-        padding: 20px 100px;
+        padding: 20px 5%;
     }
 
     .standardBox > * {
@@ -1353,7 +1353,7 @@ thich-nhat-hanh.html styling
 
     /* Give the timeline container some padding to help ensure the children display correctly */
     .timeline {
-        padding: 10px 50px;
+        padding: 10px 5%;
     }
 
     /* Give the articles a column appearance on smaller devices */
@@ -1420,7 +1420,7 @@ thich-nhat-hanh.html styling
     }
 
     .timeline {
-        padding: 20px 100px;
+        padding: 20px 5%;
     }
 
     /* Show the article in a row format for better reading on larger devices */
