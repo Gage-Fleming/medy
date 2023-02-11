@@ -930,7 +930,7 @@ meditations.html styling
     height: 40%;
 }
 
-/* Ensure meditation article takes up all space and has some margin to not cramp the screen */
+/* Ensure meditation articles takes up all space and has some margin to not cramp the screen */
 .meditationArticle {
     display: flex;
     margin: 20px 0px;
