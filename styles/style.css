@@ -945,6 +945,7 @@ meditations.html styling
 .meditationButton {
     background-color: #4240b9;
     border: 3px solid #e2e2ef;
+    border-radius: 20px;
     color: #e2e2ef;
     margin: 10px;
     padding: 10px;
