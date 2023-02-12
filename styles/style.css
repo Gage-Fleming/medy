@@ -472,12 +472,12 @@ general id selectors
 }
 
 /* Make the background color slightly see through to help sure background image on these pages */
-#postsMain, #toolsMain, #meditationsMain {
+#postsMain, #toolsMain, #meditationsMain, #reportMain {
     background-color: rgba(255, 255, 255, 0.783);
 }
 
 /* Set the body elements to have a background image that is centered */
-#postsBody, #toolsBody, #meditationsBody {
+#postsBody, #toolsBody, #meditationsBody, #reportBody {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -487,6 +487,11 @@ general id selectors
 /* Set posts body background image */
 #postsBody {
     background-image: url('../images/posts-images/background.jpg');
+}
+
+/* Set report body background image */
+#reportBody {
+    background-image: url('../images/report-images/background.jpg');
 }
 
 /* Ensure the results container shows the results properly in a column format */
@@ -819,7 +824,7 @@ index.html styling
 
     /* Adjust the width of the poll to take up more screen room for smaller devices */
     #poll {
-        width: 80%;
+        width: 90%;
     }
 
     /* On smaller devices let the spotlight images overflow for the user to scroll horizontally */
