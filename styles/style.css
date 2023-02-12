@@ -1228,8 +1228,23 @@ report.html styling
     margin: 20px;
 }
 
+/* report.html | small device media query
+========================================================================== */
+@media only screen and (max-width: 769px) {
+    /* Ensure wireframes display ina  column format for smaller devices */
+    .wireframeContainer {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .reportWireframes {
+        padding: 0px;
+        width: 90%;
+    }
+}
+
 /* ==========================================================================
-thich-nhat-hanh.html styling
+timeline.html styling
 ========================================================================== */
 /**
  * Section is sorted alphabetically, with two media queries at the end to handle responsive design
@@ -1312,7 +1327,7 @@ thich-nhat-hanh.html styling
     padding: 10px 0px;
 }
 
-/* small device media query
+/* timeline.html | small device media query
 ========================================================================== */
 @media only screen and (max-width: 769px) {
     /* For smaller devices make the divider height oriented as opposed to width oriented */
@@ -1397,7 +1412,7 @@ thich-nhat-hanh.html styling
     }
 }
 
-/* large device media query
+/* timeline.html | large device media query
 ========================================================================== */
 @media only screen and (min-width: 770px) {
     /* For larger screens use divider to separate on a width basis */
@@ -1667,7 +1682,7 @@ tools.html styling
 @media only screen and (max-width: 769px) {
     /* Ensure timer displays properly and never overflows */
     #meditationTimerContainer {
-        height: 330px;
+        height: 200px;
         width: 100%
     }
 
@@ -1684,9 +1699,17 @@ tools.html styling
     #outputTime {
         font-size: 5vw;
     }
+
+    #sceneSoundContainer {
+        width: 90%;
+    }
     
     #sceneSoundContainer > * {
         width: 50%;
+    }
+
+    .sceneOption img, #soundType, .toolTitle {
+        margin-bottom: 5px;
     }
 }
 
