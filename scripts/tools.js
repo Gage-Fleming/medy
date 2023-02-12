@@ -89,7 +89,20 @@ function setTimer() {
     outputTime.innerHTML = formatTime(timeLeft);
 
     // Create code to play bell sound if the correct amount of time has passed based on interval
-    if ((timePassed % interval) == 0) {
+    if (((timePassed % interval) == 0) && interval != null) {
+        switch (soundType) {
+            case 'gong':
+                gong.play();
+                break;
+            case 'chime':
+                chime.play();
+                break;
+            case 'bell':
+                bell.play();
+                break;
+        }
+    // Play bell if it is chosen at 1 second
+    } else if (timePassed == 1 && interval != null) {
         switch (soundType) {
             case 'gong':
                 gong.play();
@@ -155,8 +168,9 @@ meditationFormSubmit.onclick = function() {
     
     // Check to see if user selected no bells. If so leave value of interval as null.
     // Otherwise, get seconds of chosen interval
-    intervalBellSelector.value == "No Bells" ? interval : interval = intervalBellSelector.value.slice(0, 3) * 60;
+    intervalBellSelector.value == "No Bells" ? interval = null : interval = intervalBellSelector.value.slice(0, 3) * 60;
 
+    // Ensure volume is in line with user selected volume.
     gong.volume = bellVolumeSelector.value;
     chime.volume = bellVolumeSelector.value;
     bell.volume = bellVolumeSelector.value;
