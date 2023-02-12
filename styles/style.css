@@ -22,6 +22,10 @@ font declarations
 ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 
+/* Courgette import
+========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
 /* ==========================================================================
 element selectors
 ========================================================================== */
@@ -114,28 +118,33 @@ input:hover, select:hover, button:hover {
     }
 
     h1 {
+        font-family: Courgette, sans-serif;
         font-size: 7vw;
         text-align: center;
     }
 
     h2 {
+        font-family: Courgette, sans-serif;
         font-size: 6vw;
         text-align: center;
     }
 
     h3 {
+        font-family: Courgette, sans-serif;
         font-weight: 1000;
         font-size: 5vw;
         text-align: center;
     }
 
     h4 {
+        font-family: Courgette, sans-serif;
         font-weight: 500;
         font-size: 4.5vw;
         text-align: center;
     }
 
     h5 {
+        font-family: Courgette, sans-serif;
         font-size: 4.5vw;
         text-align: center;
     }
@@ -159,22 +168,26 @@ input:hover, select:hover, button:hover {
     }
 
     h1 {
+        font-family: Courgette, sans-serif;
         font-size: 3.5vw;
         text-align: center;
     }
 
     h2 {
+        font-family: Courgette, sans-serif;
         font-size: 2.5vw;
         text-align: center;
     }
 
     h3 {
+        font-family: Courgette, sans-serif;
         font-weight: 1000;
         font-size: 2vw;
         text-align: center;
     }
 
     h4 {
+        font-family: Courgette, sans-serif;
         font-weight: 500;
         font-size: 1.75vw;
         text-align: center;
