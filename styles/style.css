@@ -1238,8 +1238,13 @@ report.html styling
     }
 
     .reportWireframes {
-        padding: 0px;
+        padding: 10px;
         width: 90%;
+    }
+
+    /* Ensure wireframe images abide by sizing of container */
+    .reportWireframes img {
+        max-width: 100%;
     }
 }
 
