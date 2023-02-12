@@ -1700,6 +1700,7 @@ tools.html styling
         font-size: 5vw;
     }
 
+    /* Ensure options display correctly on smaller devices */
     #sceneSoundContainer {
         width: 90%;
     }
@@ -1708,6 +1709,7 @@ tools.html styling
         width: 50%;
     }
 
+    /* Remove large bottom margin */
     .sceneOption img, #soundType, .toolTitle {
         margin-bottom: 5px;
     }
