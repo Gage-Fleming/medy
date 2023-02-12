@@ -1729,7 +1729,7 @@ under-construction.html styling
     text-align: center;
 }
 
-/* APply a slight shadow under the image for some added weight */
+/* Apply a slight shadow under the image for some added weight */
 #constructionImage {
     border-radius: 100px;
     box-shadow: 5px 5px 5px #4240b930;
